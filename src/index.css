@@ -1,0 +1,185 @@
+:root {
+    --color-primary: #173083; 
+    --color-secondary: #E10B19; 
+    --color-terciary: #FBB905;
+    --color-white: #ffffff ;
+    
+  }
+
+/* 
+AJUSTES GENERALES */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*FOOTER ------------------------*/
+
+.footer{
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1ra franja-horizontal */
+
+.footer__icons__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 32px;
+    gap: 30px;
+}
+
+.icon__social{
+    font-size: 35px;
+}
+
+/* 2da franja horizontal */
+
+.footer__second__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+/* 2da franja horizontal/ 1ra franja vertical*/
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__info-item{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    line-height: 23px;
+}
+
+.footer__info-item-1row, .footer__info-item-2row{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__info-item a {
+
+        color: var(--color-white);
+        text-decoration: none;
+    }
+
+.logo__bembos__blanco{
+    width: 35%;
+}
+
+/* 2da franja horizontal/ 2da franja vertical*/
+
+.pagos__metodos__container{
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjetas__container{
+    display: flex;
+  gap: 20px;
+}
+
+.image__pago{
+    width: 60px;
+    border-radius: 5px;
+}
+
+.image__pago__safety{
+    width: 180px;
+}
+
+.boton__comprobante{
+    background-color: var(--color-terciary);
+    color: var(--color-primary);
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+.boton__comprobante i{
+    margin-right: 8px;
+}
+
+/* 2da franja horizontal/ 3ra franja vertical  */
+
+.footer__formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Noticias */
+
+.footer__formulario label p{
+    font-weight: bold;
+}
+
+.formulario__noticias input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+}
+
+.formulario__noticias button{
+    background-color: var(--color-terciary);
+    border: none;
+    height: 30px;
+    width: 110px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -5px;
+}
+
+/* Términos y condiciones */
+
+.formulario__checkbox{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.formulario__checkbox label{
+    margin-left: 10px;
+}
+
+/* 
+Libro de reclamaciones
+ */
+.libro__reclamaciones__img{
+    width: 20%;
+    border-radius: 13px;
+}
+
+/* PARTE FINAL: Footer/Derechos reservados */
+
+.footer__derechos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+hr{
+    color:var(--color-white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    height: 1px;
+}
