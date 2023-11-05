@@ -34,7 +34,7 @@ export const Footer = () => {
                             </ul> 
 
                             <div className='container__bembos__blanco'>                  
-                                <img src="./src/images/logo_bembos.png"  alt="" className='logo__bembos__blanco'/>
+                                <img src="./src/img/logo_bembos.png"  alt="" className='logo__bembos__blanco'/>
                             </div>
                         </div>  
 
@@ -59,13 +59,13 @@ export const Footer = () => {
                             <div className='pago__metodos__container'>
 
                                 <div className='tarjetas__container'>
-                                    <img src="./src/images/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago'/>
-                                    <img src="./src/images/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago'/>
-                                    <img src="./src/images/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
+                                    <img src="./src/img/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago'/>
+                                    <img src="./src/img/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago'/>
+                                    <img src="./src/img/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
                                 </div>
 
                                 <div>
-                                    <img src="./src/images/new_images-01.png" alt="" className='image__pago__safety' />
+                                    <img src="./src/img/new_images-01.png" alt="" className='image__pago__safety' />
                                 </div>
                             </div>
 
@@ -74,7 +74,7 @@ export const Footer = () => {
                             COMPROBANTES</button>
 
                             <div className='container__libro__reclamaciones'>
-                                <img src="./src/images/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
+                                <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
                             </div>
 
                         </div> 
@@ -95,7 +95,7 @@ export const Footer = () => {
                             <label htmlFor="">He leído y revisado los<u>términos y condiciones</u> </label>
                             </div>
                     
-                            <img src="./src/images/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
+                            <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
                             </div>
                         </div>
             </div>
