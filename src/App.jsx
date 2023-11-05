@@ -1,10 +1,23 @@
 import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
 import { Tarjeta } from "./components/Tarjeta"
 
 export const App = () => {
   return (
     <>
-      <Header />
+      <Header  />
+      <main className="principal">
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+        <h1>Contenido Principal</h1>
+      </main>
+      <Footer />
       <main className="contenedor">
         <br />
         <br />
