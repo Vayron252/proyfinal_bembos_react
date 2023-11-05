@@ -13,48 +13,57 @@ export const Header = () => {
     }
 
     return (
-        <>
-            <header className="header">
-                <div className="header__atencion">
-                    <img src={imagen_atencion} alt="imagen atencion publico" />
-                </div>
-                <div className="header__barra">
+        <header className="header">
+            <div className="header__atencion">
+                <img className="atencion__imagen" src={imagen_atencion} alt="imagen atencion publico" />
+            </div>
+            <div className="header__barra contenedor">
+                <a href="#" className="barra__paginicio">
                     <div className="barra__logo"></div>
-                    <button className="barra__sin__colas boton">
-                        <i className="fa-solid fa-store"></i>
-                        <p>Pide en tienda <span>SIN COLAS</span></p>
-                    </button>
-                    <div className='barra__navegacion'>
-                        <button><i className="fa-solid fa-phone"></i></button>
-                        {/* <div className="barra__informacion">
-                            <span>Delivery</span> Lima
-                            <p>014191919</p>
-                        </div> */}
-                        <button
-                            onClick={handleMenuBar}><i className="fa-solid fa-bars"></i></button>
-                        <button>
-                            <i className="fa-regular fa-user"></i>
-                            <p className="">Ingresar o crear tu cuenta</p>
-                        </button>
-                    </div>
-                </div>
-            </header>
-            <nav className="header__navegacion contenedor">
-                {/* <button className="navegacion__cerrarbar"><i className="fa-solid fa-xmark"></i></button> */}
-                <ul className={`navegacion__menu ${menuBarActive?'active':''}`}>
-                    <li><a href="#">Menú</a></li>
-                    <li><a href="#">Beneficio</a></li>
-                    <li><a href="#">Promociones</a></li>
-                    <li><a href="#">Locales</a></li>
-                    <li><a href="#">Zonas de Reparto</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                </ul>
-                <button className="navegacion__sin__colas boton">
+                </a>
+                <button className="barra__botonsincolas">
+                    <p className="barra__botonsincolas__informacion">Pide en tiendas <span>SIN COLAS</span></p>
                     <i className="fa-solid fa-store"></i>
-                    <p>Pide en tienda <span>SIN COLAS</span></p>
                 </button>
-                <button className="navegacion__shopcar boton"><i className="fa-solid fa-cart-shopping"></i></button>
-            </nav>
-        </>
+                <div className="barra__navegar">
+                    <i className="fa-solid fa-phone navegar__telefono"></i>
+                    <i className="fa-solid fa-bars navegar__menu" onClick={handleMenuBar}></i>
+                    <div className="navegar__ciudad">
+                        <p className="ciudad__informacion"><span>Delivery</span> LIMA</p>
+                        <p className="ciudad__numero">014191919</p>
+                    </div>
+                    <button className="navegar__ingreso">
+                        <i className="fa-regular fa-user ingreso__usuario"></i>
+                        <p className="ingreso__cuenta">Ingresar o crear tu cuenta</p>
+                    </button>
+                </div>
+            </div>
+            <div className="header__navegacion">
+                <div className="navegacion__contenido contenedor">
+                    <nav className={`navegacion__contenedor${menuBarActive ? ' active' : ''}`}>
+                        <i className="fa-solid fa-xmark navegacion__cerrar" onClick={handleMenuBar}></i>
+                        <ul className="contenedor__links">
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Menú</a></li>
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Beneficios</a></li>
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Promociones</a></li>
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Locales</a></li>
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Zonas de reparto</a></li>
+                            <li className="links__opcion"><a className="links__opcion__link" href="#">Nosotros</a></li>
+                        </ul>
+                        <ul className="contenedor__redes">
+                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-facebook"></i></a></li>
+                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </nav>
+                    <button className="navegacion__botonsincolas">
+                        <i className="fa-solid fa-store"></i>
+                        <p className="navegacion__botonsincolas__informacion">Pide en tiendas <span>SIN COLAS</span></p>
+                    </button>
+                    <button className="navegacion__shopcar"><i className="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+        </header>
     )
 }
