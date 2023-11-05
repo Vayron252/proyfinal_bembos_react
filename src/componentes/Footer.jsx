@@ -5,7 +5,6 @@ export const Footer = () => {
 
     <footer className='footer'>
             <div className='container'>
-            
                 <div className='footer__icons__container'>
                     <a href="https://www.facebook.com/bembos/" target='_blank'> <i class="fa-brands fa-facebook icon__social"></i> </a>
                     <a href="https://www.youtube.com/user/BembosCanal" target='_blank'> <i class="fa-brands fa-youtube icon__social "></i>  </a>
