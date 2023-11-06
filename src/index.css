@@ -58,10 +58,10 @@ li {
     background-color: var(--blanco);
     width: 100%;
     height: 12.5rem;
-    /* border-bottom: 1px solid var(--grisClaro); */
     box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
     -webkit-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
     -moz-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+    z-index: 200;
 }
 @media (min-width: 768px) {
     .header {
@@ -71,7 +71,7 @@ li {
 @media (min-width: 992px) {
     .header {
         background-color: var(--colorPrincipal);
-        height: 22.8rem;
+        height: 23rem;
     }
 }
 
@@ -704,20 +704,23 @@ hr {
     font-size: 0.8rem;
 }
 
+/* Contenedor Principal */
 .principal {
-    padding-top: 12.5rem;
+    padding-top: 13.5rem;
+    padding-bottom: 9rem;
+    overflow: hidden;
 }
 @media (min-width: 768px) {
     .principal {
-        padding-top: 15rem;
+        padding-top: 16rem;
+        padding-bottom: 1rem;
     }
 }
 @media (min-width: 992px) {
     .principal {
-        padding-top: 22.8rem;
+        padding-top: 24rem;
     }
 }
-
 
 /* RESPONSIVE DESIGN */
 
