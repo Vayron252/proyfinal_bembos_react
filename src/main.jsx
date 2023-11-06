@@ -4,7 +4,7 @@ import './styles/normalize.css'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LayoutPrincipal } from './components/templates/LayoutPrincipal'
-import { Home } from './pages/Home'
+import { Index, loader as indexLoader } from './pages/Index'
 import { Menu } from './pages/Menu'
 
 const router = createBrowserRouter([
@@ -14,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Index />,
+        loader: indexLoader
       },
       {
         path: '/menu',

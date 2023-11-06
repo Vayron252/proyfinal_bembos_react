@@ -6,10 +6,10 @@ export const Footer = () => {
     <footer className='footer'>
             <div className='container'>
                 <div className='footer__icons__container'>
-                    <a href="https://www.facebook.com/bembos/" target='_blank'> <i class="fa-brands fa-facebook icon__social"></i> </a>
-                    <a href="https://www.youtube.com/user/BembosCanal" target='_blank'> <i class="fa-brands fa-youtube icon__social "></i>  </a>
-                    <a href="https://twitter.com/BembosOficial" target='_blank'> <i class="fa-brands fa-twitter icon__social "></i> </a>
-                    <a href="https://www.instagram.com/bembosoficial/?hl=es-la" target='_blank'> <i class="fa-brands fa-instagram icon__social"></i> </a>              
+                    <a href="https://www.facebook.com/bembos/" target='_blank'> <i className="fa-brands fa-facebook icon__social"></i> </a>
+                    <a href="https://www.youtube.com/user/BembosCanal" target='_blank'> <i className="fa-brands fa-youtube icon__social "></i>  </a>
+                    <a href="https://twitter.com/BembosOficial" target='_blank'> <i className="fa-brands fa-twitter icon__social "></i> </a>
+                    <a href="https://www.instagram.com/bembosoficial/?hl=es-la" target='_blank'> <i className="fa-brands fa-instagram icon__social"></i> </a>              
                 </div>
                 
                 <div className='footer__second__container'>              
@@ -70,7 +70,7 @@ export const Footer = () => {
                             </div>
 
                             <button className='boton__comprobante'>
-                            <i class="fa-solid fa-receipt"></i>
+                            <i className="fa-solid fa-receipt"></i>
                             COMPROBANTES</button>
 
                             <div className='container__libro__reclamaciones'>
@@ -110,22 +110,22 @@ export const Footer = () => {
                 <div className='footer__mobile__contenedor'>
 
                     <div className='icon__footer__mobile'>
-                        <i class="fa-solid fa-burger"></i>
+                        <i className="fa-solid fa-burger"></i>
                         <h4>MENU</h4>
                     </div>
 
                     <div className='icon__footer__mobile'>
-                        <i class="fa-solid fa-heart"></i>
+                        <i className="fa-solid fa-heart"></i>
                         <h4>FAVORITOS</h4>
                     </div>
 
                     <div className='icon__footer__mobile'>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i className="fa-solid fa-cart-shopping"></i>
                         <h4>CARRITO</h4>
                     </div>
 
                     <div className='icon__footer__mobile'>
-                        <i class="fa-solid fa-user"></i>
+                        <i className="fa-solid fa-user"></i>
                         <h4>MI CUENTA</h4>
                     </div>
 
