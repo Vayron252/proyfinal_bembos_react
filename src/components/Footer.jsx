@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
   return (
@@ -109,10 +110,10 @@ export const Footer = () => {
             <div className='footer__mobile'>
                 <div className='footer__mobile__contenedor'>
 
-                    <div className='icon__footer__mobile'>
+                    <Link className='icon__footer__mobile' to="/menu">
                         <i className="fa-solid fa-burger"></i>
                         <h4>MENU</h4>
-                    </div>
+                    </Link>
 
                     <div className='icon__footer__mobile'>
                         <i className="fa-solid fa-heart"></i>

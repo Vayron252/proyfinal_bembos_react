@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import imagen_atencion from '../img/1110x57.jpg'
 
 export const Header = () => {
@@ -18,9 +19,9 @@ export const Header = () => {
                 <img className="atencion__imagen" src={imagen_atencion} alt="imagen atencion publico" />
             </div>
             <div className="header__barra contenedor">
-                <a href="#" className="barra__paginicio">
+                <Link href="#" className="barra__paginicio">
                     <div className="barra__logo"></div>
-                </a>
+                </Link>
                 <button className="barra__botonsincolas">
                     <p className="barra__botonsincolas__informacion">Pide en tiendas <span>SIN COLAS</span></p>
                     <i className="fa-solid fa-store"></i>
