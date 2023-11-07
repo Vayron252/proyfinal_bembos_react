@@ -9,7 +9,6 @@ export const Menu = () => {
   return (
     <div className="contenedor">
         <AutoSlider/>
-
     </div>
   )
 }

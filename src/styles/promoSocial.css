@@ -1,0 +1,235 @@
+/* PROMO Y SOCIAL MEDIA DEL HOME */
+
+.contenedor__principal{
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__promo{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--colorPrincipal);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image__promo__container{
+    max-width: 100%;
+    width: 100%;
+}
+
+.image__promo{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container__letter__promo{
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+}
+
+.ticket{
+    max-width: 95px;
+}
+
+
+.ticket__promo__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 10px;
+}
+
+.ticket__promo__container h2{
+    color: var(--blanco);
+    font-size: min(20px, 5vh);
+    transform: scaleY(1.15);
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.ticket__promo__container span{
+    color:var(--colorSecundario);
+}
+
+.ticket__tablet__mobile{
+    display: none;
+    max-width: 95px;
+}
+
+/* SOCIAL MEDIA _HOME
+ */
+
+ .container__social{
+    border: 0.3px solid var(--colorPrincipal);
+    margin-top: 35px; 
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 1140px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+ .social__bembos__details{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: 80px;
+    padding: 23px;
+    background-color: var(--colorSecundario);
+    border-radius: 10px 0px 0px 10px;
+ }
+
+ .bembos__details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+ }
+
+
+ .social__bembos__details h1{
+    color: var(--colorPrincipal);
+    transform: scaleY(1.24);
+    line-height: 21px;
+    font-size: 25px;
+    margin-bottom: 18px;
+ }
+
+ .social__bembos__details p{
+    color: var(--colorPrincipal);
+    transform: scaleY(1.24);
+    font-weight: bold;
+ }
+
+ .social__link__twitter button, .social__link__facebook button{
+    color: var(--blanco);
+    width: 110px;
+    height: 23px;
+    border: none;
+    border-radius: 5px;
+ }
+
+ .icon__social__home{
+    color: var(--blanco);
+    font-size: 10px;
+    margin-right: 5px;
+ }
+
+
+ .social__link__twitter button{
+    background-color: var(--colorTwitter);
+    margin-top: 13px;
+    margin-bottom: 13px;
+ }
+
+ .social__link__facebook button{
+    background-color: var(--colorFacebook);
+ }
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:992px) {
+
+    .contenedor__principal{
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center; 
+    }
+    
+    .contenedor__promo{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .ticket__promo__container{
+        max-width: 100%;
+        margin: 30px auto;
+        justify-content: center;
+    }
+
+    .image__promo__container{
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .image__promo{
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+    }
+
+    .container__letter__promo{
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .ticket{
+        display: none;
+    }
+
+    .ticket__tablet__mobile{
+        display: block;
+        max-width: 14%;
+    }
+
+    .container__social{
+        display:none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .ticket__promo__container {
+        max-width: 100%;
+        margin: 24px 0;
+    }
+    
+    .ticket__promo__container h2{
+        font-size: min(15px, 5vw);
+        transform: scaleY(1.15);
+        letter-spacing: normal;
+        line-height: 18px;   
+    }
+
+    .container__letter__promo{
+        max-width: 90%;
+        gap: 16px;
+    }
+
+
+    .ticket{
+        display: none;
+    }
+
+    .ticket__tablet__mobile{
+        display: block;
+        max-width: 18%;
+    }
+    
+}

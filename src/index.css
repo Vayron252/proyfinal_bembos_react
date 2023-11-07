@@ -7,6 +7,8 @@
     --rojo: #E20917;
     --colorPrincipal: #173083;
     --colorSecundario: #FBB905;
+    --colorFacebook: #314A7E;
+    --colorTwitter: #29B6FD;
     --fuentePrincipal: 'Roboto', sans-serif;
     --fuenteSecundaria: 'Lato', sans-serif;
 }
@@ -792,5 +794,15 @@ hr {
     .footer__mobile {
         display: block;
     }
+
+
+    .icon__footer__mobile h4{
+        color: white;
+    }
+
+    .icon__footer__mobile h4:active{
+        color: var(--color-contrast);
+    }
+    
 
 }
