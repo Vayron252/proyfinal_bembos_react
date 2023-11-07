@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import Slider from "react-slick"
+import { AutoSlider } from "../components/AutoSlider"
 import { Tarjeta } from '../components/Tarjeta'
 import { obtenerPromocionesOnline, obtenerListadoMenu } from '../data/bembosAPI'
 import '../styles/listados.css'
@@ -16,11 +17,22 @@ export const loader = () => {
 export const Index = () => {
   const { promociones, listadoMenu } = useLoaderData();
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    slidesPerRow: 1,
+    initialSlide: 0
+  };
+
   return (
     <>
-      <section>
+      <AutoSlider />
+      <section className="contenedor">
         <h2>Promociones de hamburguesas online</h2>
-        <Slider>
+        <Slider {...settings}>
           {promociones.map(promo => (
             <Tarjeta>
               <div className="tarjeta__contenedor__imagen">
