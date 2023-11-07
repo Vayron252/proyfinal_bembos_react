@@ -34,7 +34,7 @@ export const AutoSlider = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 2500,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true, 

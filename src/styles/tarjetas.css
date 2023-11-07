@@ -1,4 +1,7 @@
 /* Tarjeta */
+.contenedor__tarjeta {
+    padding: 0 0.8rem;
+}
 .tarjeta {
     margin: .5rem 0;
     border-radius: 1.5rem;
@@ -6,17 +9,26 @@
     box-shadow: 0px 0px 5px 2px rgba(161,158,158,0.75);
     -webkit-box-shadow: 0px 0px 5px 2px rgba(161,158,158,0.75);
     -moz-box-shadow: 0px 0px 5px 2px rgba(161,158,158,0.75);
+    font-family: var(--fuenteSecundaria);
 }
 .tarjeta__contenedor__imagen {
-    /* overflow: hidden; */
+    overflow: hidden;
     height: 22rem;
+}
+@media (min-width: 768px) {
+    .tarjeta__contenedor__imagen {
+        height: 30rem;
+    }
 }
 .tarjeta__imagen {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* margin: 0 auto; */
-    /* scale: 1.2; */
+    object-position: center center;
+    transition: all 0.4s;
+}
+.tarjeta__imagen:hover {
+    scale: 1.1;
 }
 .tarjeta__contenido {
     padding: 1rem;
@@ -35,25 +47,51 @@
     font-weight: 900;
     text-align: center;
 }
+@media (min-width: 768px) {
+    .tarjeta__titulo {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 992px) {
+    .tarjeta__titulo {
+        font-size: 2.3rem;
+    }
+}
 .tarjeta__precio {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
-.tarjeta__precio__actual,
-.tarjeta__precio__anterior {
-    font-size: 1.9rem;
+.tarjeta__precio__actual {
+    font-size: 2rem;
     font-weight: 900;
 }
 .tarjeta__precio__anterior {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     text-decoration:line-through;
     color: var(--rojo);
+    font-weight: 900;
+}
+@media (min-width: 768px) {
+    .tarjeta__precio__actual {
+        font-size: 2.5rem;
+    }
+    .tarjeta__precio__anterior {
+        font-size: 2.3rem;
+    }
+}
+@media (min-width: 992px) {
+    .tarjeta__precio__actual {
+        font-size: 2.8rem;
+    }
+    .tarjeta__precio__anterior {
+        font-size: 2.6rem;
+    }
 }
 .tarjeta__boton {
     width: 100%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     background-color: var(--colorPrincipal);
     color: var(--blanco);
     outline: none;
@@ -62,4 +100,14 @@
     border-radius: 3rem;
     font-weight: 700;
     font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+    .tarjeta__boton {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 992px) {
+    .tarjeta__boton {
+        font-size: 2.3rem;
+    }
 }

@@ -21,10 +21,24 @@ export const Index = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     slidesPerRow: 1,
-    initialSlide: 0
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   };
 
   return (
@@ -35,18 +49,20 @@ export const Index = () => {
         <Slider {...settings}>
           {promociones.map(promo => (
             <Tarjeta>
-              <div className="tarjeta__contenedor__imagen">
-                <img className="tarjeta__imagen" src={promo.img} alt="imagen" />
-              </div>
-              <div className="tarjeta__contenido">
-                <div className="tarjeta__contenido__informacion">
-                  <h4 className="tarjeta__titulo">{promo.nombre}</h4>
-                  <div className="tarjeta__precio">
-                    <p className="tarjeta__precio__actual">{`S/.${promo.precio_actual}`}</p>
-                    <p className="tarjeta__precio__anterior">{`S/.${promo.precio_antiguo}`}</p>
-                  </div>
+              <div className="tarjeta">
+                <div className="tarjeta__contenedor__imagen">
+                  <img className="tarjeta__imagen" src={promo.img} alt="imagen" />
                 </div>
-                <button className="tarjeta__boton">Ver más</button>
+                <div className="tarjeta__contenido">
+                  <div className="tarjeta__contenido__informacion">
+                    <h4 className="tarjeta__titulo">{promo.nombre}</h4>
+                    <div className="tarjeta__precio">
+                      <p className="tarjeta__precio__actual">{`S/.${promo.precio_actual}`}</p>
+                      <p className="tarjeta__precio__anterior">{`S/.${promo.precio_antiguo}`}</p>
+                    </div>
+                  </div>
+                  <button className="tarjeta__boton">Ver más</button>
+                </div>
               </div>
             </Tarjeta>
           ))}
@@ -57,14 +73,16 @@ export const Index = () => {
         <Slider {...settings}>
           {listadoMenu.map(itemMenu => (
             <Tarjeta>
-              <div className="tarjeta__contenedor__imagen">
-                <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />
-              </div>
-              <div className="tarjeta__contenido">
-                <div className="tarjeta__contenido__informacion">
-                  <h4 className="tarjeta__titulo tarjeta__titulo__menuburguer">{itemMenu.nombre}</h4>
+              <div className="tarjeta">
+                <div className="tarjeta__contenedor__imagen">
+                  <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />
                 </div>
-                <button className="tarjeta__boton">Ver Todos</button>
+                <div className="tarjeta__contenido">
+                  <div className="tarjeta__contenido__informacion">
+                    <h4 className="tarjeta__titulo tarjeta__titulo__menuburguer">{itemMenu.nombre}</h4>
+                  </div>
+                  <button className="tarjeta__boton">Ver Todos</button>
+                </div>
               </div>
             </Tarjeta>
           ))}
