@@ -20,7 +20,7 @@ export const Index = () => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
+    speed: 400,
     slidesToShow: 4,
     slidesToScroll: 1,
     slidesPerRow: 1,
