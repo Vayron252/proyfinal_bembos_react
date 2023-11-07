@@ -1,0 +1,26 @@
+/* Seccion Promociones Online */
+.seccion__promociones__online {
+    margin-top: 2rem;
+}
+.promociones__online__titulo {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+/* Seccion Menu Burguer Online */
+.seccion__menuburguer__online {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+.menuburguer__online__titulo {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: var(--fuenteSecundaria);
+}
+.tarjeta__titulo__menuburguer {
+    min-height: 4rem;
+    font-size: 1.7rem;
+}

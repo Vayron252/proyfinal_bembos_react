@@ -8,6 +8,7 @@
     --colorPrincipal: #173083;
     --colorSecundario: #FBB905;
     --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Lato', sans-serif;
 }
 
 /*
@@ -55,20 +56,9 @@ li {
     margin: 0 auto;
 }
 
-/* .slick-slide {
+.slick-slide > div {
     margin: 0 10px;
 }
-
-.slick-list {
-    margin: 0 -10px;
-} */
-
-/* .slick-slide > div {
-    margin: 0 10px;
-  }
-  .slick-list {
-    margin: 0 -10px;
-  } */
 
 /********/
 
