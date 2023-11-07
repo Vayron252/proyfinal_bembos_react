@@ -1,0 +1,64 @@
+
+/* SLIDER */
+
+.banner{
+    position: relative;
+}
+
+.flechas__carrusel{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 24px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+
+.tarjetas__carrusel{
+    width: 100%;
+}
+
+.icon__container{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--color-gris);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__container i{
+    color: var(--blanco);
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.left{
+    transform: rotate(90deg);
+}
+
+.right{
+    transform: rotate(-90deg);
+}
+
+/* slides con radio buttons */
+
+.slider{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+}
+
+.radio{
+    height: 11px;
+}
+
+/* .hidden{
+    display: none;
+}  */
