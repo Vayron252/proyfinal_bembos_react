@@ -5,7 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LayoutPrincipal } from './components/templates/LayoutPrincipal'
 import { Index, loader as indexLoader } from './pages/Index'
-import { Menu } from './pages/Menu'
+import { Menu, loader as menuLoader } from './pages/Menu'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/menu',
-        element: <Menu />
+        element: <Menu />,
+        loader: menuLoader
       }
     ]
   }

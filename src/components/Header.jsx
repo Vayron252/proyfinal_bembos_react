@@ -19,7 +19,7 @@ export const Header = () => {
                 <img className="atencion__imagen" src={imagen_atencion} alt="imagen atencion publico" />
             </div>
             <div className="header__barra contenedor">
-                <Link href="#" className="barra__paginicio">
+                <Link to="/" className="barra__paginicio">
                     <div className="barra__logo"></div>
                 </Link>
                 <button className="barra__botonsincolas">
@@ -44,7 +44,7 @@ export const Header = () => {
                     <nav className={`navegacion__contenedor${menuBarActive ? ' active' : ''}`}>
                         <i className="fa-solid fa-xmark navegacion__cerrar" onClick={handleMenuBar}></i>
                         <ul className="contenedor__links">
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Menú</a></li>
+                            <li className="links__opcion"><Link className="links__opcion__link" to="/menu">Menú</Link></li>
                             <li className="links__opcion"><a className="links__opcion__link" href="#">Beneficios</a></li>
                             <li className="links__opcion"><a className="links__opcion__link" href="#">Promociones</a></li>
                             <li className="links__opcion"><a className="links__opcion__link" href="#">Locales</a></li>
