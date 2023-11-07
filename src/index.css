@@ -10,7 +10,8 @@
     --colorFacebook: #314A7E;
     --colorTwitter: #29B6FD;
     --fuentePrincipal: 'Roboto', sans-serif;
-    --fuenteSecundaria: 'Lato', sans-serif;
+    --fuenteSecundaria: 'Teko', sans-serif;
+    --fuenteTerciaria: 'Dosis', sans-serif;
 }
 
 /*
@@ -58,9 +59,9 @@ li {
     margin: 0 auto;
 }
 
-.slick-slide > div {
+/* .slick-slide > div {
     margin: 0 10px;
-}
+} */
 
 /********/
 
@@ -426,6 +427,18 @@ li {
         border-radius: 3rem;
         font-size: 2rem;
         cursor: pointer;
+        position: relative;
+    }
+    .shopcar__items {
+        position: absolute;
+        background-color: var(--rojo);
+        color: var(--blanco);
+        border-radius: 50%;
+        width: 1.3rem;
+        height: 1.3rem;
+        font-size: 1rem;
+        right: 1.5rem;
+        top: 0.5rem;
     }
 }
 
@@ -729,14 +742,14 @@ hr {
 
 @media (min-width: 768px) {
     .principal {
-        padding-top: 16rem;
+        padding-top: 15.2rem;
         padding-bottom: 1rem;
     }
 }
 
 @media (min-width: 992px) {
     .principal {
-        padding-top: 24rem;
+        padding-top: 23.2rem;
     }
 }
 

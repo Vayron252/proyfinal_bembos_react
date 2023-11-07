@@ -1,7 +1,7 @@
 
 export const Tarjeta = ({children}) => {
   return (
-    <div className="tarjeta">
+    <div className="contenedor__tarjeta">
         {children}
     </div>
   )

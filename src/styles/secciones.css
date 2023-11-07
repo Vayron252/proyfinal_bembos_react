@@ -2,11 +2,21 @@
 .seccion__promociones__online {
     margin-top: 2rem;
 }
+@media (min-width: 992px) {
+    .seccion__promociones__online {
+        margin-top: 6rem;
+    }
+}
 .promociones__online__titulo {
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 2.5rem;
-    font-family: var(--fuenteSecundaria);
+    font-size: 2.2rem;
+    font-family: var(--fuenteTerciaria);
+}
+@media (min-width: 768px) {
+    .promociones__online__titulo {
+        font-size: 2.5rem;
+    }
 }
 
 /* Seccion Menu Burguer Online */
@@ -17,10 +27,27 @@
 .menuburguer__online__titulo {
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 2.5rem;
-    font-family: var(--fuenteSecundaria);
+    font-size: 2.2rem;
+    font-family: var(--fuenteTerciaria);
+}
+@media (min-width: 768px) {
+    .menuburguer__online__titulo {
+        font-size: 2.5rem;
+    }
 }
 .tarjeta__titulo__menuburguer {
     min-height: 4rem;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+    .tarjeta__titulo__menuburguer {
+        min-height: 6rem;
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 992px) {
+    .tarjeta__titulo__menuburguer {
+        min-height: 6.5rem;
+        font-size: 2.8rem;
+    }
 }
