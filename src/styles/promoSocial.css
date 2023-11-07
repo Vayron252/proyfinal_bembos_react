@@ -76,8 +76,9 @@
     margin-top: 35px; 
     display: flex;
     align-items: center;
+    align-items: center;
     border-radius: 10px;
-    margin: 30px auto;
+    margin: 24px auto;
     width: 1140px;
     max-width: 100%;
     cursor: pointer;
@@ -85,18 +86,19 @@
 
  .social__bembos__details{
     width: 25%;
+    height: 225px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     margin-right: 80px;
-    padding: 23px;
     background-color: var(--colorSecundario);
     border-radius: 10px 0px 0px 10px;
+    padding: 30px;
  }
 
  .bembos__details{
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-left: 20px;
  }
 
@@ -105,8 +107,8 @@
     color: var(--colorPrincipal);
     transform: scaleY(1.24);
     line-height: 21px;
-    font-size: 25px;
-    margin-bottom: 18px;
+    font-size: 26px;
+    margin-bottom: 16px;
  }
 
  .social__bembos__details p{
@@ -132,8 +134,8 @@
 
  .social__link__twitter button{
     background-color: var(--colorTwitter);
-    margin-top: 13px;
-    margin-bottom: 13px;
+    margin-top: 11px;
+    margin-bottom: 11px;
  }
 
  .social__link__facebook button{
