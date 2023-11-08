@@ -21,8 +21,8 @@ export const Header = () => {
         e.preventDefault();
         handleMenuBar();
         navigate(`${subUrl}`);
-      }
-    
+    }
+
     return (
         <header className="header">
             <div className="header__atencion">
@@ -57,7 +57,7 @@ export const Header = () => {
                             {width >= 992 ? <OpcionesNavegacion /> :
                                 <>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" 
+                                        <a className="links__opcion__link"
                                             onClick={e => handleClickOptionMenu(e, '/customer/account/login')}>
                                             <p className="links__opcion__texto">Mi Cuenta</p>
                                         </a>
@@ -68,13 +68,13 @@ export const Header = () => {
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" 
+                                        <a className="links__opcion__link"
                                             onClick={e => handleClickOptionMenu(e, '/zonas-de-reparto')}>
                                             <p className="links__opcion__texto">Zonas de Reparto</p>
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" 
+                                        <a className="links__opcion__link"
                                             onClick={e => handleClickOptionMenu(e, '/nosotros/como-nacio-bembos')}>
                                             <p className="links__opcion__texto">Nosotros</p>
                                         </a>

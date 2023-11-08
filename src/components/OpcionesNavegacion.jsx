@@ -4,7 +4,7 @@ import bmb_promociones from '../img/bmb_promociones.svg'
 import bmb_hamburguesa from '../img/bmb_hamburguesa.svg'
 import bmb_beneficios from '../img/bmb_beneficios.svg'
 
-export const OpcionesNavegacion = ({ menuBarActive, handleMenuBar }) => {
+export const OpcionesNavegacion = () => {
   return (
     <>
       <li className="links__opcion">
