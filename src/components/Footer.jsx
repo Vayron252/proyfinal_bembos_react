@@ -110,31 +110,31 @@ export const Footer = () => {
             {/* FOOTER SOLO MOBILE */}
 
             <div className='footer__mobile'>
-                <div className='footer__mobile__contenedor'>
+                    <div className='footer__mobile__contenedor'>
 
-                    <Link className='icon__footer__mobile' to="/menu">
-                        <i className="fa-solid fa-burger"></i>
-                        <h4>MENU</h4>
-                    </Link>
+                        <Link className='icon__footer__mobile' to="/menu">
+                            <i className="fa-solid fa-burger"></i>
+                            <h4>MENU</h4>
+                        </Link>
 
-                    <div className='icon__footer__mobile'>
-                        <i className="fa-solid fa-heart"></i>
-                        <h4>FAVORITOS</h4>
+                        <div className='icon__footer__mobile'>
+                            <i className="fa-solid fa-heart"></i>
+                            <h4>FAVORITOS</h4>
+                        </div>
+
+                        <div className='icon__footer__mobile'>
+                            <i className="fa-solid fa-cart-shopping"></i>
+                            <h4>CARRITO</h4>
+                        </div>
+
+                        <div className='icon__footer__mobile'>
+                            <i className="fa-solid fa-user"></i>
+                            <h4>MI CUENTA</h4>
+                        </div>
+
                     </div>
-
-                    <div className='icon__footer__mobile'>
-                        <i className="fa-solid fa-cart-shopping"></i>
-                        <h4>CARRITO</h4>
-                    </div>
-
-                    <div className='icon__footer__mobile'>
-                        <i className="fa-solid fa-user"></i>
-                        <h4>MI CUENTA</h4>
-                    </div>
-
                 </div>
-            </div>
-
+            
             {/* FINAL FOOTER MOBILE */}
  
     </footer>

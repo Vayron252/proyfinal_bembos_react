@@ -569,6 +569,8 @@ li {
 
 .footer__pago p {
     font-weight: bold;
+    font-size: 16px;
+    transform: scaleY(1.0);
 }
 
 .pago__metodos__container {
@@ -625,6 +627,8 @@ li {
 .footer__formulario label p {
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 14px;
+    transform: scaleY(1.2);
 }
 
 .formulario__noticias {
@@ -641,6 +645,8 @@ li {
     padding-left: 10px;
     border: none;
     font-size: 15px;
+    font-size: 14px;
+    transform: scaleY(1.2);
 }
 
 .formulario__noticias input:focus {
@@ -658,12 +664,14 @@ li {
 /* Términos y condiciones */
 
 .formulario__checkbox {
-    margin-top: 20px;
+    margin-top: 14px;
     margin-bottom: 30px;
 }
 
 .formulario__checkbox label {
     margin-left: 10px;
+    font-size: 13px;
+    transform: scaleY(1.2);
 }
 
 .formulario__checkbox label u {
@@ -736,7 +744,7 @@ hr {
 
 .icon__footer__mobile i {
     margin-bottom: 16px;
-    margin-top: 18px;
+    margin-top: 20px;
     color: var(--colorSecundario);
     font-size: 24px;
 }
@@ -807,7 +815,10 @@ hr {
 @media (max-width:992px) {
     .container__ocultar {
         display: none;
+    }
 
+    .footer__icons__container {
+        margin-bottom: 13px;
     }
 
     .footer__info__tablet {
@@ -834,8 +845,13 @@ hr {
 
     .container__query {
         display: block;
+        margin-bottom: 25px;
     }
 
+    .footer__info__tablet p{
+        font-size: 13px;
+        transform: scaleY(1.2);
+    }
 }
 
 @media (max-width: 600px) {

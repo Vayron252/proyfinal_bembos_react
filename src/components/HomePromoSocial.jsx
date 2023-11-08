@@ -5,6 +5,9 @@ import '../styles/promoSocial.css'
 
 export const HomePromoSocial = () => {
   return (
+
+    <div>
+
     <div className='contenedor__principal'>
       {/* FRANJA 3/HOME_PROMOS */}
       <div className='contenedor__promo'>
@@ -42,10 +45,57 @@ export const HomePromoSocial = () => {
             {/* RED SOCIAL FACEBOOK */}
             <h3>AQUÍ SE COLOCARÁ EL FACEBOOK</h3>
           </div>
-        </div>  
-        
-        
+        </div>
+      </div>
 
+      <div className='container__footer__mobile__above'>
+                  <div className='footer__icons__container'>
+                      <a href="https://www.facebook.com/bembos/" target='_blank'> <i className="fa-brands fa-facebook icon__social"></i> </a>
+                      <a href="https://www.youtube.com/user/BembosCanal" target='_blank'> <i className="fa-brands fa-youtube icon__social "></i>  </a>
+                      <a href="https://twitter.com/BembosOficial" target='_blank'> <i className="fa-brands fa-twitter icon__social "></i> </a>
+                      <a href="https://www.instagram.com/bembosoficial/?hl=es-la" target='_blank'> <i className="fa-brands fa-instagram icon__social"></i> </a>              
+                  </div>
+                  
+                  <div className='footer__second__container'>                               
+                          <div className='footer__info container__query'>
+
+                                      {/* En esta sección este footer info es para mobile */}
+                                      <div className='footer__info__tablet'>
+                                          <hr/>
+                                          <p className=''>MAPA DEL SITIO</p>
+                                          <hr />
+                                          <p className=''>TÉRMINOS Y CONDICIONES</p>
+                                          <hr/>
+                                      </div>                  
+                          </div>
+
+                          <div className='footer__pago'>
+                              <p>FORMAS DE PAGO</p>
+
+                              <div className='pago__metodos__container'>
+
+                                  <div className='tarjetas__container'>
+                                      <img src="./src/img/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago'/>
+                                      <img src="./src/img/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago'/>
+                                      <img src="./src/img/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
+                                  </div>
+
+                                  <div>
+                                      <img src="./src/img/new_images-01.png" alt="" className='image__pago__safety' />
+                                  </div>
+                              </div>
+
+                              <button className='boton__comprobante'>
+                              <i className="fa-solid fa-receipt"></i>
+                              COMPROBANTES</button>
+
+                              <div className='container__libro__reclamaciones'>
+                                  <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
+                              </div>
+                          </div>                               
+                          </div>
+              </div>
     </div>
+
   )
 }
