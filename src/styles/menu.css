@@ -1,0 +1,12 @@
+
+/* Aplicando estilos al menú */
+body{
+    background-color: var(--background);
+}
+
+
+
+.contenedor__menuChange{
+    border: 1px solid black;
+    margin: 0 auto;
+}

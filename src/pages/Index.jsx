@@ -7,6 +7,7 @@ import '../styles/tarjetas.css'
 import '../styles/secciones.css'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { HomePromoSocial } from "../components/HomePromoSocial"
 
 export const loader = () => {
   const promociones = obtenerPromocionesOnline();
@@ -88,6 +89,7 @@ export const Index = () => {
           ))}
         </Slider>
       </section>
+      <HomePromoSocial/>
     </>
   )
 }

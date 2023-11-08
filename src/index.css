@@ -1,4 +1,5 @@
 :root {
+    /* Paleta de colores */
     --color-contrast: #9bb5da;
     --color-gris: #d8d8d8;
     --grisClaro: #A19E9E;
@@ -7,8 +8,13 @@
     --rojo: #E20917;
     --colorPrincipal: #173083;
     --colorSecundario: #FBB905;
+    --background: #F6F7F8;
+
+    /* Paleta de colores: redes sociales */
     --colorFacebook: #314A7E;
     --colorTwitter: #29B6FD;
+
+    /* Tipografias */
     --fuentePrincipal: 'Roboto', sans-serif;
     --fuenteSecundaria: 'Teko', sans-serif;
     --fuenteTerciaria: 'Dosis', sans-serif;
