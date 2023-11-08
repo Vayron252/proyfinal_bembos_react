@@ -5,8 +5,8 @@ export const TarjetaMenu = ({menu}) => {
     <div className='container__total__menu'>
         <div className='contenedor__menu__individual'>
             <div className='border__shadow__menu'>
-                <h2 className='tittle__menu'> {menu.nombre} </h2>        
-                <img src={menu.img} alt="" className='menu__image' />
+                <h2 className='tittle__menu'> {menu.nombre} </h2>                     
+                  <img src={menu.img} alt="" className='menu__image' />              
             </div>
             <button>Ver todos</button>
         </div>

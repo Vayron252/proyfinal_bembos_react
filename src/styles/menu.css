@@ -149,11 +149,23 @@ ESTILO DE TARJETAS DEL MENÚ */
     text-align: center;
 }
 
+/* .container__menu__image {
+    width: 70rem;
+    height: 30rem;
+    overflow: hidden;
+} */
+
 .contenedor__menu__individual img{
-    overflow-clip-margin: content-box;
+ overflow-clip-margin: content-box;
     overflow: clip;
     width: 446px;
-    height: 505px;
+    height: 505px; 
+/*     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    overflow-clip-margin: content-box;
+    overflow: clip; */
 }
 
 .contenedor__menu__individual button{

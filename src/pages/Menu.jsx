@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import {AutoSlider} from '../components/AutoSlider'
 import '../styles/menu.css'
 import { obtenerListadoMenu } from '../data/bembosAPI'
@@ -11,7 +11,7 @@ export const loader = () => {
 
 export const Menu = () => {
 
-  const { listadoMenu } = loader ();
+  const { listadoMenu } = useLoaderData();
 
   return (
     <div className="contenedor__menu">
