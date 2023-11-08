@@ -48,6 +48,7 @@ export const Index = () => {
       <section className="seccion__promociones__online contenedor">
         <h2 className="promociones__online__titulo">Promociones de hamburguesas online</h2>
         <Slider {...settings}>
+
           {promociones.map(promo => (
             <Tarjeta>
               <div className="tarjeta">

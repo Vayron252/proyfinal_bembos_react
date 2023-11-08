@@ -94,6 +94,11 @@ export const obtenerListadoMenu = () => {
             "nombre": "Promociones Exclusivas Web",
             "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/promociones-bembos-delivery.webp"
         },
+
+        {   "nombre": "Combos",
+            "img": "https://www.bembos.com.pe/_ipx/q_60,s_230x308/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/combo-churrita-500x669.webp"
+        },
+
         {
             "nombre": "Hamburguesas",
             "img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/hamburguesas_2.webp"

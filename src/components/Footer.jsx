@@ -15,28 +15,30 @@ export const Footer = () => {
                 
                 <div className='footer__second__container'>              
                         <div className='footer__info container__ocultar'>
-                            <ul className='footer__info-list'>
-                                <li className='footer__info-item'>
-                                    <div className='footer__info-item-1row'>
-                                        <a href="" className=''>Locales</a>
-                                        <a href="" className=''>Nosotros</a>
-                                        <a href="" className=''>Atención al Cliente</a>
-                                        <a href="" className=''>Preguntas Frecuentes</a>
-                                        <a href="" className=''>Mapa de sitio</a>
-                                    </div>
+                          
+                                <ul className='footer__info-list'>
+                                    <li className='footer__info-item'>                                       
+                                        <div className='footer__info-item-1row'>
+                                            <a href="" className=''>Locales</a>
+                                            <a href="" className=''>Nosotros</a>
+                                            <a href="" className=''>Atención al Cliente</a>
+                                            <a href="" className=''>Preguntas Frecuentes</a>
+                                            <a href="" className=''>Mapa de sitio</a>
+                                        </div>
 
-                                    <div className='footer__info-item-2row'>
-                                        <a href="" className=''>Políticas de Datos Personales</a>
-                                        <a href="" className=''>Términos y condiciones de Promociones</a>
-                                        <a href="" className=''>Derechos ARCO</a>
-                                        
-                                    </div>
-                                </li>
-                            </ul> 
+                                        <div className='footer__info-item-2row'>
+                                            <a href="" className=''>Políticas de Datos Personales</a>
+                                            <a href="" className=''>Términos y condiciones de Promociones</a>
+                                            <a href="" className=''>Derechos ARCO</a>
+                                            
+                                        </div>
+                                    </li>
+                                </ul> 
 
-                            <div className='container__bembos__blanco'>                  
-                                <img src="./src/img/logo_bembos.png"  alt="" className='logo__bembos__blanco'/>
-                            </div>
+                                <div className='container__bembos__blanco'>                  
+                                    <img src="./src/img/logo_bembos.png"  alt="" className='logo__bembos__blanco'/>
+                                </div>
+                            
                         </div>  
 
 
