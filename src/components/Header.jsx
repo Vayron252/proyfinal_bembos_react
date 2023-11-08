@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import imagen_atencion from '../img/1110x57.jpg'
 import { OpcionesNavegacion } from '../components/OpcionesNavegacion'
-import { obtenerTamanioPantalla } from '../utils/utilitarios'
 import { useScreenSize } from '../hooks/useScreenSize'
 
 export const Header = () => {
+    const navigate = useNavigate();
     const { width } = useScreenSize();
     const [menuBarActive, setMenuBarActive] = useState(false);
 
@@ -16,6 +16,12 @@ export const Header = () => {
             setMenuBarActive(true);
         }
     }
+
+    const handleClickOptionMenu = (e, subUrl) => {
+        e.preventDefault();
+        handleMenuBar();
+        navigate(`${subUrl}`);
+      }
     
     return (
         <header className="header">
@@ -51,22 +57,25 @@ export const Header = () => {
                             {width >= 992 ? <OpcionesNavegacion /> :
                                 <>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                        <a className="links__opcion__link" 
+                                            onClick={e => handleClickOptionMenu(e, '/customer/account/login')}>
                                             <p className="links__opcion__texto">Mi Cuenta</p>
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/locales')}>
                                             <p className="links__opcion__texto">Locales</p>
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                        <a className="links__opcion__link" 
+                                            onClick={e => handleClickOptionMenu(e, '/zonas-de-reparto')}>
                                             <p className="links__opcion__texto">Zonas de Reparto</p>
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                        <a className="links__opcion__link" 
+                                            onClick={e => handleClickOptionMenu(e, '/nosotros/como-nacio-bembos')}>
                                             <p className="links__opcion__texto">Nosotros</p>
                                         </a>
                                     </li>

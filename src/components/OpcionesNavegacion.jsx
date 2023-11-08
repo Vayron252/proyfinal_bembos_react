@@ -1,18 +1,10 @@
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import bmb_menu from '../img/bmb_menu.svg'
 import bmb_promociones from '../img/bmb_promociones.svg'
 import bmb_hamburguesa from '../img/bmb_hamburguesa.svg'
 import bmb_beneficios from '../img/bmb_beneficios.svg'
 
 export const OpcionesNavegacion = ({ menuBarActive, handleMenuBar }) => {
-  const navigate = useNavigate();
-
-  const handleClickOptionMenu = (e, subUrl) => {
-    e.preventDefault();
-    handleMenuBar();
-    navigate(`${subUrl}`);
-  }
-
   return (
     <>
       <li className="links__opcion">

@@ -9,6 +9,10 @@ import { Menu, loader as menuLoader } from './pages/Menu'
 import { Hamburguesas } from './pages/Hamburguesas'
 import { Promociones } from './pages/Promociones'
 import { Beneficios } from './pages/Beneficios'
+import { MiCuenta } from './pages/MiCuenta'
+import { Locales } from './pages/Locales'
+import { ZonasReparto } from './pages/ZonasReparto'
+import { Nosotros } from './pages/Nosotros'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +40,22 @@ const router = createBrowserRouter([
       {
         path: '/beneficios',
         element: <Beneficios />
+      },
+      {
+        path: '/customer/account/login',
+        element: <MiCuenta />
+      },
+      {
+        path: '/locales',
+        element: <Locales />
+      },
+      {
+        path: '/zonas-de-reparto',
+        element: <ZonasReparto />
+      },
+      {
+        path: '/nosotros/como-nacio-bembos',
+        element: <Nosotros />
       }
     ]
   }
