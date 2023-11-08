@@ -1,8 +1,13 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import imagen_atencion from '../img/1110x57.jpg'
+import bmb_menu from '../img/bmb_menu.svg'
+import bmb_promociones from '../img/bmb_promociones.svg'
+import bmb_hamburguesa from '../img/bmb_hamburguesa.svg'
+import bmb_beneficios from '../img/bmb_beneficios.svg'
 
 export const Header = () => {
+    const navigate = useNavigate();
     const [menuBarActive, setMenuBarActive] = useState(false);
 
     const handleMenuBar = () => {
@@ -11,6 +16,12 @@ export const Header = () => {
         } else {
             setMenuBarActive(true);
         }
+    }
+
+    const handleClickOptionMenu = (e, subUrl) => {
+        e.preventDefault();
+        handleMenuBar();
+        navigate(`${subUrl}`);
     }
 
     return (
@@ -44,18 +55,45 @@ export const Header = () => {
                     <nav className={`navegacion__contenedor${menuBarActive ? ' active' : ''}`}>
                         <i className="fa-solid fa-xmark navegacion__cerrar" onClick={handleMenuBar}></i>
                         <ul className="contenedor__links">
-                            <li className="links__opcion"><Link className="links__opcion__link" to="/menu">Menú</Link></li>
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Beneficios</a></li>
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Promociones</a></li>
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Locales</a></li>
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Zonas de reparto</a></li>
-                            <li className="links__opcion"><a className="links__opcion__link" href="#">Nosotros</a></li>
+                            <li className="links__opcion">
+                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/menu')}>
+                                    <img className="links__opcion__imagen" src={bmb_menu} alt="imagen menu" />
+                                    <p className="links__opcion__texto">Menú</p>
+                                </a>
+                            </li>
+                            <li className="links__opcion">
+                                <a className="links__opcion__link" 
+                                    onClick={e => handleClickOptionMenu(e, '/promociones/delivery-hamburguesas')}>
+                                    <img className="links__opcion__imagen" src={bmb_promociones} alt="imagen promociones" />
+                                    <p className="links__opcion__texto">Promociones</p>
+                                </a>
+                            </li>
+                            <li className="links__opcion">
+                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/menu/hamburguesas')}>
+                                    <img className="links__opcion__imagen" src={bmb_hamburguesa} alt="imagen hamburguesas" />
+                                    <p className="links__opcion__texto">Hamburguesas</p>
+                                </a>
+                            </li>
+                            <li className="links__opcion">
+                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                    <img className="links__opcion__imagen" src={bmb_beneficios} alt="imagen beneficios" />
+                                    <p className="links__opcion__texto">Beneficios</p>
+                                </a>
+                            </li>
                         </ul>
                         <ul className="contenedor__redes">
-                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-facebook"></i></a></li>
-                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-youtube"></i></a></li>
-                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                            <li className="redes__opcion"><a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                            <li className="redes__opcion">
+                                <a className="redes__opcion__link" href="#"><i className="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li className="redes__opcion">
+                                <a className="redes__opcion__link" href="#"><i className="fa-brands fa-youtube"></i></a>
+                            </li>
+                            <li className="redes__opcion">
+                                <a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li className="redes__opcion">
+                                <a className="redes__opcion__link" href="#"><i className="fa-brands fa-twitter"></i></a>
+                            </li>
                         </ul>
                     </nav>
                     <button className="navegacion__botonsincolas">
