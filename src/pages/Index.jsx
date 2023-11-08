@@ -2,12 +2,14 @@ import { useLoaderData } from "react-router-dom"
 import Slider from "react-slick"
 import { AutoSlider } from "../components/AutoSlider"
 import { Tarjeta } from '../components/Tarjeta'
+import { HomePromoSocial } from "../components/HomePromoSocial"
+import { OpcionesNavegacion } from "../components/OpcionesNavegacion"
 import { obtenerPromocionesOnline, obtenerListadoMenu } from '../data/bembosAPI'
+import { useScreenSize } from '../hooks/useScreenSize'
 import '../styles/tarjetas.css'
 import '../styles/secciones.css'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { HomePromoSocial } from "../components/HomePromoSocial"
 
 export const loader = () => {
   const promociones = obtenerPromocionesOnline();
@@ -16,6 +18,7 @@ export const loader = () => {
 }
 
 export const Index = () => {
+  const { width } = useScreenSize();
   const { promociones, listadoMenu } = useLoaderData();
 
   const settings = {
@@ -45,6 +48,10 @@ export const Index = () => {
   return (
     <>
       <AutoSlider />
+      {width < 992 ? 
+        <section className="seccion__navegacion__index contenedor">
+          <OpcionesNavegacion />
+        </section> : <></>}
       <section className="seccion__promociones__online contenedor">
         <h2 className="promociones__online__titulo">Promociones de hamburguesas online</h2>
         <Slider {...settings}>

@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import imagen_atencion from '../img/1110x57.jpg'
-import bmb_menu from '../img/bmb_menu.svg'
-import bmb_promociones from '../img/bmb_promociones.svg'
-import bmb_hamburguesa from '../img/bmb_hamburguesa.svg'
-import bmb_beneficios from '../img/bmb_beneficios.svg'
+import { OpcionesNavegacion } from '../components/OpcionesNavegacion'
+import { obtenerTamanioPantalla } from '../utils/utilitarios'
+import { useScreenSize } from '../hooks/useScreenSize'
 
 export const Header = () => {
-    const navigate = useNavigate();
+    const { width } = useScreenSize();
     const [menuBarActive, setMenuBarActive] = useState(false);
 
     const handleMenuBar = () => {
@@ -17,13 +16,7 @@ export const Header = () => {
             setMenuBarActive(true);
         }
     }
-
-    const handleClickOptionMenu = (e, subUrl) => {
-        e.preventDefault();
-        handleMenuBar();
-        navigate(`${subUrl}`);
-    }
-
+    
     return (
         <header className="header">
             <div className="header__atencion">
@@ -55,31 +48,29 @@ export const Header = () => {
                     <nav className={`navegacion__contenedor${menuBarActive ? ' active' : ''}`}>
                         <i className="fa-solid fa-xmark navegacion__cerrar" onClick={handleMenuBar}></i>
                         <ul className="contenedor__links">
-                            <li className="links__opcion">
-                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/menu')}>
-                                    <img className="links__opcion__imagen" src={bmb_menu} alt="imagen menu" />
-                                    <p className="links__opcion__texto">Menú</p>
-                                </a>
-                            </li>
-                            <li className="links__opcion">
-                                <a className="links__opcion__link" 
-                                    onClick={e => handleClickOptionMenu(e, '/promociones/delivery-hamburguesas')}>
-                                    <img className="links__opcion__imagen" src={bmb_promociones} alt="imagen promociones" />
-                                    <p className="links__opcion__texto">Promociones</p>
-                                </a>
-                            </li>
-                            <li className="links__opcion">
-                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/menu/hamburguesas')}>
-                                    <img className="links__opcion__imagen" src={bmb_hamburguesa} alt="imagen hamburguesas" />
-                                    <p className="links__opcion__texto">Hamburguesas</p>
-                                </a>
-                            </li>
-                            <li className="links__opcion">
-                                <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
-                                    <img className="links__opcion__imagen" src={bmb_beneficios} alt="imagen beneficios" />
-                                    <p className="links__opcion__texto">Beneficios</p>
-                                </a>
-                            </li>
+                            {width >= 992 ? <OpcionesNavegacion /> :
+                                <>
+                                    <li className="links__opcion">
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                            <p className="links__opcion__texto">Mi Cuenta</p>
+                                        </a>
+                                    </li>
+                                    <li className="links__opcion">
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                            <p className="links__opcion__texto">Locales</p>
+                                        </a>
+                                    </li>
+                                    <li className="links__opcion">
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                            <p className="links__opcion__texto">Zonas de Reparto</p>
+                                        </a>
+                                    </li>
+                                    <li className="links__opcion">
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/beneficios')}>
+                                            <p className="links__opcion__texto">Nosotros</p>
+                                        </a>
+                                    </li>
+                                </>}
                         </ul>
                         <ul className="contenedor__redes">
                             <li className="redes__opcion">
