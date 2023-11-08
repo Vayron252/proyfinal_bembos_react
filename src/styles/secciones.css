@@ -1,3 +1,52 @@
+/* Seccion Navegacion */
+.seccion__navegacion__index {
+    padding: 2rem 0 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+.seccion__navegacion__index .links__opcion:hover {
+    scale: 1.1;
+}
+.seccion__navegacion__index .links__opcion__link {
+    display: flex;
+    flex-direction: column;
+}
+.seccion__navegacion__index .links__opcion__imagen__contenedor {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px 2px rgba(161,158,158,0.81);
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(161,158,158,0.81);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(161,158,158,0.81);
+}
+.seccion__navegacion__index .links__opcion__imagen {
+    scale: 1.1;
+}
+@media (min-width: 768px) {
+    .seccion__navegacion__index .links__opcion__imagen__contenedor {
+        width: 7rem;
+        height: 7rem;
+    }
+    .seccion__navegacion__index .links__opcion__imagen {
+        scale: 1.2;
+    }
+}
+.seccion__navegacion__index .links__opcion__texto {
+    color: var(--colorPrincipal);
+    font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+    .seccion__navegacion__index .links__opcion__texto {
+        font-size: 1.5rem;
+    }
+}
+.seccion__navegacion__index .links__opcion:hover {
+    border-bottom: none;
+}
+
 /* Seccion Promociones Online */
 .seccion__promociones__online {
     margin-top: 2rem;
