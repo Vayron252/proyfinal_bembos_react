@@ -57,7 +57,7 @@ export const Index = () => {
         <Slider {...settings}>
 
           {promociones.map(promo => (
-            <Tarjeta>
+            <Tarjeta key={promo.id}>
               <div className="tarjeta">
                 <div className="tarjeta__contenedor__imagen">
                   <img className="tarjeta__imagen" src={promo.img} alt="imagen" />
@@ -81,7 +81,7 @@ export const Index = () => {
         <h2 className="menuburguer__online__titulo">Menu de hamburguesas online</h2>
         <Slider {...settings}>
           {listadoMenu.map(itemMenu => (
-            <Tarjeta>
+            <Tarjeta key={itemMenu.nombre}>
               <div className="tarjeta">
                 <div className="tarjeta__contenedor__imagen">
                   <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />

@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom'
 import {AutoSlider} from '../components/AutoSlider'
 import '../styles/menu.css'
 import { obtenerListadoMenu } from '../data/bembosAPI'
-import { TarjetaMenu } from '../components/templates/TarjetaMenu'
+import { TarjetaMenu } from '../components/TarjetaMenu'
 
 export const loader = () => {
   const listadoMenu = obtenerListadoMenu();

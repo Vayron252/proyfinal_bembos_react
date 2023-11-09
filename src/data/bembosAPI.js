@@ -131,3 +131,162 @@ export const obtenerListadoMenu = () => {
 
     return listadoMenu;
 }
+
+export const obtenerListadoProductosXOpcion = (opcion) => {
+    let listado = [];
+    
+    if (opcion == 'hamburguesas') {
+        listado = [
+            {
+                "nombre": "Hamburguesa Clásica Bembos",
+                "precio": 16.9,
+                "id": 1,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-clasica_1_1.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Cheese",
+                "precio": 18.9,
+                "id": 2,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-cheese-base.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Bembos Queso Tocino",
+                "precio": 19.9,
+                "id": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-tocino_1.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Royal",
+                "precio": 19.9,
+                "id": 4,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-royal-base_1.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Churrita",
+                "precio": 20.9,
+                "id": 5,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-churrita_1_1_1.jpg"
+            },
+            {
+                "nombre": "Hamburguesa A lo Pobre",
+                "precio": 20.9,
+                "id": 6,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-a-lo-pobre-base_1.jpg"
+            },
+            {
+                "nombre": "Alemana",
+                "precio": 20.9,
+                "id": 7,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-alemana.jpg"
+            },
+            {
+                "nombre": "Queabuso",
+                "precio": 20.9,
+                "id": 8,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-la-sin-nombre.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Parrillera",
+                "precio": 23.9,
+                "id": 9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-parrillera-base.jpg"
+            },
+            {
+                "nombre": "Hamburguesa La Carretillera",
+                "precio": 23.9,
+                "id": 10,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-carretillera-base.jpg"
+            },
+            {
+                "nombre": "Hamburguesa Extrema",
+                "precio": 25.9,
+                "id": 11,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-extrema_1.jpg"
+            }
+        ]
+    }
+
+    if (opcion == 'bebidas') {
+        listado = [
+            {
+                "nombre": "Agua San Luis S/G",
+                "precio": 4.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/a/san-luis-sin-gas-nueva.jpg",
+                "id": 16
+            },
+            {
+                "nombre": "Coca Cola Sabor Original 500 ml",
+                "precio": 5.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-original-500ml-nuevo.jpg",
+                "id": 17
+            },
+            {
+                "nombre": "Coca Cola Sin Azúcar 500 ml",
+                "precio": 5.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-sin-azucar-500ml-nuevo.jpg",
+                "id": 18
+            },
+            {
+                "nombre": "Inca Kola Sabor Original 500 ml",
+                "precio": 5.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-kola-original-500ml-nuevo.jpg",
+                "id": 19
+            },
+            {
+                "nombre": "Sprite Sabor Original 500 ml",
+                "precio": 5.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/p/sprite-500ml-nuevo.jpg",
+                "id": 20
+            },
+            {
+                "nombre": "Fanta Sabor Original 500 ml",
+                "precio": 5.9,
+                "img": "chttps://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/fanta-500ml-nuevo.jpg",
+                "id": 21
+            },
+            {
+                "nombre": "Inca kola Sin Azúcar 500 ml",
+                "precio": 5.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-kola-sin-kola-500ml-nuevo.jpg",
+                "id": 22
+            }
+        ]
+    }
+
+    if (opcion == 'complementos') {
+        listado = [
+            {
+                "nombre": "Papas Inka Chips",
+                "precio": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-inka-chips-nueva.jpg",
+                "id": 25
+            },
+            {
+                "nombre": "Papas Fritas Bembos",
+                "precio": 4.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/n/u/nueva-papas-medianas_2.jpg",
+                "id": 26
+            },
+            {
+                "nombre": "Chicken nuggets",
+                "precio": 10.5,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/n/u/nuggets-base.jpg",
+                "id": 27
+            },
+            {
+                "nombre": "Cheese Fingers",
+                "precio": 11.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/h/cheese-fingers-base_3.jpg",
+                "id": 28
+            },
+            {
+                "nombre": "Family Box Piqueo",
+                "precio": 22.9,
+                "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-piqueo-nuevo-abril.jpg",
+                "id": 29
+            }
+        ]
+    }
+
+    return listado;
+}
