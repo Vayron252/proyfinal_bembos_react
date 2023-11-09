@@ -1,0 +1,101 @@
+/* ESTILOS DE LA SECCIÓN NOSOTROS */
+
+.container__total__nosotros{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__info__nosotros{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container__info__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px
+}
+
+.container__info__historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+}
+
+.titulo__separador{
+    width: 100%;
+    background-color: var(--colorPrincipal);
+    max-height: 1.2px;
+    margin-top: 14px;
+    margin-bottom: 28px
+}
+
+.encabezado__nosotros{
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.encabezado__nosotros h1{
+    text-align: center;
+    transform: scaleY(1.3);
+}
+
+.titulo__historia__bembos{
+    text-align: left;
+    color: var(--colorPrincipal);
+    font-weight: bolder;
+    font-size: 19px;
+    transform: scaleY(1.3);
+}
+
+.nosotros__texto{
+    font-size: 18.3px;
+    font-family: var(--fuenteCuaternaria);
+    word-spacing: 4px;
+    line-height: 22px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.bembos__nosotros__image{
+   margin-bottom: 20px;
+}
+
+.nosotros__texto.oculto {
+    display: none;
+}
+
+.container__info__img__txt.oculto, .container__info__img__txt__second.oculto, .container__info__img__txt__third.oculto, .container__info__img__txt__fourth.oculto {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:992px) {
+    .container__info__details{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container__info__details{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}

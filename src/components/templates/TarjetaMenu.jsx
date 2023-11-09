@@ -8,7 +8,7 @@ export const TarjetaMenu = ({menu}) => {
                 <h2 className='tittle__menu'> {menu.nombre} </h2>                     
                   <img src={menu.img} alt="" className='menu__image' />              
             </div>
-            <button>Ver todos</button>
+            <button className='menu__button__ver__todos'>Ver todos</button>
         </div>
     </div>
   )

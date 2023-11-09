@@ -13,6 +13,7 @@ import { MiCuenta } from './pages/MiCuenta'
 import { Locales } from './pages/Locales'
 import { ZonasReparto } from './pages/ZonasReparto'
 import { Nosotros } from './pages/Nosotros'
+import { TerminosCondiciones } from './pages/TerminosCondiciones'
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,26 @@ const router = createBrowserRouter([
       {
         path: '/nosotros/como-nacio-bembos',
         element: <Nosotros />
+      },
+
+      {
+        path: '/nosotros/que-ofrecemos',
+        element: <Nosotros />
+      },
+
+      {
+        path: '/nosotros/creacion-hamburguesas-bembos',
+        element: <Nosotros />
+      },
+
+      {
+        path: '/nosotros/en-la-actualidad',
+        element: <Nosotros />
+      },
+
+      {
+        path: '/terminos-y-condiciones-de-promociones',
+        element: <TerminosCondiciones/>
       }
     ]
   }

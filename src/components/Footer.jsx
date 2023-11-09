@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+/* import { logo_bembos} from '../img/logo_bembos.png'
+import { libro_reclamaciones } from '../img/libro_reclamaciones.png' */
 
 export const Footer = () => {
   return (
@@ -20,7 +22,9 @@ export const Footer = () => {
                                     <li className='footer__info-item'>                                       
                                         <div className='footer__info-item-1row'>
                                             <a href="" className=''>Locales</a>
+                                            <Link className="" to={'/nosotros/como-nacio-bembos'}>
                                             <a href="" className=''>Nosotros</a>
+                                            </Link>                      
                                             <a href="" className=''>Atención al Cliente</a>
                                             <a href="" className=''>Preguntas Frecuentes</a>
                                             <a href="" className=''>Mapa de sitio</a>
@@ -28,7 +32,11 @@ export const Footer = () => {
 
                                         <div className='footer__info-item-2row'>
                                             <a href="" className=''>Políticas de Datos Personales</a>
+                                            
+                                            <Link className='' to={'/terminos-y-condiciones-de-promociones'}>
                                             <a href="" className=''>Términos y condiciones de Promociones</a>
+                                            </Link>
+                                            
                                             <a href="" className=''>Derechos ARCO</a>
                                             
                                         </div>
@@ -36,7 +44,7 @@ export const Footer = () => {
                                 </ul> 
 
                                 <div className='container__bembos__blanco'>                  
-                                    <img src="./src/img/logo_bembos.png"  alt="" className='logo__bembos__blanco'/>
+                                    <img src="./src/img/logo_bembos.png" alt="" className='logo__bembos__blanco'/>
                                 </div>
                             
                         </div>  
@@ -49,7 +57,9 @@ export const Footer = () => {
                                         <hr/>
                                         <p className=''>MAPA DEL SITIO</p>
                                         <hr />
+                                        
                                         <p className=''>TÉRMINOS Y CONDICIONES</p>
+                                        
                                         <hr/>
                                     </div>                  
                         </div>
@@ -62,13 +72,13 @@ export const Footer = () => {
                             <div className='pago__metodos__container'>
 
                                 <div className='tarjetas__container'>
-                                    <img src="./src/img/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago'/>
-                                    <img src="./src/img/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago'/>
-                                    <img src="./src/img/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
+                                    <img src="./src/img/visa.jpg" alt="" className='image__pago'/>
+                                    <img src="./src/img/mastercard.jpg" alt="" className='image__pago'/>
+                                    <img src="./src/img/american_express.jpg" alt="" className='image__pago' />
                                 </div>
 
                                 <div>
-                                    <img src="./src/img/new_images-01.png" alt="" className='image__pago__safety' />
+                                    <img src="./src/img/safety_pay.png" alt="" className='image__pago__safety' />
                                 </div>
                             </div>
 
@@ -98,7 +108,7 @@ export const Footer = () => {
                             <label htmlFor="">He leído y revisado los<u>términos y condiciones</u> </label>
                             </div>
                     
-                            <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
+                            <img src="./src/img/libro_reclamaciones.png" alt="" className='libro__reclamaciones__img'/>
                             </div>
                         </div>
             </div>

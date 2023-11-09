@@ -1,0 +1,33 @@
+/* ESTILOS DE TERMINOS Y CONDICIONES */
+
+.container__terminos__condiciones{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container__terminos__condiciones__info{
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.terminos__condiciones__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 36px;
+    margin-right: 36px;
+    font-size: 12.9px;
+    font-family: var(--fuentePrimaria);
+    padding: 30px;
+    line-height: 18px;
+}
+
+.terminos__condiciones__details p{
+    text-align: justify;
+    margin-top: 10px;
+}
