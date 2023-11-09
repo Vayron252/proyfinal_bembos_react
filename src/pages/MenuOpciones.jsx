@@ -21,10 +21,10 @@ export const MenuOpciones = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 400,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     initialSlide: 0,
     rows: 1,
     variableWidth: true
