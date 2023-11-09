@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LayoutPrincipal } from './components/templates/LayoutPrincipal'
 import { Index, loader as indexLoader } from './pages/Index'
 import { Menu, loader as menuLoader } from './pages/Menu'
-import { Hamburguesas } from './pages/Hamburguesas'
+import { MenuOpciones, loader as menuOpcionesLoader } from './pages/MenuOpciones'
 import { Promociones } from './pages/Promociones'
 import { Beneficios } from './pages/Beneficios'
 import { MiCuenta } from './pages/MiCuenta'
@@ -31,8 +31,9 @@ const router = createBrowserRouter([
         loader: menuLoader
       },
       {
-        path: '/menu/hamburguesas',
-        element: <Hamburguesas />
+        path: '/menu/:opcion',
+        element: <MenuOpciones />,
+        loader: menuOpcionesLoader
       },
       {
         path: '/promociones/delivery-hamburguesas',
