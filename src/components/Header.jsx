@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import imagen_atencion from '../img/1110x57.jpg'
 import { OpcionesNavegacion } from '../components/OpcionesNavegacion'
 import { useScreenSize } from '../hooks/useScreenSize'
+import { useCarroCompras } from '../hooks/useCarroCompras';
 
 export const Header = () => {
     const navigate = useNavigate();
     const { width } = useScreenSize();
     const [menuBarActive, setMenuBarActive] = useState(false);
+    const { carroCompras } = useCarroCompras();
 
     const handleMenuBar = () => {
         if (menuBarActive) {
@@ -21,7 +23,7 @@ export const Header = () => {
         e.preventDefault();
         handleMenuBar();
         navigate(`${subUrl}`);
-    }
+    }    
 
     return (
         <header className="header">
@@ -102,7 +104,7 @@ export const Header = () => {
                     </button>
                     <button className="navegacion__shopcar">
                         <i className="fa-solid fa-cart-shopping"></i>
-                        <span className="shopcar__items">0</span>
+                        <span className="shopcar__items">{carroCompras.length}</span>
                     </button>
                 </div>
             </div>
