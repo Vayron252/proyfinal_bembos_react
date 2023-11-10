@@ -56,25 +56,9 @@ const router = createBrowserRouter([
         element: <ZonasReparto />
       },
       {
-        path: '/nosotros/como-nacio-bembos',
+        path: '/nosotros/:ruta',
         element: <Nosotros />
       },
-
-      {
-        path: '/nosotros/que-ofrecemos',
-        element: <Nosotros />
-      },
-
-      {
-        path: '/nosotros/creacion-hamburguesas-bembos',
-        element: <Nosotros />
-      },
-
-      {
-        path: '/nosotros/en-la-actualidad',
-        element: <Nosotros />
-      },
-
       {
         path: '/terminos-y-condiciones-de-promociones',
         element: <TerminosCondiciones/>

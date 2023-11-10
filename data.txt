@@ -343,6 +343,7 @@
 					"nombre": "Inka Chips",
 					"img": "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-inka-chips-1.webp"
 				}
+				
 			]
 		}
 	]

@@ -245,11 +245,61 @@
         display: block;
         background-color: var(--colorPrincipal);
         color: var(--blanco);
+        margin-bottom: -5px;
+        max-height: 740px;
      }
 
      .footer__icons__container{
         padding-top: 40px;
      }
 
+     .derechos__footer__only__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+     }
+
+     .derechos__footer__only__mobile p{
+        color: var(--color-contrast);
+        font-size: 13.5px;
+        transform: scaleY(1.1);
+     }
+
+     .derechos__footer__only__mobile hr{
+        color: var(--blanco);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 95%;
+        height: 1px;
+        opacity: 0.5;
+     }
+
+
+
+   /*   .footer__derechos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
     
+    .footer__derechos p {
+        color: var(--color-contrast);
+        font-size: 13.5px;
+        transform: scaleY(1.1);
+    }
+    
+    hr {
+        color: var(--blanco);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 95%;
+        height: 1px;
+        opacity: 0.5;
+    }
+ */
+     
 }

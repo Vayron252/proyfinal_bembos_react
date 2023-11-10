@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
-/* import { logo_bembos} from '../img/logo_bembos.png'
-import { libro_reclamaciones } from '../img/libro_reclamaciones.png' */
+import libro_reclamaciones from '../img/libro_reclamaciones.png'
+import logo_bembos from '../img/logo_bembos.png'
+import american_express from '../img/american_express.jpg'
+import visa from '../img/visa.jpg'
+import mastercard from '../img/mastercard.jpg'
+import safety_pay from '../img/safety_pay.png'
+
 
 export const Footer = () => {
     return (
@@ -11,7 +16,7 @@ export const Footer = () => {
                     <a href="https://www.facebook.com/bembos/" target='_blank'> <i className="fa-brands fa-facebook icon__social"></i> </a>
                     <a href="https://www.youtube.com/user/BembosCanal" target='_blank'> <i className="fa-brands fa-youtube icon__social "></i>  </a>
                     <a href="https://twitter.com/BembosOficial" target='_blank'> <i className="fa-brands fa-twitter icon__social "></i> </a>
-                    <a href="https://www.instagram.com/bembosoficial/?hl=es-la" target='_blank'> <i className="fa-brands fa-instagram icon__social"></i> </a>
+                    <a href="https://www.instagram.com/bembosoficial/?hl=es-la" target='_blank'> <i className="fa-brands fa-instagram icon__social"></i></a>
                 </div>
 
                 <div className='footer__second__container'>
@@ -41,7 +46,7 @@ export const Footer = () => {
                         </ul>
 
                         <div className='container__bembos__blanco'>
-                            <img src="./src/img/logo_bembos.png" alt="" className='logo__bembos__blanco' />
+                            <img src={logo_bembos} alt="logo_bembos" className='logo__bembos__blanco' />
                         </div>
 
                     </div>
@@ -67,13 +72,13 @@ export const Footer = () => {
                         <div className='pago__metodos__container'>
 
                             <div className='tarjetas__container'>
-                                <img src="./src/img/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago' />
-                                <img src="./src/img/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago' />
-                                <img src="./src/img/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
+                                <img src={visa} alt="" className='image__pago' />
+                                <img src={mastercard} alt="" className='image__pago' />
+                                <img src={american_express} alt="" className='image__pago' />
                             </div>
 
                             <div>
-                                <img src="./src/img/new_images-01.png" alt="" className='image__pago__safety' />
+                                <img src={safety_pay} alt="" className='image__pago__safety' />
                             </div>
                         </div>
 
@@ -82,7 +87,7 @@ export const Footer = () => {
                             COMPROBANTES</button>
 
                         <div className='container__libro__reclamaciones'>
-                            <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img' />
+                            <img src={libro_reclamaciones} alt="imagen reclamaciones" className='libro__reclamaciones__img' />
                         </div>
 
                     </div>
@@ -103,7 +108,7 @@ export const Footer = () => {
                             <label htmlFor="">He leído y revisado los<u>términos y condiciones</u> </label>
                         </div>
 
-                        <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img' />
+                        <img src={libro_reclamaciones} alt="" className='libro__reclamaciones__img' />
                     </div>
                 </div>
             </div>

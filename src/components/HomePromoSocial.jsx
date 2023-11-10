@@ -2,6 +2,11 @@ import React from 'react'
 import promoImage from '../img/home_promos.png'
 import ticket from '../img/home_ticket_bembos.png'
 import '../styles/promoSocial.css'
+import american_express from '../img/american_express.jpg'
+import visa from '../img/visa.jpg'
+import mastercard from '../img/mastercard.jpg'
+import safety_pay from '../img/safety_pay.png'
+import libro_reclamaciones from '../img/libro_reclamaciones.png'
 
 export const HomePromoSocial = () => {
   return (
@@ -42,11 +47,16 @@ export const HomePromoSocial = () => {
           </div>
 
           <div>
+
+
             {/* RED SOCIAL FACEBOOK */}
             <h3>AQUÍ SE COLOCARÁ EL FACEBOOK</h3>
           </div>
         </div>
       </div>
+      {/* FIN DE RED SOCIAL FACEBOOK */}
+
+      {/* INICIO DE FOOTER CON FORMAS DE PAGO Y COMPROBANTES */}
 
       <div className='container__footer__mobile__above'>
                   <div className='footer__icons__container'>
@@ -66,7 +76,7 @@ export const HomePromoSocial = () => {
                                           <hr />
                                           <p className=''>TÉRMINOS Y CONDICIONES</p>
                                           <hr/>
-                                      </div>                  
+                                      </div>                                                                                              
                           </div>
 
                           <div className='footer__pago'>
@@ -75,13 +85,13 @@ export const HomePromoSocial = () => {
                               <div className='pago__metodos__container'>
 
                                   <div className='tarjetas__container'>
-                                      <img src="./src/img/pagos_Mesa de trabajo 2.jpg" alt="" className='image__pago'/>
-                                      <img src="./src/img/pagos_Mesa de trabajo 3.jpg" alt="" className='image__pago'/>
-                                      <img src="./src/img/american_express_Mesa de trabajo 1.jpg" alt="" className='image__pago' />
+                                    <img src={visa} alt="" className='image__pago' />
+                                    <img src={mastercard} alt="" className='image__pago' />
+                                    <img src={american_express} alt="" className='image__pago' />
                                   </div>
 
                                   <div>
-                                      <img src="./src/img/new_images-01.png" alt="" className='image__pago__safety' />
+                                      <img src={safety_pay} alt="" className='image__pago__safety' />
                                   </div>
                               </div>
 
@@ -90,11 +100,20 @@ export const HomePromoSocial = () => {
                               COMPROBANTES</button>
 
                               <div className='container__libro__reclamaciones'>
-                                  <img src="./src/img/reclamaciones-02.png" alt="" className='libro__reclamaciones__img'/>
-                              </div>
-                          </div>                               
+                                  <img src={libro_reclamaciones} alt="" className='libro__reclamaciones__img'/>                         
+                              </div>                                                              
+                          </div>  
+
+                          <div className='derechos__footer__only__mobile'>
+                                <hr />
+                                <p>© 2019 Todos los derechos reservados</p>
+                              </div> 
+                                                                   
                           </div>
               </div>
+
+        
+          {/* FINAL DE FOOTER CON FORMAS DE PAGO Y COMPROBANTES */}
     </div>
 
   )
