@@ -75,7 +75,7 @@ export const HomePromoSocial = () => {
                                           <p className=''>MAPA DEL SITIO</p>
                                           <hr />
                                           <p className=''>TÉRMINOS Y CONDICIONES</p>
-                                          <hr/>
+                                          <hr />                                         
                                       </div>                                                                                              
                           </div>
 
