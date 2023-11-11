@@ -7,6 +7,7 @@ import visa from '../img/visa.jpg'
 import mastercard from '../img/mastercard.jpg'
 import safety_pay from '../img/safety_pay.png'
 import libro_reclamaciones from '../img/libro_reclamaciones.png'
+import red_social_home from '../img/red_social_home.png'
 
 export const HomePromoSocial = () => {
   return (
@@ -50,7 +51,30 @@ export const HomePromoSocial = () => {
 
 
             {/* RED SOCIAL FACEBOOK */}
-            <h3>AQUÍ SE COLOCARÁ EL FACEBOOK</h3>
+            <div className='container__red__social'>
+              <img src={red_social_home} alt="" />
+              <a href="https://www.facebook.com/bembos/" target='_blank' className=''>
+                <div className='bembos__titulo__social'>
+                  <h1>BEMBOS</h1>
+                </div>
+              </a>
+              <div className='container__button__social__media'>
+              <a href="https://www.facebook.com/bembos/" target='_blank' className=''>
+                <div className='button__seguir__pagina'>                
+                  <i class="fa-brands fa-square-facebook icono__redes__facebook"></i>
+                  <button>Seguir página</button>              
+                </div>
+              </a>
+              <a href="https://www.facebook.com/bembos/" target='_blank' className=''>
+                <div className='button__compartir'>
+                  <i class="fa-solid fa-share icono__redes__compartir"></i>
+                  <button>Compartir</button>
+                </div>
+              </a>
+              
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

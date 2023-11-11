@@ -9,7 +9,7 @@ export const loader = () => {
 };
 
     export const Nosotros = () => {
-    const[mostrarPrimerContenido, setMostrarPrimerContenido] = useState(false)
+    const[mostrarPrimerContenido, setMostrarPrimerContenido] = useState(true)
     const [mostrarSegundoContenido, setMostrarSegundoContenido] = useState(false)
     const [mostrarTercerContenido, setMostrarTercerContenido] = useState(false)
     const [mostrarCuartoContenido, setMostrarCuartoContenido] = useState(false)

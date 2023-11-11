@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const PromocionesTarjetas = ({complemento}) => {
+export const PromocionesTarjetas = ({complementoPromo}) => {
   return (
-    <div>PromocionesTarjetas
+    <div>
 
         {/* Promociones Personales */}
 
@@ -18,10 +18,10 @@ export const PromocionesTarjetas = ({complemento}) => {
 
         {/* Complementos */}
 
-        <div>
-            <img src={complemento.img} alt="" />
-            <h3> {complemento.nombre} </h3>
-            <h1> {complemento.precio}</h1>
+        <div className='contenedor__card__complementos'>
+            <img src={complementoPromo.img} alt="" />
+            <h3> {complementoPromo.nombre} </h3>
+            <h1> {complementoPromo.precio}</h1>
         </div>
 
 

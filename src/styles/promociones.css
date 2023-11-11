@@ -28,9 +28,15 @@
 /* Menú con categoría de productos */
 
 .container__todo__pagina__promociones{
-    padding: 0 66px;
+    
     margin: 0 auto;
+    width: 100%;
 
+}
+
+.container__details__promociones{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contenedor__total__promociones{
@@ -88,7 +94,7 @@
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 25px;
-    padding: 0 35px;
+    padding: 0 85px;
 }
 
 
@@ -140,6 +146,19 @@
     margin-bottom: 30px;
 }
 
+.separador__promociones__hamburguesas{
+   margin: 0 auto;
+   max-width: 90%;
+   margin-bottom: 50px;
+   
+}
+
+.separador__solo__tablet{
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .container__solo__tablet{
     display: none;
 }
@@ -147,20 +166,15 @@
 /* LISTA DE PROMOCIONES - PERSONALES / PARA DOS/ PARA COMPARTIR */
 
 .promociones__categoria__total{
-  width: 100%;
-  padding: 0 16px;
+    max-width: 100%;
 }
 
 .contenedor__promociones__categorias{
-    max-width: 1200px;
-    
+   max-width: 90%;
+   margin: 0 auto;
 }
 
 .titulo__promociones__lista{
-    width: 100%;
-}
-
-.separador__promociones__categorias{
     width: 100%;
 }
 
@@ -174,6 +188,10 @@
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
+}
+
+.separador__promociones__categorias{
+    width: 100%;
 }
 
 .contenedor__promocion__categoria h3{
@@ -248,6 +266,16 @@
     text-align: justify;
 }
 
+/* COMPLEMENTOS SLIDER -----------------------------------*/
+
+.menu__container__complementos{
+    display: flex;
+}
+
+.contenedor__card__complementos{
+    margin-right: 30px;
+
+}
 
 
 
@@ -261,7 +289,7 @@
         display: flex;
         align-items: center;
         align-content: center;
-        margin-left: -80px;
+        margin-left: -40px;
     }
 
     .container__ocultar__promo__buscar{
@@ -281,10 +309,9 @@
         font-size: 21px;
     }
 
-    
-
-
-   
+    .separador__solo__tablet{
+        display: block;
+    }
 
     
 }
@@ -294,7 +321,6 @@
 .contenedor__total__promo__buscar{
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
 }
 
 .contenedor__buscar__producto{
@@ -349,9 +375,16 @@
     margin-left: -80px;
 }
 
-.separador__encabezado__promo__buscador{
+.separador__promociones__hamburguesas{
     display: none;
+ }
+
+ .separador__solo__tablet{
+    display: none;
+ 
 }
+
+
 
 /* PROMOCIONES__MENU */
 

@@ -142,9 +142,102 @@
     background-color: var(--colorFacebook);
  }
 
+ /* SOCIAL BEMBOS - FACEBOOK */
+
+ .button__seguir__pagina{
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+    align-items: center;
+ }
+
+.button__compartir{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+ .button__seguir__pagina button{
+    padding-left: 26px;
+    padding-right: 7px;
+    width: 113px;
+    height: 26px;
+    border: 1px solid var(--color-gris);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-align: right;
+    color: var(--negroMenosIntenso);
+    cursor: pointer;
+    
+ }
+
+ .button__compartir button{
+    width: 86px;
+    height: 26px;
+    padding-right: 9px;
+    border: 1px solid var(--color-gris);
+    color: var(--negroMenosIntenso);
+    font-weight: bold;
+    font-size: 11.5px;
+    text-align: right;
+    cursor: pointer;
+ }
+
+
+ .container__red__social{
+    border: 1px solid var(--color-gris);
+    position: relative;
+ }
+
+ .container__red__social img{
+    cursor: default;
+ }
+
+ .bembos__titulo__social h1{
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 63.5px;
+    font-weight: 500;
+    transform: scale(0.95);
+    color: var(--colorPrincipal);
+    background-color: var(--blanco);
+ }
+
+ .bembos__titulo__social h1:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+ }
+
+
+
+.container__button__social__media{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 282px;
+    top: 94px;
+
+}
+
+.icono__redes__facebook{
+    color: var(--colorPrincipal);
+    font-size: 13px;
+    position: absolute;
+    left: 10px;
+}
+
+.icono__redes__compartir{
+    color: var(--negroMenosIntenso);
+    font-size: 11px;
+    position: absolute;
+    left: 6px;
+}
+
  .container__footer__mobile__above{
     display: none;
  }
+
 
 /* RESPONSIVE DESIGN */
 
