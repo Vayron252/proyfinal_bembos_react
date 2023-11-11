@@ -1,0 +1,393 @@
+/* ESTILOS PARA LAS PROMOCIONES */
+
+:root {
+    /* Paleta de colores */
+    --color-contrast: #9bb5da;
+    --color-gris: #d8d8d8;
+    --grisClaro: #A19E9E;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --rojo: #E20917;
+    --colorPrincipal: #173083;
+    --colorSecundario: #FBB905;
+    --background: #F6F7F8;
+    --negroMenosIntenso: #494b4d;
+
+    /* Paleta de colores: redes sociales */
+    --colorFacebook: #314A7E;
+    --colorTwitter: #29B6FD;
+
+    /* Tipografias */
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Teko', sans-serif;
+    --fuenteTerciaria: 'Dosis', sans-serif;
+    --fuenteCuaternaria: 'serif';
+}
+
+
+/* Menú con categoría de productos */
+
+.container__todo__pagina__promociones{
+    padding: 0 66px;
+    margin: 0 auto;
+
+}
+
+.contenedor__total__promociones{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--blanco) ;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contenedor__promociones__seleccion{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 28px;
+    max-width: 90%;
+    padding: 0 16px;
+}
+
+.contenedor__promociones__seleccion button{
+    color: var(--negro);
+    background-color: var(--gris);
+    border: 2px solid var(--color-gris);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 218px;
+    height: 40px;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+}
+
+.contenedor__promociones__seleccion button:active{
+
+   background-color: var(--colorSecundario); 
+}
+
+.contenedor__promociones__seleccion button:target{
+
+   background-color: var(--colorSecundario);
+}
+
+/* MENÚ CON CATEGORÍA DE PRODUCTOS__SOLO MOBILE */
+
+.contenedor__menu__promociones__mobile
+{
+    display: none;
+}
+
+/* AVISO DE PROMOCIÓN */
+
+.contenedor__total__promo__buscar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0 35px;
+}
+
+
+.contenedor__texto__promocion__especial {
+    width: 100%;
+}
+
+
+.texto__solo__computadora, .texto__solo__mobile {
+    color: var(--colorPrincipal);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transform: scaleY(1.2);
+    margin-left: 200px;
+}
+
+.texto__solo__mobile{
+    display: none;
+}
+
+.contenedor__buscar__producto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor__buscar__producto input{
+
+    padding: 13px 15px 13px 20px;
+    font-size: 15px;
+    border-radius: 23px;
+    width: 250px;
+    border: 1px solid var(--grisClaro); 
+}
+
+.icono__buscar{
+    position: absolute;
+    right: 10px;
+    font-size: 15px;
+
+}
+
+.separador__encabezado__promo__buscador{
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 16px;
+    margin-bottom: 30px;
+}
+
+.container__solo__tablet{
+    display: none;
+}
+
+/* LISTA DE PROMOCIONES - PERSONALES / PARA DOS/ PARA COMPARTIR */
+
+.promociones__categoria__total{
+  width: 100%;
+  padding: 0 16px;
+}
+
+.contenedor__promociones__categorias{
+    max-width: 1200px;
+    
+}
+
+.titulo__promociones__lista{
+    width: 100%;
+}
+
+.separador__promociones__categorias{
+    width: 100%;
+}
+
+
+.titulo__promociones__lista h1{
+    transform: scaleY(1.2);
+}
+
+.contenedor__promocion__categoria{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contenedor__promocion__categoria h3{
+    font-size: 19px;
+    transform: scaleY(1.1);
+    text-align: left;
+}
+
+.contenedor__promocion__categoria i{
+    font-size: 28px;
+    color: var(--colorPrincipal);
+}
+
+/* PREGUNTAS FRECUENTES DE PROMOCIONES DELIVERY ONLINE */
+
+.container__preguntas__frecuentes{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    margin-bottom: 60px;
+}
+
+.titulo__preguntas__frecuentes{
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--colorPrincipal);
+    font-weight: 900;
+    transform: scaleY(1.2);
+    font-size: 23px;
+}
+
+.preguntas__unidad__container{
+    max-width: 1100px;
+    width: 100%;
+}
+
+.preguntas__unidad, .preguntas__unidad__second, .preguntas__unidad__third, .preguntas__unidad__forth, .preguntas__unidad__fifth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.preguntas_unidad h2{
+    color: var(--colorPrincipal);
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.preguntas__unidad i, .preguntas__unidad__second i, .preguntas__unidad__third i, .preguntas__unidad__forth i, .preguntas__unidad__fifth i {
+    transform: rotate(90deg);
+    font-size: 23px;
+}
+
+.separador__pregunta__unit{
+    width: 100%;
+    margin-top: 8px;
+}
+
+.respuesta__preguntas{
+    margin-bottom: 15px;
+    line-height: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.respuesta__preguntas p{
+    color: var(--negro);
+    font-size: 15px;
+    line-height: 23px;
+    text-align: justify;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:992px) {
+
+ 
+    .container__solo__tablet{
+        display: block;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-left: -80px;
+    }
+
+    .container__ocultar__promo__buscar{
+        display: none;
+    }
+
+    .container__total__promo__buscar{
+        display: grid;
+    }
+
+    .container__buscar__producto__tablet{
+        margin-left: 40px;
+    }
+
+    .texto__solo__tablet{
+        margin-left: 60px;
+        font-size: 21px;
+    }
+
+    
+
+
+   
+
+    
+}
+
+@media (max-width: 600px) {
+    
+.contenedor__total__promo__buscar{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.contenedor__buscar__producto{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contenedor__buscar__producto input{
+
+    padding: 13px 15px 13px 20px;
+    font-size: 15px;
+    border-radius: 23px;
+    width: 100%;
+    border: 1px solid var(--grisClaro); 
+}
+
+.contenedor__texto__promocion__especial {
+    width: 100%;
+
+}
+
+.contenedor__texto__promocion__especial p{
+
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+
+.contenedor__total__promo__buscar{
+
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.contenedor__total__promociones{
+    display: none;
+}
+
+.texto__solo__computadora{
+    display: none;
+}
+
+.texto__solo__mobile{
+    display: block;
+    font-size: 20px;
+}
+
+.container__solo__tablet{
+    display: none;
+    margin-left: -80px;
+}
+
+.separador__encabezado__promo__buscador{
+    display: none;
+}
+
+/* PROMOCIONES__MENU */
+
+.contenedor__total__promociones{
+    display: none;
+}
+
+.contenedor__menu__promociones__mobile
+{
+    display: block;
+    padding: 0px 0px 0px 20px;
+    width: 100%;
+}
+
+.contenedor__button__menu__mobile{
+    padding-right: 2rem;
+}
+
+.contenedor__button__menu__mobile button{
+    background-color: var(--gris);
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 17px;
+    font-weight: bolder;
+    border: 2px solid var(--color-gris) ;
+
+}
+
+.contenedor__button__menu__mobile button:active{
+    background-color: var(--colorSecundario);
+}
+
+.contenedor__button__menu__mobile button:target{
+    background-color: var(--colorSecundario);
+}
+
+
+
+}

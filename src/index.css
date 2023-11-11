@@ -646,7 +646,6 @@ li {
     height: 40px;
     padding-left: 10px;
     border: none;
-    font-size: 15px;
     font-size: 14px;
     transform: scaleY(1.2);
 }
@@ -753,7 +752,7 @@ hr {
 
 .icon__footer__mobile h4 {
     margin-bottom: 16px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 /* Seccion Sugerencias */

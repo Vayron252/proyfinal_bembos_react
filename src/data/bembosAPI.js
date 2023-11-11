@@ -132,6 +132,43 @@ export const obtenerListadoMenu = () => {
     return listadoMenu;
 }
 
+export const obtenerListadoComplementos = () => {
+    const listadoComplementos = [
+        {
+            "nombre": "Papas Inka Chips",
+            "precio": 3,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-inka-chips-nueva.jpg",
+            "id": 25
+        },
+        {
+            "nombre": "Papas Fritas Bembos",
+            "precio": 4.9,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/n/u/nueva-papas-medianas_2.jpg",
+            "id": 26
+        },
+        {
+            "nombre": "Chicken nuggets",
+            "precio": 10.5,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/n/u/nuggets-base.jpg",
+            "id": 27
+        },
+        {
+            "nombre": "Cheese Fingers",
+            "precio": 11.9,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/h/cheese-fingers-base_3.jpg",
+            "id": 28
+        },
+        {
+            "nombre": "Family Box Piqueo",
+            "precio": 22.9,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-piqueo-nuevo-abril.jpg",
+            "id": 29
+        }
+    ]
+
+    return listadoComplementos;
+}
+
 export const obtenerListadoProductosXOpcion = (opcion) => {
     let listado = [];
     

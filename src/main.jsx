@@ -39,6 +39,7 @@ const router = createBrowserRouter([
         path: '/promociones/delivery-hamburguesas',
         element: <Promociones />
       },
+
       {
         path: '/beneficios',
         element: <Beneficios />
