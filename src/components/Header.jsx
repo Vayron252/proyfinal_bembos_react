@@ -9,7 +9,7 @@ export const Header = () => {
     const navigate = useNavigate();
     const { width } = useScreenSize();
     const [menuBarActive, setMenuBarActive] = useState(false);
-    const { carroCompras } = useCarroCompras();
+    const { carroCompras, setMostrarCarro } = useCarroCompras();
 
     const handleMenuBar = () => {
         if (menuBarActive) {
@@ -102,7 +102,7 @@ export const Header = () => {
                         <i className="fa-solid fa-store"></i>
                         <p className="navegacion__botonsincolas__informacion">Pide en tiendas <span>SIN COLAS</span></p>
                     </button>
-                    <button className="navegacion__shopcar">
+                    <button className="navegacion__shopcar" onClick={() => setMostrarCarro(true)}>
                         <i className="fa-solid fa-cart-shopping"></i>
                         <span className="shopcar__items">{carroCompras.length}</span>
                     </button>

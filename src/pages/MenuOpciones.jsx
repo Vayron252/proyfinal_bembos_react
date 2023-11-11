@@ -1,10 +1,12 @@
 import { useLoaderData, Link, useLocation } from 'react-router-dom';
 import { obtenerListadoProductosXOpcion } from '../data/bembosAPI'
 import { useScrollPosition } from '../hooks/useScrollPosition'
+import { useCarroCompras } from '../hooks/useCarroCompras'
 import { Tarjeta } from '../components/Tarjeta'
 import Slider from "react-slick"
 import '../styles/tarjetas.css'
 import '../styles/secciones.css'
+
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -18,15 +20,14 @@ export const MenuOpciones = () => {
   const location = useLocation();
   const scrollPosition = useScrollPosition();
   const listado = useLoaderData();
+  const { setMostrarCarro } = useCarroCompras();
 
   const settings = {
     dots: false,
     infinite: true,
-    speed: 400,
+    speed: 200,
     slidesToShow: 1,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    rows: 1,
+    slidesToScroll: 2,
     variableWidth: true
   };
 
@@ -121,7 +122,7 @@ export const MenuOpciones = () => {
               </li>
           </Slider>
           <div className="opcion__ver__carrito__contenedor">
-            <button className="opcion__ver__carrito">
+            <button className="opcion__ver__carrito" onClick={() => setMostrarCarro(true)}>
               <i className="fa-solid fa-cart-shopping ver__carrito__imagen"></i>
               <p className="ver__carrito__texto">Ver Carrito de compra</p>
               <p className="ver__carrito__monto">S/. 0.00</p>

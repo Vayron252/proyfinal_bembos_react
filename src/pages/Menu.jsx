@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import {AutoSlider} from '../components/AutoSlider'
 import '../styles/menu.css'
 import { obtenerListadoMenu } from '../data/bembosAPI'
@@ -25,7 +25,7 @@ export const Menu = () => {
             <div className='menu__notice'>
               <h4>Se está mostrando el menú del restaurante</h4>
               <div className='menu__location'>
-                <i class="fa-solid fa-location-dot"></i>
+                <i className="fa-solid fa-location-dot"></i>
                 <h2>GENERAL</h2>
               </div>
             </div>
@@ -42,7 +42,7 @@ export const Menu = () => {
 
               <div className='container__encabezado__location__mobile__tablet'>
                 <div className='general__mobile__tablet'>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot"></i>
                   <h2>GENERAL</h2>
                 </div>
                 <div className='container__button__mobile__tablet'>

@@ -1,8 +1,8 @@
 import { useContext } from "react"
-import { CarroComprasContext } from "../context/carroComprasContext"
+import { CarroComprasContext } from "../context/CarroComprasContext"
 
 export const useCarroCompras = () => {
-    const { carroCompras, setCarroCompras } = useContext(CarroComprasContext);
+    const { carroCompras, setCarroCompras, mostrarCarro, setMostrarCarro } = useContext(CarroComprasContext);
 
-    return { carroCompras, setCarroCompras }
+    return { carroCompras, setCarroCompras, mostrarCarro, setMostrarCarro }
 }
