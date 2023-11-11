@@ -5,9 +5,16 @@ import american_express from '../img/american_express.jpg'
 import visa from '../img/visa.jpg'
 import mastercard from '../img/mastercard.jpg'
 import safety_pay from '../img/safety_pay.png'
-
+import { useCarroCompras } from '../hooks/useCarroCompras'
 
 export const Footer = () => {
+    const { carroCompras, setMostrarCarro } = useCarroCompras();
+
+    const mostrarCarritoCompras = (e) => {
+        e.preventDefault();
+        setMostrarCarro(true);
+    }
+
     return (
 
         <footer className='footer'>
@@ -26,9 +33,7 @@ export const Footer = () => {
                             <li className='footer__info-item'>
                                 <div className='footer__info-item-1row'>
                                     <a href="" className=''>Locales</a>
-                                    <Link to={'/nosotros/como-nacio-bembos'}>
-                                    <a href="" className=''>Nosotros</a>
-                                    </Link>
+                                    <Link to={'/nosotros/como-nacio-bembos'}>Nosotros</Link>
                                     <a href="" className=''>Atención al Cliente</a>
                                     <a href="" className=''>Preguntas Frecuentes</a>
                                     <a href="" className=''>Mapa de sitio</a>
@@ -36,9 +41,7 @@ export const Footer = () => {
 
                                 <div className='footer__info-item-2row'>
                                     <a href="" className=''>Políticas de Datos Personales</a>
-                                    <Link to={'/terminos-y-condiciones-de-promociones'}>
-                                    <a href="" className=''>Términos y condiciones de Promociones</a>
-                                    </Link>
+                                    <Link to={'/terminos-y-condiciones-de-promociones'}>Términos y condiciones de Promociones</Link>
                                     <a href="" className=''>Derechos ARCO</a>
 
                                 </div>
@@ -96,7 +99,6 @@ export const Footer = () => {
 
                         <div className='container__ocultar'>
                             <label><p>¿Quieres recibir promociones y noticias?</p></label>
-
                             <div className='formulario__noticias'>
                                 <input type="text" placeholder='Escribe tu correo' />
                                 <button>ENVIAR</button>
@@ -132,10 +134,11 @@ export const Footer = () => {
                         <h4>FAVORITOS</h4>
                     </div>
 
-                    <div className='icon__footer__mobile'>
+                    <Link className='icon__footer__mobile' onClick={e => mostrarCarritoCompras(e)}>
                         <i className="fa-solid fa-cart-shopping"></i>
+                        <span className="shopcar__items">{carroCompras.length}</span>
                         <h4>CARRITO</h4>
-                    </div>
+                    </Link>
 
                     <div className='icon__footer__mobile'>
                         <i className="fa-solid fa-user"></i>
