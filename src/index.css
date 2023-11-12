@@ -989,7 +989,7 @@ hr {
     }
 }
 .carro__vacio__contenido {
-    height: 100%;
+    height: calc(100vh - 7.8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1177,7 +1177,7 @@ hr {
 }
 .carro__pago {
     min-height: 12.45rem;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     padding: 2rem;
