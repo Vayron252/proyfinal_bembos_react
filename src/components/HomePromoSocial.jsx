@@ -61,13 +61,13 @@ export const HomePromoSocial = () => {
               <div className='container__button__social__media'>
               <a href="https://www.facebook.com/bembos/" target='_blank' className=''>
                 <div className='button__seguir__pagina'>                
-                  <i class="fa-brands fa-square-facebook icono__redes__facebook"></i>
+                  <i className="fa-brands fa-square-facebook icono__redes__facebook"></i>
                   <button>Seguir página</button>              
                 </div>
               </a>
               <a href="https://www.facebook.com/bembos/" target='_blank' className=''>
                 <div className='button__compartir'>
-                  <i class="fa-solid fa-share icono__redes__compartir"></i>
+                  <i className="fa-solid fa-share icono__redes__compartir"></i>
                   <button>Compartir</button>
                 </div>
               </a>
