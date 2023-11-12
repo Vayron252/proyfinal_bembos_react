@@ -7,7 +7,7 @@ import { LayoutPrincipal } from './components/templates/LayoutPrincipal'
 import { Index, loader as indexLoader } from './pages/Index'
 import { Menu, loader as menuLoader } from './pages/Menu'
 import { MenuOpciones, loader as menuOpcionesLoader } from './pages/MenuOpciones'
-import { Promociones } from './pages/Promociones'
+import { Promociones, loader as promocionesLoader } from './pages/Promociones'
 import { Beneficios } from './pages/Beneficios'
 import { MiCuenta } from './pages/MiCuenta'
 import { Locales } from './pages/Locales'
@@ -38,8 +38,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/promociones/delivery-hamburguesas',
-        element: <Promociones />
+        element: <Promociones />,
+        loader: promocionesLoader
       },
+
       {
         path: '/beneficios',
         element: <Beneficios />
