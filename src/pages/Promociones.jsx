@@ -44,7 +44,7 @@ export const Promociones = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "#9bb5da" }}
+        style={{ ...style, display: "block", background: "#173083"}}
         onClick={onClick}
       />
     );
@@ -168,14 +168,15 @@ export const Promociones = () => {
                   <h1>Complementos</h1>
                   {/* COMPLEMENTOS */}
                      
-                   
+          
                     <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
                     <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
                     ))}
                     </Slider>  
-                    </div> 
+                    </div>
+
                                    
        
                 </div>
@@ -185,10 +186,32 @@ export const Promociones = () => {
                   <h3>Promociones para dos</h3>
                 </div>
 
+                <div className='menu__container__complementos'>
+                    <Slider {...settingsCards}>
+                    {listadoComplementos.map((complemento, index) => (
+                    <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
+                    ))}
+                    </Slider>  
+                </div>
+
                 <div className='contenedor__promocion__categoria'>
                   <i class="fa-solid fa-people-group"></i>
                   <h3>Promociones para compartir</h3>
                 </div>
+
+                <div className='menu__container__complementos'>
+                    <Slider {...settingsCards}>
+                    {listadoComplementos.map((complemento, index) => (
+                    <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
+                    ))}
+                    </Slider>  
+                </div>
+
+                <div className='contenedor__promocion__categoria'>
+                  <h3>Cupones</h3>
+                </div>
+
+
             </div>
           </div> 
 

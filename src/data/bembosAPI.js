@@ -294,7 +294,7 @@ export const obtenerListadoProductosXOpcion = (opcion) => {
         listado = [
             {
                 "nombre": "Papas Inka Chips",
-                "precio": 3,
+                "precio": 3.00,
                 "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-inka-chips-nueva.jpg",
                 "id": 25
             },

@@ -52,22 +52,23 @@
 
 .encabezado__nosotros h1{
     text-align: center;
-    transform: scaleY(1.3);
+    transform: scaleY(1);
+    font-size: 23px;
 }
 
 .titulo__historia__bembos{
     text-align: left;
     color: var(--colorPrincipal);
     font-weight: bolder;
-    font-size: 19px;
-    transform: scaleY(1.3);
+    font-size: 20px;
+    transform: scaleY(1.1);
 }
 
 .nosotros__texto{
-    font-size: 18.3px;
-    font-family: var(--fuenteCuaternaria);
+    font-size: 17px;
+    font-family: var(--fuentePrimaria);
     word-spacing: 4px;
-    line-height: 22px;
+    line-height: 25px;
     text-align: justify;
     margin-bottom: 40px;
 }
