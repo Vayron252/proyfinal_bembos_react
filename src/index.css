@@ -902,12 +902,15 @@ hr {
 .contenedor__carro {
     z-index: 300;
     width: 100%;
+    /* position: absolute; */
+    /* height: 100vh; */
     position: fixed;
 }
 .contenedor__carro.mostrar {
     background-color: rgba(0, 0, 0, 0.363);
     top: 0;
     right: 0;
+    bottom: 0;
     height: 100vh;
 }
 .carro__compras {
@@ -943,12 +946,14 @@ hr {
 .fijar__carro {
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 .carro__opciones {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1rem;
+    min-height: 7.8rem;
 }
 .opcion__carro__cerrar {
     color: var(--rojo);
@@ -1026,6 +1031,8 @@ hr {
 .carro__items__contenido {
     background-color: var(--blanco);
     padding: 2rem;
+    height: calc(100vh - 20.25rem);
+    overflow-y: auto;
 }
 .contenido__items__titulo {
     padding-top: 2rem;
@@ -1093,6 +1100,7 @@ hr {
     padding: .4rem .6rem;
     font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
 }
 .carrito__cantidades p {
     font-size: 1.3rem;
@@ -1130,19 +1138,20 @@ hr {
 .carrito__informacion__subtotal {
     font-size: 1.4rem;
     font-weight: 700;
+    font-family: var(--fuenteTerciaria);
 }
 @media (min-width: 768px) {
     .carrito__informacion__nombre,
     .carrito__informacion__subtotal {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .carrito__informacion__nombre,
     .carrito__informacion__subtotal {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-}
+} */
 .detalleeliminacion__eliminar {
     color: var(--rojo);
     font-size: 2.5rem;
@@ -1165,4 +1174,35 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+.carro__pago {
+    min-height: 12.45rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    background-color: var(--blanco);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.pago__pagar,
+.pago__seguircomprando {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .9rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border-radius: 2rem;
+}
+.pago__pagar {
+    background-color: var(--grisClaro);
+    color: var(--blanco);
+}
+.pago__seguircomprando {
+    background-color: var(--blanco);
+    color: var(--rojo);
+    border: .2rem solid var(--rojo);
 }

@@ -1,13 +1,28 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { useCarroCompras } from "../hooks/useCarroCompras"
 import { ItemCarrito } from "./ItemCarrito";
 
 export const CarroCompras = () => {
+    const navigate = useNavigate();
+
     const { mostrarCarro,
             mostrarSuTotalCarrito,
             mostrarMontoTotal, 
             setMostrarCarro, 
             carroCompras,
             montoDelivery } = useCarroCompras();
+
+    const handleIrAPagar = (e) => {
+        e.preventDefault();
+        setMostrarCarro(false);
+        alert('Está llendo a pagar!!!');
+    }
+
+    const handleSeguirComprando = (e) => {
+        e.preventDefault();
+        setMostrarCarro(false);
+        navigate('/menu');
+    }
 
     return (
         <div className={`contenedor__carro${mostrarCarro ? ' mostrar' : ''}`}>
@@ -49,6 +64,10 @@ export const CarroCompras = () => {
                         <div className="contenido__items__total">
                             <p className="items__total__titulo">Total a pagar</p>
                             <p className="items__total__monto">{`S/. ${mostrarMontoTotal()}`}</p>
+                        </div>
+                        <div className="carro__pago">
+                            <Link className="pago__pagar" onClick={e => handleIrAPagar(e)}>Ir a Pagar</Link>
+                            <Link className="pago__seguircomprando" onClick={e => handleSeguirComprando(e)}>Seguir Comprando</Link>
                         </div>
                     </div>
                 )}
