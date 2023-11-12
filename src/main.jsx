@@ -14,6 +14,7 @@ import { Locales } from './pages/Locales'
 import { ZonasReparto } from './pages/ZonasReparto'
 import { Nosotros } from './pages/Nosotros'
 import { TerminosCondiciones } from './pages/TerminosCondiciones'
+import { CarroCompras } from './components/CarroCompras'
 
 const router = createBrowserRouter([
   {
