@@ -14,7 +14,7 @@ import { Locales } from './pages/Locales'
 import { ZonasReparto } from './pages/ZonasReparto'
 import { Nosotros } from './pages/Nosotros'
 import { TerminosCondiciones } from './pages/TerminosCondiciones'
-import { CarroCompras } from './components/CarroCompras'
+import { ErrorPage } from './pages/ErrorPage'
 
 const router = createBrowserRouter([
   {
@@ -24,47 +24,57 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
-        loader: indexLoader
+        loader: indexLoader,
+        errorElement: <ErrorPage />
       },
       {
         path: '/menu',
         element: <Menu />,
-        loader: menuLoader
+        loader: menuLoader,
+        errorElement: <ErrorPage />
       },
       {
         path: '/menu/:opcion',
         element: <MenuOpciones />,
-        loader: menuOpcionesLoader
+        loader: menuOpcionesLoader,
+        errorElement: <ErrorPage />
       },
       {
         path: '/promociones/delivery-hamburguesas',
         element: <Promociones />,
-        loader: promocionesLoader
+        loader: promocionesLoader,
+        errorElement: <ErrorPage />
       },
 
       {
         path: '/beneficios',
-        element: <Beneficios />
+        element: <Beneficios />,
+        errorElement: <ErrorPage />
       },
       {
         path: '/customer/account/login',
-        element: <MiCuenta />
+        element: <MiCuenta />,
+        errorElement: <ErrorPage />
       },
       {
         path: '/locales',
-        element: <Locales />
+        element: <Locales />,
+        errorElement: <ErrorPage />
       },
       {
         path: '/zonas-de-reparto',
-        element: <ZonasReparto />
+        element: <ZonasReparto />,
+        errorElement: <ErrorPage />
       },
       {
         path: '/nosotros/:ruta',
-        element: <Nosotros />
+        element: <Nosotros />,
+        errorElement: <ErrorPage />
       },
       {
         path: '/terminos-y-condiciones-de-promociones',
-        element: <TerminosCondiciones/>
+        element: <TerminosCondiciones/>,
+        errorElement: <ErrorPage />
       }
     ]
   }
