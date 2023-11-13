@@ -1,14 +1,20 @@
-import { useParams } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
+import { obtenerProductoxNombre } from "../data/bembosAPI"
+
+export const loader = ({ params }) => {
+  const { opcion, producto } = params;
+  const productoConsultado = obtenerProductoxNombre(producto);
+  return productoConsultado;
+}
 
 export const ProductoCompra = ({ }) => {
-    const param = useParams(); 
-    console.log(param);
+  const producto = useLoaderData();
 
   return (
     <div className="">
-        <h1>
-            soy e l loproducto
-        </h1>
+      <h1>
+        {JSON.stringify(producto)}
+      </h1>
     </div>
   )
 }

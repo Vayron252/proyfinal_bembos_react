@@ -327,3 +327,21 @@ export const obtenerListadoProductosXOpcion = (opcion) => {
 
     return listado;
 }
+
+export const obtenerProductoxNombre = (nombreProducto) => {
+    const producto = {
+        informacion: {
+            id_producto: 28,
+            nombre_producto: 'Cheese Fingers',
+            img_producto: 'https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/h/cheese-fingers-base_3.jpg',
+            precio_producto: 11.9,
+            descripcion_producto: `Perfectos para acompañar tu hamburguesa a la parrilla :
+            Prueba unos ricos deditos de queso: En presentación de 4, 6 o 9 Cheese Fingers.
+            Trozos alargados de queso mozzarella fritos para acompañar tu hamburguesa favorita.
+            
+            Mayonesa x1, Ketchup x1, Ají Bembos x1`
+        }
+    }
+
+    return producto;
+}
