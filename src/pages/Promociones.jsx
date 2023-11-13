@@ -5,27 +5,37 @@ import { useScrollPosition } from '../hooks/useScrollPosition'
 import { PromocionesTarjetas } from '../components/PromocionesTarjetas'
 import { PromocionesPersonales } from '../components/PromocionesPersonales'
 import { Cupones } from '../components/Cupones'
+import { PromocionesParaCompartir } from '../components/PromocionesParaCompartir'
+import { PromocionesParaDos} from '../components/PromocionesParaDos'
 import { useState } from 'react';
 import { obtenerListadoProductosXOpcion } from '../data/bembosAPI';
+import { obtenerPromocionesParaDos } from '../data/bembosAPI';
 import { obtenerPromocionesPersonales } from '../data/bembosAPI';
 import { obtenerCupones } from '../data/bembosAPI';
+import { obtenerPromocionesParaCompartir } from '../data/bembosAPI';
 
 
 export const loader = () => {
   const listadoComplementos = obtenerListadoProductosXOpcion('complementos')
   const promocionesPersonalesActualizado = obtenerPromocionesPersonales('')
+  const promocionesParaCompartir = obtenerPromocionesParaCompartir('')
+  const promocionesParaDos = obtenerPromocionesParaDos('')
   const cupones = obtenerCupones('')
-  return {listadoComplementos, promocionesPersonalesActualizado, cupones};
+  return {listadoComplementos, promocionesPersonalesActualizado, promocionesParaCompartir, promocionesParaDos, cupones};
 }
 
 export const Promociones = () => {
 
   const { listadoComplementos } = useLoaderData();
   const { promocionesPersonalesActualizado } = useLoaderData ();
+  const { promocionesParaDos } = useLoaderData ();
   const { cupones } = useLoaderData ();
+  const {promocionesParaCompartir} = useLoaderData ();
   console.log(listadoComplementos)
   console.log(promocionesPersonalesActualizado)
+  console.log(promocionesParaDos)
   console.log(cupones)
+  console.log(promocionesParaCompartir)
   
 
   const settings = {
@@ -201,6 +211,18 @@ export const Promociones = () => {
                   <h3>Promociones para dos</h3>
                 </div>
 
+                {/* PROMO PARA DOS */}
+
+                <div className='promociones__personales__contenedor'>
+                  <Slider {...settingsCards} className='slider__contenedor'>
+                      {promocionesParaDos.map((dos, index) => (
+                        <PromocionesParaDos key={index} promoDos = {dos}/>
+                      ))}
+                  </Slider>
+                </div>  
+
+                 {/* FIN - PROMO PARA DOS */}
+
                 <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
@@ -209,10 +231,22 @@ export const Promociones = () => {
                     </Slider>  
                 </div>
 
+                {/* PROMOCIONES PARA COMPARTIR */}
+
                 <div className='contenedor__promocion__categoria'>
                   <i class="fa-solid fa-people-group"></i>
                   <h3>Promociones para compartir</h3>
                 </div>
+
+                <div className='promociones__personales__contenedor'>
+                  <Slider {...settingsCards} className='slider__contenedor'>
+                      {promocionesParaCompartir.map((compartir, index) => (
+                        <PromocionesParaCompartir key={index} promoCompartir = {compartir}/>
+                      ))}
+                  </Slider>
+                </div>  
+
+                {/*FIN PROMOCIONES PARA COMPARTIR */}
 
                 {/* COMPLEMENTOS */}
 
@@ -233,7 +267,8 @@ export const Promociones = () => {
                 </div>
 
                 <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsCards} className='slider__contenedor'>
+      
+                  <Slider {...settingsCards} className='slider__contenedor'>     
                       {cupones.map((cupon, index) => (
                         <Cupones key={index} personalCupon = {cupon}/>
                       ))}
@@ -247,18 +282,9 @@ export const Promociones = () => {
           </div> 
 
           
-          {/* FIN SEGUNDA FRANJA - PROMOCIÓN AVISO Y BUSCAR */}
-
-          {/* SEGUNDA FRANJA (SOLO MOBILE) - PROMOCIÓN AVISO Y BUSCAR */}
-
 
 
           {/* FIN SEGUNDA FRANJA (SOLO MOBILE) - PROMOCIÓN AVISO Y BUSCAR */}
-
-
-          {/* PARA LOS SIGUIENTES */} 
-
-
 
 
 

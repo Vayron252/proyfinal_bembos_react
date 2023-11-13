@@ -348,6 +348,334 @@
 
 /* PROMOCIONES PERSONALES - FIN */
 
+/* PROMOCIONES PARA DOS - INICIO ---------------------------*/
+
+.contenedor__info__details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco);
+    padding-right: 25px;
+    padding-left: 14px;
+ 
+}
+
+.general__container__promo__personal{
+    display: flex;
+    align-items: center;
+    border: 1.5px solid rgb(226, 223, 223);
+    box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
+    margin-right: 30px;
+    max-width: 500px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+}
+
+.contenedor__imagen__promo__personal{
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.imagen__promo__personal{
+    object-fit: cover;
+    width: 210px;
+    height:230px;
+}
+
+.contenedor__promo__personal__img{
+    position: relative;
+}
+
+.contenedor__precios__promo{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 148px;
+    max-width: 160px;
+    width: 100%;
+}
+
+.button__promo__personal{
+    background-color: var(--colorPrincipal);
+    color: var(--blanco);
+    height: 35px;
+    font-size: 14px;
+    width: 150px;
+    max-width: 100%;
+    margin-top: -10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.precios__promo__personal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.container__total__promo__button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+}
+
+.precio__actual{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.precio__antiguo{
+    color: var(--rojo);
+    font-size: 900;
+
+}
+
+.promo__personal__details{
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+.titulo__promo{
+    transform: scaleY(1.1);
+    font-size: 15px;
+    margin-bottom: 10px;
+
+}
+
+.descripcion__promo{
+    font-size: 11px;
+    color: var(--negroMenosIntenso);
+    line-height: 16px;
+    max-width:120px;
+    width:100%;
+}
+
+.contenedor__precios__promo h4{
+    color: var(--blanco);
+    background-color: var(--rojo);
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: -9px;
+    border-radius: 20px;
+    max-width: 55px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor__precios__promo p{
+    color: var(--blanco);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* PROMOCIONES PARA DOS - FIN --------------------------------*/
+
+
+
+/* PROMOCIONES PARA COMPARTIR - INICIO  ------------------------*/
+
+.contenedor__compartir__details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco);
+    padding-right: 20px;
+    padding-left: 14px;
+    max-width: 220px;
+    width: 100%;
+}
+
+.image__web{
+    width: 60px;
+}
+
+.contenedor__exclusivo__web{
+    display: flex;
+    align-items: center;
+;
+}
+
+.general__container__compartir{
+    display: flex;
+    align-items: center;
+    border: 1.5px solid rgb(226, 223, 223);
+    box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
+    margin-right: 30px;
+    max-width: 500px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background-color: var(--blanco);
+    
+}
+
+.contenedor__imagen__compartir{
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.imagen__compartir{
+    object-fit: cover;
+    width: 210px;
+    height:230px;
+}
+
+.contenedor__compartir__img{
+    position: relative;
+}
+
+.contenedor__precios__compartir{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px;
+    max-width: 160px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.button__compartir__promo{
+    background-color: var(--colorPrincipal);
+    color: var(--blanco);
+    height: 35px;
+    font-size: 14px;
+    width: 150px;
+    max-width: 100%;
+    margin-top: -10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.precios__promo__personal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.container__total__promo__button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+}
+
+.precio__actual__compartir{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.precio__antiguo__compartir{
+    color: var(--rojo);
+    font-size: 900;
+
+}
+
+.promo__compartir__details{
+    margin-bottom: 25px;
+
+}
+
+.titulo__compartir__azul{
+    transform: scaleY(1.1);
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--colorPrincipal);
+
+}
+
+.titulo__compartir__negro{
+    transform: scaleY(1.1);
+    font-size: 15px;
+    margin-bottom: 10px;
+
+}
+
+.descripcion__compartir{
+    font-size: 11px;
+    color: var(--negroMenosIntenso);
+    line-height: 16px;
+    max-width:120px;
+    width:100%;
+}
+
+.contenedor__precios__compartir h4{
+    color: var(--blanco);
+    background-color: var(--rojo);
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: -9px;
+    border-radius: 20px;
+    max-width: 55px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor__precios__compartir p{
+    color: var(--blanco);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.terminos__blanco{
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.terminos__negro{
+    color: var(--negro);
+    font-weight: bold;
+}
+
+.web__special__image{
+    max-width:90px;
+    width: 100%;
+    margin-left: 70px;
+}
+
+.image__solo__web{
+    max-width: 75px;
+    width: 100%;
+}
+/* PROMOCIONES PARA COMPARTIR - FIN */
+
+
 /* CUPONES ----------------------------------*/
 
 .cupon__info__details{
@@ -471,9 +799,9 @@
     width:100%;
 }
 
-.contenedor__precios__cupon h4{
+
+.precios__cupon__descuento{
     color: var(--blanco);
-    background-color: var(--rojo);
     text-align: center;
     font-size: 14px;
     position: absolute;
@@ -485,6 +813,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--rojo);
+
 }
 
 .contenedor__precios__cupon p{
@@ -588,6 +918,7 @@
     margin: 0 auto;
     padding: 0 18px;
     margin-bottom: 60px;
+    margin-top: 50px;
 }
 
 .titulo__preguntas__frecuentes{

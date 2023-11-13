@@ -1,7 +1,14 @@
 import React from 'react'
+import { useState } from 'react';
+
+
+
 
 
 export const Cupones = ({personalCupon}) => {
+
+    
+    
   return (
     <div>
 
@@ -16,7 +23,7 @@ export const Cupones = ({personalCupon}) => {
                     <img src={personalCupon.img_entel} alt="" className='entel__image' />
                     <h3 className='titulo__cupon'>{personalCupon.nombre} </h3>
                     <p className='descripcion__cuppon'> {personalCupon.descripcion} </p>
-                    <p className='aviso__cupon'> {personalCupon.aviso} </p>
+                    <p className='aviso__cupon'>{personalCupon.aviso} </p>
                 </div>
                
 
@@ -33,9 +40,11 @@ export const Cupones = ({personalCupon}) => {
 
             <div className='contenedor__cupon__personal__img'>
                 <div className='contenedor__imagen__cupon__personal'>
-                    <img src={personalCupon.img} alt="" className='imagen__cupon__personal' />
+                    <img src={personalCupon.img} alt="" className= 'imagen__cupon__personal'/>
+
                     <div className='contenedor__precios__cupon'>
                         <div>
+                        <h4>{personalCupon.descuento}</h4>
                         </div>
                         <div>
                         <p> <u>Términos y condiciones</u></p>  
@@ -47,6 +56,7 @@ export const Cupones = ({personalCupon}) => {
             </div>
 
     </div>
+    
 
     </div>
   )

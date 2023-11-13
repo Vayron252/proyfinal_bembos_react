@@ -161,7 +161,6 @@ export const obtenerCupones = () => {
         {
             "nombre": "Combo Interbank",
             "descripcion": "1 queso tocino regular, nuggets x 6, 1 papa regular",
-            "aviso": "",
             "precio_actual": 19.90,
             "precio_antiguo": 30.30,
             "descuento": 34,
@@ -174,9 +173,9 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de suscriptores de pchujoy.com antes de finalizar la compra y obtén la promoción a S/.26.90",
             "precio_actual": 47.60,
             "precio_antiguo": "",
-            "descuento": "",
             "id": 2,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/e/personal-cheese-bembos.webp"
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/e/personal-cheese-bembos.webp",
+            "terminos":"Términos y Condiciones"
         },
 
         {
@@ -185,7 +184,6 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/23.80",
             "precio_actual": 47.60,
             "precio_antiguo": "",
-            "descuento": "",
             "id": 3,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-royal-800x1370.webp",
             "img_entel": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_4.png"
@@ -197,8 +195,6 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de Yape antes de finalizar la compra y obtén la promoción a S/21.90",
             "precio_actual": 36.90,
             "precio_antiguo": "",
-            "descuento": "",
-            "descuento": "",
             "id": 4,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-pv-bb.webp",
             
@@ -210,7 +206,6 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/27.80",
             "precio_actual": 55.60,
             "precio_antiguo": "",
-            "descuento": "",
             "id": 5,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-parrillera-800x1370.webp",
             "img_entel": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_4.png"
@@ -222,7 +217,6 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/20.80",
             "precio_actual": 41.60,
             "precio_antiguo": "",
-            "descuento": "",
             "id": 6,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-clasica-800x1370.webp",
             "img_entel": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_4.png"
@@ -234,7 +228,6 @@ export const obtenerCupones = () => {
             "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/24.80",
             "precio_actual": 49.60,
             "precio_antiguo": "",
-            "descuento": "",
             "id": 7,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-queabuso-2x1_1.webp",
             "img_entel": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_4.png"      
@@ -245,8 +238,143 @@ export const obtenerCupones = () => {
     return cupones;
 }
 
+export const obtenerPromocionesParaDos = () => {
+    const promocionesParaDos = [
+
+        {
+            "nombre_azul": "Dupla Perfecta Cyber",
+            "descripcion": "1 Cheese regular, 1 Royal regular, 2 papas regulares..",
+            "precio_actual": 24.90,
+            "precio_antiguo": 40.60,
+            "descuento": 39,
+            "id": 1,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-dupla-perfecta-cyber-nov-2023.webp",
+            "terminos_negro":"Términos y Condiciones"
+        },
+        {
+            "nombre_azul": "Dúo Queso Tocino",
+            "descripcion": "2 Queso Tocino regulares, 2 Papas medianas.",
+            "precio_actual": 27.90,
+            "precio_antiguo": "43.60",
+            "descuento": 42,
+            "id": 2,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-dupla-perfecta-cyber-nov-2023.webp",
+            "terminos_blanco":"Términos y Condiciones"
+        },
+
+        {
+            "nombre_negro": "Dúo Churrita",
+            "descripcion": "2 Churritas regulares, 2 papas regulares",
+            "precio_actual": 23.90,
+            "precio_antiguo": 44.60,
+            "descuento": 45,
+            "id": 3,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combos-800x1370-churrita.webp",
+            "terminos_blanco":"Términos y Condiciones"
+        },
+
+        {
+            "nombre_negro": "Dúo Extrema",
+            "descripcion": "2 Extrema regulares + 2 papas regulares",
+            "precio_actual": 30.90,
+            "precio_antiguo": 51.60,
+            "descuento": 40,
+            "id": 4,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-duo-extrema.webp",
+            "terminos_blanco":"Términos y Condiciones"          
+        },
+
+        {
+            "nombre_negro": "Dupla Perfecta",
+            "descripcion": "1 Cheese regular, 1 Royal regular, 2 papas regulares",
+            "precio_actual": 30.90,
+            "precio_antiguo": 40.60,
+            "descuento": 24,
+            "id": 5,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-royal-cheese-bb.webp",
+        },
+
+        {
+            "nombre_negro": "Queabuso Cyber Yape",
+            "descripcion": "1 Queabuso regular, 1 Clásica regular, 2 papas regulares",
+            "precio_actual": 39.60,
+            "precio_antiguo": 20.60,
+            "descuento": 13,
+            "id": 6,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/q/u/queabuso-800x1370.webp",
+            "terminos_blanco":"Términos y Condiciones"  
+        }
+        
+        
+    ]
+
+    return promocionesParaDos;
+}
 
 
+
+export const obtenerPromocionesParaCompartir = () => {
+    const promocionesParaCompartir = [
+
+        {
+            "nombre_azul": "Familiar Parrillero Cyber",
+            "descripcion": "2 Clásicas regulares, 2 Parrilleras regulares, 4 papa...",
+            "precio_actual": 49.90,
+            "precio_antiguo": 85.20,
+            "descuento": 41,
+            "id": 1,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-dupla-perfecta-cyber-nov-2023.webp",
+            "terminos_negro":"Términos y Condiciones"
+        },
+        {
+            "nombre_azul": "Extremadamente Cheesy Cyber",
+            "descripcion": "2 Extremas regulares, 2 Cheese regulares, 4 papas...",
+            "precio_actual": 52.90,
+            "precio_antiguo": "91.20",
+            "descuento": 42,
+            "id": 2,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-dupla-perfecta-cyber-nov-2023.webp",
+            "terminos_negro":"Términos y Condiciones"
+        },
+
+        {
+            "nombre_negro": "Trío Power",
+            "descripcion": "2 Clásicas medianas, 1 A lo Pobre regulares, 3 Papas...",
+            "precio_actual": 45.90,
+            "precio_antiguo": 66.40,
+            "descuento": 31,
+            "id": 3,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/t/r/trio-power-bembos.webp",
+            "terminos_blanco":"Términos y Condiciones"
+        },
+
+        {
+            "nombre_negro": "Familiar 1",
+            "descripcion": "4 Royal regulares, 4 Papas regulares",
+            "precio_actual": 49.90,
+            "precio_antiguo": 83.20,
+            "descuento": 40,
+            "id": 4,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/familiar-1-bembos.webp",
+            "terminos_blanco":"Términos y Condiciones"          
+        },
+
+        {
+            "nombre_negro": "La Cuádruple",
+            "descripcion": "2 Queso Tocino regular, 2 Churrita regular, 1 papa...",
+            "precio_actual": 51.90,
+            "precio_antiguo": 79.10,
+            "descuento": 40,
+            "id": 5,
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-parrillera-800x1370.webp",
+            "img_web": "https://www.bembos.com.pe/_ipx/q_85,w_250,f_webp/img/exclusivo-web.webp",
+            "terminos_blanco":"Términos y Condiciones"
+        }
+        
+    ]
+
+    return promocionesParaCompartir;
+}
 
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export const PromocionesPersonales = ({personalPromo}) => {
   return (
     <div>
@@ -22,22 +23,23 @@ export const PromocionesPersonales = ({personalPromo}) => {
                     <button className='button__promo__personal'>Ver más</button>
                 </div>
             </div>
+    
 
             <div className='contenedor__promo__personal__img'>
                 <div className='contenedor__imagen__promo__personal'>
                     <img src={personalPromo.img} alt="" className='imagen__promo__personal' />
                     <div className='contenedor__precios__promo'>
                         <div>
-                        <h4>-{personalPromo.descuento}%</h4>
+                        <h4>-{personalPromo.descuento}</h4>
                         </div>
                         <div>
                         <p> <u>Términos y condiciones</u></p>  
                         </div>                     
-                    </div>  
-                    
+                    </div>                     
                           
                 </div>      
             </div>
+ 
 
     </div>
 
