@@ -15,6 +15,7 @@ import { ZonasReparto } from './pages/ZonasReparto'
 import { Nosotros } from './pages/Nosotros'
 import { TerminosCondiciones } from './pages/TerminosCondiciones'
 import { ErrorPage } from './pages/ErrorPage'
+import { ProductoCompra } from './pages/ProductoCompra'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         element: <MenuOpciones />,
         loader: menuOpcionesLoader,
         errorElement: <ErrorPage />
+      },
+      {
+        path: '/menu/:opcion/:producto',
+        element: <ProductoCompra />
       },
       {
         path: '/promociones/delivery-hamburguesas',

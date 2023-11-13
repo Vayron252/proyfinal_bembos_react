@@ -20,7 +20,7 @@ export const MenuOpciones = () => {
   const location = useLocation();
   const scrollPosition = useScrollPosition();
   const listado = useLoaderData();
-  const { setMostrarCarro } = useCarroCompras();
+  const { setMostrarCarro, mostrarSuTotalCarrito } = useCarroCompras();
 
   const settings = {
     dots: false,
@@ -125,7 +125,7 @@ export const MenuOpciones = () => {
             <button className="opcion__ver__carrito" onClick={() => setMostrarCarro(true)}>
               <i className="fa-solid fa-cart-shopping ver__carrito__imagen"></i>
               <p className="ver__carrito__texto">Ver Carrito de compra</p>
-              <p className="ver__carrito__monto">S/. 0.00</p>
+              <p className="ver__carrito__monto">{`S/. ${mostrarSuTotalCarrito()}`}</p>
             </button>
           </div>
         </div>
