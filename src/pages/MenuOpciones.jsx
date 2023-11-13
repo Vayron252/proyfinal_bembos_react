@@ -1,4 +1,4 @@
-import { useLoaderData, Link, useLocation } from 'react-router-dom';
+import { useLoaderData, Link, useLocation, useParams } from 'react-router-dom';
 import { obtenerListadoProductosXOpcion } from '../data/bembosAPI'
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { useCarroCompras } from '../hooks/useCarroCompras'
@@ -11,12 +11,13 @@ import '../styles/secciones.css'
 // import "slick-carousel/slick/slick-theme.css";
 
 export const loader = ({ params }) => {
-  const { opcion } = params;
-  const listadoOpciones = obtenerListadoProductosXOpcion(opcion);
+  const { categoria } = params;
+  const listadoOpciones = obtenerListadoProductosXOpcion(categoria);
   return listadoOpciones;
 }
 
-export const MenuOpciones = () => {
+export const MenuOpciones = ({ params }) => {
+  const { categoria }  = useParams();
   const location = useLocation();
   const scrollPosition = useScrollPosition();
   const listado = useLoaderData();
@@ -70,21 +71,23 @@ export const MenuOpciones = () => {
         <div className="listado__productos">
           {listado.map(producto => (
             <Tarjeta key={producto.id}>
-              <div className="tarjeta">
-                <div className="tarjeta__contenedor__imagen">
-                  <img className="tarjeta__imagen" src={producto.img} alt="imagen producto" />
-                </div>
-                <div className="tarjeta__contenido">
-                  <div className="tarjeta__contenido__informacion">
-                    <h4 className="tarjeta__titulo">{producto.nombre}</h4>
-                    <p className="tarjeta__precio">{`S/. ${producto.precio}`}</p>
-                    {location.pathname === '/menu/combos' ? <></> : (
-                      <p className="tarjeta__terminosycondiciones">Términos y Condiciones</p>
-                    )}
+              <Link to={`/menu/${categoria}/${producto.link}`}>
+                <div className="tarjeta">
+                  <div className="tarjeta__contenedor__imagen">
+                    <img className="tarjeta__imagen" src={producto.img} alt="imagen producto" />
                   </div>
-                  <button className="tarjeta__boton">Ver más</button>
+                  <div className="tarjeta__contenido">
+                    <div className="tarjeta__contenido__informacion">
+                      <h4 className="tarjeta__titulo">{producto.nombre}</h4>
+                      <p className="tarjeta__precio">{`S/. ${producto.precio}`}</p>
+                      {location.pathname === '/menu/combos' ? <></> : (
+                        <p className="tarjeta__terminosycondiciones">Términos y Condiciones</p>
+                      )}
+                    </div>
+                    <button className="tarjeta__boton">Ver más</button>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Tarjeta>
           ))}
         </div>
