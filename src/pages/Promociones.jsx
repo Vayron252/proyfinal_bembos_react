@@ -3,20 +3,41 @@ import '../styles/promociones.css'
 import Slider from "react-slick"
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { PromocionesTarjetas } from '../components/PromocionesTarjetas'
+import { PromocionesPersonales } from '../components/PromocionesPersonales'
+import { Cupones } from '../components/Cupones'
+import { PromocionesParaCompartir } from '../components/PromocionesParaCompartir'
+import { PromocionesParaDos} from '../components/PromocionesParaDos'
 import { useState } from 'react';
 import { obtenerListadoProductosXOpcion } from '../data/bembosAPI';
+import { obtenerPromocionesParaDos } from '../data/bembosAPI';
+import { obtenerPromocionesPersonales } from '../data/bembosAPI';
+import { obtenerCupones } from '../data/bembosAPI';
+import { obtenerPromocionesParaCompartir } from '../data/bembosAPI';
 
 
 export const loader = () => {
   const listadoComplementos = obtenerListadoProductosXOpcion('complementos')
-  return {listadoComplementos};
+  const promocionesPersonalesActualizado = obtenerPromocionesPersonales('')
+  const promocionesParaCompartir = obtenerPromocionesParaCompartir('')
+  const promocionesParaDos = obtenerPromocionesParaDos('')
+  const cupones = obtenerCupones('')
+  return {listadoComplementos, promocionesPersonalesActualizado, promocionesParaCompartir, promocionesParaDos, cupones};
 }
-                       
+
 export const Promociones = () => {
 
   const { listadoComplementos } = useLoaderData();
+  const { promocionesPersonalesActualizado } = useLoaderData ();
+  const { promocionesParaDos } = useLoaderData ();
+  const { cupones } = useLoaderData ();
+  const {promocionesParaCompartir} = useLoaderData ();
   console.log(listadoComplementos)
+  console.log(promocionesPersonalesActualizado)
+  console.log(promocionesParaDos)
+  console.log(cupones)
+  console.log(promocionesParaCompartir)
   
+
   const settings = {
     dots: false,
     infinite: false,
@@ -50,9 +71,7 @@ export const Promociones = () => {
     );
   }
 
-
   return (
-
 
       <div className='container__todo__pagina__promociones'>
 
@@ -161,14 +180,21 @@ export const Promociones = () => {
                  
                 <div className='contenedor__promocion__categoria'>
                   <i class="fa-solid fa-user"></i>
-                  <h3>Promociones Personales</h3>
+                  <h3>Promociones Personales</h3>                
                 </div>
 
-                <div>
+                <div className='promociones__personales__contenedor'>
+                  <Slider {...settingsCards} className='slider__contenedor'>
+                      {promocionesPersonalesActualizado.map((personal, index) => (
+                        <PromocionesPersonales key={index} personalPromo = {personal}/>
+                      ))}
+                  </Slider>
+                </div>    
+
+                  <div>
+
                   <h1>Complementos</h1>
-                  {/* COMPLEMENTOS */}
-                     
-          
+                  {/* COMPLEMENTOS - PROMOCIONES PERSONALES */}                            
                     <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
@@ -176,9 +202,8 @@ export const Promociones = () => {
                     ))}
                     </Slider>  
                     </div>
-
-                                   
-       
+                  {/* FIN COMPLEMENTOS - PROMOCIONES PERSONALES */}
+                                        
                 </div>
 
                 <div className='contenedor__promocion__categoria'>
@@ -186,6 +211,18 @@ export const Promociones = () => {
                   <h3>Promociones para dos</h3>
                 </div>
 
+                {/* PROMO PARA DOS */}
+
+                <div className='promociones__personales__contenedor'>
+                  <Slider {...settingsCards} className='slider__contenedor'>
+                      {promocionesParaDos.map((dos, index) => (
+                        <PromocionesParaDos key={index} promoDos = {dos}/>
+                      ))}
+                  </Slider>
+                </div>  
+
+                 {/* FIN - PROMO PARA DOS */}
+
                 <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
@@ -193,12 +230,26 @@ export const Promociones = () => {
                     ))}
                     </Slider>  
                 </div>
+
+                {/* PROMOCIONES PARA COMPARTIR */}
 
                 <div className='contenedor__promocion__categoria'>
                   <i class="fa-solid fa-people-group"></i>
                   <h3>Promociones para compartir</h3>
                 </div>
 
+                <div className='promociones__personales__contenedor'>
+                  <Slider {...settingsCards} className='slider__contenedor'>
+                      {promocionesParaCompartir.map((compartir, index) => (
+                        <PromocionesParaCompartir key={index} promoCompartir = {compartir}/>
+                      ))}
+                  </Slider>
+                </div>  
+
+                {/*FIN PROMOCIONES PARA COMPARTIR */}
+
+                {/* COMPLEMENTOS */}
+
                 <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
@@ -207,41 +258,37 @@ export const Promociones = () => {
                     </Slider>  
                 </div>
 
+              {/* FIN COMPLEMENTOS */}
+
+              {/* INICIO CUPONES*/}
+
                 <div className='contenedor__promocion__categoria'>
                   <h3>Cupones</h3>
                 </div>
+
+                <div className='promociones__personales__contenedor'>
+      
+                  <Slider {...settingsCards} className='slider__contenedor'>     
+                      {cupones.map((cupon, index) => (
+                        <Cupones key={index} personalCupon = {cupon}/>
+                      ))}
+                  </Slider>
+                </div>   
+
+              {/* FIN CUPONES */} 
 
 
             </div>
           </div> 
 
           
-          {/* FIN SEGUNDA FRANJA - PROMOCIÓN AVISO Y BUSCAR */}
-
-          {/* SEGUNDA FRANJA (SOLO MOBILE) - PROMOCIÓN AVISO Y BUSCAR */}
-
 
 
           {/* FIN SEGUNDA FRANJA (SOLO MOBILE) - PROMOCIÓN AVISO Y BUSCAR */}
 
 
-          {/* PARA LOS SIGUIENTES */} 
 
 
-
-
-    {/*     <div className='menu__container__cards'>
-          {listadoMenu.map((menu, index) => (
-            <TarjetaMenu key = {index} menu = {menu} />
-          ))}
-        </div>
-  */}
-
-  {/* const[mostrarPrimerContenido, setMostrarPrimerContenido] = useState(true)
-    const [mostrarSegundoContenido, setMostrarSegundoContenido] = useState(false)
-    const [mostrarTercerContenido, setMostrarTercerContenido] = useState(false)
-    const [mostrarCuartoContenido, setMostrarCuartoContenido] = useState(false)
-        */}
 
           {/* FIN COMPLEMENTOS */}
 
@@ -251,83 +298,77 @@ export const Promociones = () => {
             <h1 className='titulo__preguntas__frecuentes'>Preguntas Frecuentes de Promociones Delivery Online</h1>
           
           {/* PREGUNTA 1*/}
+
           <div className= 'preguntas__unidad__container'>
-            <div className= 'preguntas__unidad'>
-              <h2>¿Las promociones de <strong>hamburguesas delivery</strong> online se pueden pagar presencialmente en mi domicilio?</h2>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className= 'respuesta__preguntas'>
-              <p>¡Claro que sí, sobrino! Puedes acceder a las <strong>promociones delivery</strong> online por nuestra Web o App y pagar en casa en efectivo o con tarjeta de crédito o débito Visa o Mastercard. Incluso con Yape. Recuerda que también puedes pagar en línea con tarjeta de manera fácil y 100% segura.</p>
-            </div>
-            <hr className='separador__pregunta__unit'/>
-            {/* FIN - PREGUNTA 1*/}
 
-            {/* PREGUNTA - 2 */}
-            <div className='preguntas__unidad__second'>
-              <h2>¿Con cualquier método de pago accedo a las <strong>promociones de delivery</strong> online de Bembos?</h2>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className= 'respuesta__preguntas'>
-              <p>¡Obvio, sobrino! Puedes disfrutar todas nuestras <strong>promociones hoy</strong> online y elegir pagar en efectivo o con tarjetas de crédito o débito Visa o Mastercard. Incluso con Yape.</p>
-            </div>
-            <hr className='separador__pregunta__unit'/>
-            {/* FIN PREGUNTA - 2 */}
+          <div class="preguntas__frecuentes__container">
+            <details class="container__por__pregunta">
+              <summary className="pregunta__frecuente">
+                <h3>¿Las promociones de <strong>hamburguesas delivery</strong> online se pueden pagar presencialmente en mi domicilio?</h3>
+              </summary>
+              <div className="respuesta__preguntas__promos">
+                <p>¡Claro que sí, sobrino! Puedes acceder a las <strong>promociones delivery</strong> online por nuestra Web o App y pagar en casa en efectivo o con tarjeta de crédito o débito Visa o Mastercard. Incluso con Yape. Recuerda que también puedes pagar en línea con tarjeta de manera fácil y 100% segura.</p>
+              </div>
+            </details>
+            <hr className='separador__por__pregunta'/>
+          {/* FIN - PREGUNTA 1*/}
 
-            {/* PREGUNTA - 3 */}
-            <div className='preguntas__unidad__third'>
-              <h2>¿En qué ciudades puedo pedir las <strong>Promociones de Delivery</strong></h2>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className='respuesta__preguntas'>
-              <p>Puedes pedir tu delivery de hamburguesas favoritas en Lima, Arequipa, Cusco, Chiclayo, Huanuco, Ica, Juliaca, Piura, Puno, Tacna Huancayo y Trujillo. Para conocer la ubicación de nuestros locales ingresa a nuestra página de <u>Locales</u>.</p>
-            </div>
-            <hr className='separador__pregunta__unit'/>
-            {/* FIN PREGUNTA - 3 */}
+          {/* PREGUNTA 2 */}
 
-            {/* PREGUNTA - 4 */}
-            <div className='preguntas__unidad__forth'>
-              <h2>¿Acumulo puntos si elijo las <strong>promociones de delivery</strong> online?</h2>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className='respuesta__preguntas'>
-              <p>¡Así es, sobrino! Sí acumulas puntos por cada compra Online que realices, sean promociones o productos del <strong>menú de hamburguesas</strong>. Con tus puntos acumulados puedes acceder a promociones exclusivas a través de la Web o App e ir construyendo una Relación con Bembos, a más amor, más beneficios.</p>
-            </div>
-            <hr className='separador__pregunta__unit'/>
-            {/* FIN PREGUNTA - 4 */}
+            <details class="container__por__pregunta">
+              <summary className="pregunta__frecuente">
+                <h3>¿Con cualquier método de pago accedo a las <strong>promociones de delivery</strong> online de Bembos?</h3>
+              </summary>
+              <div className="respuesta__preguntas__promos">
+                <p>¡Obvio, sobrino! Puedes disfrutar todas nuestras <strong>promociones hoy</strong> online y elegir pagar en efectivo o con tarjetas de crédito o débito Visa o Mastercard. Incluso con Yape.</p>
+              </div>
+            </details>
+            <hr className='separador__por__pregunta'/>
+            {/* FIN - PREGUNTA 2 */}
 
-            {/* PREGUNTA - 5 */}
-            <div className='preguntas__unidad__fifth'>
-              <h2>Para acceder a las promociones <strong>online delivery</strong> de Bembos tengo que ser cliente habitual?</h2>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className='respuesta__preguntas'>
-              <p>¡Bembos es para todos, sobrino! Puedes acceder a nuestras <strong>promociones de delivery</strong> online si es tu primera compra o si ya eres Bembos Lover.
-              </p>
-            </div>
-            <hr className='separador__pregunta__unit'/>
-            {/* FIN PREGUNTA - 5 */}
+            {/* PREGUNTA 3 */}
 
+            <details class="container__por__pregunta">
+              <summary className="pregunta__frecuente">
+                <h3>¿En qué ciudades puedo pedir las <strong>Promociones de Delivery</strong></h3>
+              </summary>
+              <div className="respuesta__preguntas__promos">
+                <p>Puedes pedir tu delivery de hamburguesas favoritas en Lima, Arequipa, Cusco, Chiclayo, Huanuco, Ica, Juliaca, Piura, Puno, Tacna Huancayo y Trujillo. Para conocer la ubicación de nuestros locales ingresa a nuestra página de <u>Locales</u>.</p>
+              </div>
+            </details>
+            <hr className='separador__por__pregunta'/>
 
+            {/* FIN PREGUNTA 3 */}
 
+            {/* PREGUNTA 4 */}
+
+            <details class="container__por__pregunta">
+              <summary className="pregunta__frecuente">
+                <h3>¿Acumulo puntos si elijo las <strong>promociones de delivery</strong> online?</h3>
+              </summary>
+              <div className="respuesta__preguntas__promos">
+                <p>¡Así es, sobrino! Sí acumulas puntos por cada compra Online que realices, sean promociones o productos del <strong>menú de hamburguesas</strong>. Con tus puntos acumulados puedes acceder a promociones exclusivas a través de la Web o App e ir construyendo una Relación con Bembos, a más amor, más beneficios.</p>
+              </div>
+            </details>
+            <hr className='separador__por__pregunta'/>
+            {/* FIN PREGUNTA 4 */}
+
+            {/* PREGUNTA 5 */}
+
+            <details class="container__por__pregunta">
+              <summary className="pregunta__frecuente">
+                <h3>Para acceder a las promociones <strong>online delivery</strong> de Bembos tengo que ser cliente habitual?</h3>
+              </summary>
+              <div className="respuesta__preguntas__promos">
+                <p>¡Bembos es para todos, sobrino! Puedes acceder a nuestras <strong>promociones de delivery</strong> online si es tu primera compra o si ya eres Bembos Lover.</p>
+              </div>
+            </details>
+            <hr className='separador__por__pregunta'/>
           </div>
-    
-          {/* FIN_PREGUNTA 1*/}
-
-          
-
-          
-
-
-
-
-
-
-
-
+          </div>
           </div>
         </div>
 
       </div>
   )
 }
-

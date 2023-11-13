@@ -209,15 +209,12 @@
     text-underline-offset: 2px;
  }
 
-
-
 .container__button__social__media{
     display: flex;
     align-items: center;
     position: absolute;
     gap: 282px;
     top: 94px;
-
 }
 
 .icono__redes__facebook{
