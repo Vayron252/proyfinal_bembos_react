@@ -7,3 +7,8 @@ export const obtenerTamanioPantalla = () => {
         x = win.innerWidth || docElem.clientWidth || body.clientWidth;
     return x;
 }
+
+export const formatoDosDecimales = (num, decimals) => num.toLocaleString('en-US', {
+    minimumFractionDigits: 2,      
+    maximumFractionDigits: 2,
+ });
