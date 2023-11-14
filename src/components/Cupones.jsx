@@ -27,7 +27,7 @@ export const Cupones = ({personalCupon}) => {
                 </div>
                
 
-                <div className='container__total__cupon__button'>              
+                <div className='container__total__cupon__button'>             
                     <div className='precios__cupon__personal'>
                         <h2 className='precio__actual__cupon'> S/.{personalCupon.precio_actual} </h2>
                         <h2 className='precio__antiguo__cupon'> {personalCupon.precio_antiguo} </h2>
@@ -43,8 +43,9 @@ export const Cupones = ({personalCupon}) => {
                     <img src={personalCupon.img} alt="" className= 'imagen__cupon__personal'/>
 
                     <div className='contenedor__precios__cupon'>
+                        {/* { precanterior > 0 ? <p>30.5</p> : <p></p> } */}
                         <div>
-                        <h4>{personalCupon.descuento}</h4>
+                        <h4 className='descuento__img'>{personalCupon.descuento}</h4>
                         </div>
                         <div>
                         <p> <u>Términos y condiciones</u></p>  

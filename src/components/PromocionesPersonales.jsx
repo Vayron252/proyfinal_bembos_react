@@ -3,7 +3,7 @@ import React from 'react'
 
 export const PromocionesPersonales = ({personalPromo}) => {
   return (
-    <div>
+    <div className='prueba'>
 
         {/* Promociones Personales */}
     
@@ -30,7 +30,7 @@ export const PromocionesPersonales = ({personalPromo}) => {
                     <img src={personalPromo.img} alt="" className='imagen__promo__personal' />
                     <div className='contenedor__precios__promo'>
                         <div>
-                        <h4>-{personalPromo.descuento}</h4>
+                        <h4>-{personalPromo.descuento}%</h4>
                         </div>
                         <div>
                         <p> <u>Términos y condiciones</u></p>  

@@ -33,32 +33,57 @@ export const Promociones = () => {
   const {promocionesParaCompartir} = useLoaderData ();
   console.log(listadoComplementos)
   console.log(promocionesPersonalesActualizado)
-  console.log(promocionesParaDos)
   console.log(cupones)
   console.log(promocionesParaCompartir)
   
-
+/* SLIDER DEL MENU */
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    variableWidth: true,
+    variableWidth: true
   };
 
-
+/* SLIDER DE COMPLEMENTOS */
   const settingsCards = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     variableWidth: true,
     swipeToSlide: false,
     nextArrow: <Arrow />,
-    prevArrow: <Arrow />
+    prevArrow: <Arrow />,
+    style: {
+      margin: '0 20px', 
+      columnGap: '10px', 
+    },
   };
+
+  /* SLIDER DEL PROMO PERSONAL, CUPONES*/
+
+  const settingsAll = {
+    speed: 500,
+    infinite: false,
+    slidesToShow: 2,
+    // slidesToScroll: 2,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />,
+    rows: 2,
+    // slidesPerRow: 1
+    // column: 3,
+    // centerMode: false
+    // style: {
+    //   margin: '10px 1px',
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    // },
+  };
+
 
   function Arrow(props) {
     const { className, style, onClick } = props;
@@ -79,7 +104,7 @@ export const Promociones = () => {
                     <div className='contenedor__promociones__seleccion'>
                       <button>Promociones Personales</button>
                       <button>Promociones para 2</button>
-                      <button>Promociones para compartir</button>
+                      <button><a href='#sss'>Promociones para compartir</a></button>
                       <button>Cupones</button>
                     </div>
                   </div>
@@ -131,25 +156,6 @@ export const Promociones = () => {
           </Slider>
           <hr className='separador__encabezado__mobile'/>     
           </div> 
-        {/*   <li className="opcion__menu">
-                    <Link className="opcion__menu__link" to={'/promociones/delivery-hamburguesas'}>Promociones Exclusivas Web</Link>
-                </li>
-                <li className="opcion__menu">
-                    <Link className={`opcion__menu__link${location.pathname === '/menu/combos' ? ' active' : ''}`} to={'/menu/combos'}>Combos</Link>
-                </li>
-                <li className="opcion__menu">
-                    <Link className={`opcion__menu__link${location.pathname === '/menu/hamburguesas' ? ' active' : ''}`} to={'/menu/hamburguesas'}>Hamburguesas</Link>
-                </li>
-                <li className="opcion__menu">
-                    <Link className={`opcion__menu__link${location.pathname === '/menu/pollo' ? ' active' : ''}`} to={'/menu/pollo'}>Pollo</Link>
-                </li>
-                <li className="opcion__menu">
-                    <Link className={`opcion__menu__link${location.pathname === '/menu/loncheritas' ? ' active' : ''}`} to={'/menu/loncheritas'}>Loncheritas</Link>
-                </li> */}
-
-
-
-
 
           {/* PROMOCIÓN-AVISO Y BUSCAR (SOLO TABLET) */}
         
@@ -184,7 +190,7 @@ export const Promociones = () => {
                 </div>
 
                 <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsCards} className='slider__contenedor'>
+                  <Slider {...settingsAll} className='slider__contenedor'>
                       {promocionesPersonalesActualizado.map((personal, index) => (
                         <PromocionesPersonales key={index} personalPromo = {personal}/>
                       ))}
@@ -206,7 +212,7 @@ export const Promociones = () => {
                                         
                 </div>
 
-                <div className='contenedor__promocion__categoria'>
+                <div className='contenedor__promocion__categoria' id='sss'>
                   <i class="fa-solid fa-user-group"></i>
                   <h3>Promociones para dos</h3>
                 </div>
@@ -214,22 +220,28 @@ export const Promociones = () => {
                 {/* PROMO PARA DOS */}
 
                 <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsCards} className='slider__contenedor'>
-                      {promocionesParaDos.map((dos, index) => (
-                        <PromocionesParaDos key={index} promoDos = {dos}/>
+                  <Slider {...settingsAll} className='slider__contenedor'>
+                      {promocionesParaDos.map((compartir, index) => (
+                        <PromocionesParaDos key={index} promoDos = {compartir}/>
                       ))}
                   </Slider>
                 </div>  
 
                  {/* FIN - PROMO PARA DOS */}
 
-                <div className='menu__container__complementos'>
+                 <div>
+                  <h1>Complementos</h1>
+                  {/* COMPLEMENTOS - PROMOCIONES PERSONALES */}                            
+                    <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
                     <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
                     ))}
                     </Slider>  
-                </div>
+                    </div>
+                  {/* FIN COMPLEMENTOS - PROMOCIONES PERSONALES */}
+                                        
+                  </div>
 
                 {/* PROMOCIONES PARA COMPARTIR */}
 
@@ -239,7 +251,7 @@ export const Promociones = () => {
                 </div>
 
                 <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsCards} className='slider__contenedor'>
+                  <Slider {...settingsAll} className='slider__contenedor'>
                       {promocionesParaCompartir.map((compartir, index) => (
                         <PromocionesParaCompartir key={index} promoCompartir = {compartir}/>
                       ))}
@@ -250,13 +262,19 @@ export const Promociones = () => {
 
                 {/* COMPLEMENTOS */}
 
-                <div className='menu__container__complementos'>
+                <div>
+                  <h1>Complementos</h1>
+                  {/* COMPLEMENTOS - PROMOCIONES PERSONALES */}                            
+                    <div className='menu__container__complementos'>
                     <Slider {...settingsCards}>
                     {listadoComplementos.map((complemento, index) => (
                     <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
                     ))}
                     </Slider>  
-                </div>
+                    </div>
+                  {/* FIN COMPLEMENTOS - PROMOCIONES PERSONALES */}
+                                        
+                  </div>
 
               {/* FIN COMPLEMENTOS */}
 
@@ -268,7 +286,7 @@ export const Promociones = () => {
 
                 <div className='promociones__personales__contenedor'>
       
-                  <Slider {...settingsCards} className='slider__contenedor'>     
+                  <Slider {...settingsAll} className='slider__contenedor'>     
                       {cupones.map((cupon, index) => (
                         <Cupones key={index} personalCupon = {cupon}/>
                       ))}
@@ -281,14 +299,8 @@ export const Promociones = () => {
             </div>
           </div> 
 
-          
-
 
           {/* FIN SEGUNDA FRANJA (SOLO MOBILE) - PROMOCIÓN AVISO Y BUSCAR */}
-
-
-
-
 
           {/* FIN COMPLEMENTOS */}
 

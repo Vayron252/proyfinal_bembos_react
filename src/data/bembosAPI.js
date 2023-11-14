@@ -164,6 +164,7 @@ export const obtenerCupones = () => {
             "precio_actual": 19.90,
             "precio_antiguo": 30.30,
             "descuento": 34,
+            "muestradesc": true,
             "id": 1,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-interbank-oct.webp"
         },

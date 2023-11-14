@@ -19,7 +19,7 @@ export const PromocionesParaDos= ({promoDos}) => {
                 <div className='container__total__promo__button'>              
                     <div className='precios__promo__personal'>
                         <h2 className='precio__actual__compartir'> S/.{promoDos.precio_actual} </h2>
-                        <h2 className='precio__antiguo__compartir'> <del> S/.{promoDos.precio_antiguo} </del> </h2>
+                        <h2 className='precio__antiguo__compartir'> <del> {promoDos.precio_antiguo} </del> </h2>
                     </div>
                     <button className='button__compartir__promo'>Ver más</button>
                 </div>

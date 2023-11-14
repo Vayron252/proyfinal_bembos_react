@@ -223,13 +223,10 @@
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
     box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
-    margin-right: 30px;
-    max-width: 500px;
-    height: 220px;
+    /* height: 220px; */
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 30px;
-    
+    /* margin-bottom: 30px; */
 }
 
 .contenedor__imagen__promo__personal{
@@ -346,6 +343,8 @@
     cursor: pointer;
 }
 
+
+
 /* PROMOCIONES PERSONALES - FIN */
 
 /* PROMOCIONES PARA DOS - INICIO ---------------------------*/
@@ -355,7 +354,7 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--blanco);
-    padding-right: 25px;
+    padding-right: 40px;
     padding-left: 14px;
  
 }
@@ -365,24 +364,31 @@
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
     box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
-    margin-right: 30px;
-    max-width: 500px;
+    /* margin-right: 60px; */
+    width: 100%;
+    max-width: 430px;
     height: 220px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     
+}
+
+.prueba {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
 .contenedor__imagen__promo__personal{
     overflow: hidden;
-    max-width: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .imagen__promo__personal{
@@ -829,6 +835,11 @@
 .entel__image{
     width: 155px;
     margin-bottom: 20px;
+}
+
+.descuento__img{
+    position: absolute;
+    color: white;
 }
 
 

@@ -1,0 +1,138 @@
+
+:root {
+    /* Paleta de colores */
+    --color-contrast: #9bb5da;
+    --color-gris: #d8d8d8;
+    --grisClaro: #A19E9E;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --rojo: #E20917;
+    --colorPrincipal: #173083;
+    --colorSecundario: #FBB905;
+    --background: #F6F7F8;
+    --negroMenosIntenso: #494b4d;
+
+    /* Paleta de colores: redes sociales */
+    --colorFacebook: #314A7E;
+    --colorTwitter: #29B6FD;
+
+    /* Tipografias */
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Teko', sans-serif;
+    --fuenteTerciaria: 'Dosis', sans-serif;
+    --fuenteCuaternaria: 'serif';
+}
+
+/* CONTENEDOR TOTAL */
+
+.container__all__beneficios{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--blanco);
+}
+
+/* ENCABEZADO DE BENEFICIOS */
+
+.encabezado__beneficios{
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.encabezado__beneficios h1{
+    text-align: center;
+    transform: scaleY(1);
+    font-size: 23px;
+}
+
+/* ESTILOS DE BENEFICIOS */
+
+.container__por__pregunta__beneficios {
+    width: 100%;
+    border: 3px solid var(--color-gris);
+    padding: 6px 14px;
+    margin-top: 11px;
+  }
+  
+  .container__por__pregunta__beneficios summary {
+    display: flex;
+    color: var(--colorPrincipal);
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    transition: color 0.35s;
+  }
+  
+  .container__por__pregunta__beneficios summary::after {
+    content: "\276F";
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+    color: var(--colorPrincipal);
+    font-size: 13px;
+    border-radius: 100%;
+    padding: 5px;
+    width: 26px;
+    background-color: var(--rojo); 
+    color:var(--blanco); 
+  }
+  
+  .container__por__pregunta__beneficios[open] summary::after {
+    transform: rotate(270deg);
+    background-color: var(--colorPrincipal); 
+    color: var(--blanco);  
+  }
+  
+  .container__por__pregunta__beneficios[open] {
+    border: 2px solid var(--colorSecundario);
+  }
+  
+  .respuesta__preguntas__beneficios {
+    overflow: hidden;
+    transition: all 0.35s;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .respuesta__preguntas__beneficios p {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: justify;
+  }
+  
+  .container__por__pregunta__beneficios[open] .respuesta__preguntas__beneficios {
+    max-height: 10rem;
+  }
+  
+  .pregunta__beneficios h3 {
+    margin-bottom: 8px;
+    text-align: justify;
+    font-size: 16px;
+    transform: scaleY(1);
+  }
+
+  .pregunta__beneficios{
+    margin-bottom: 13px;
+    margin-top: 8px;
+  }
+
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+ 
+
+
+
+
+/* FIN EFECTO PREGUNTAS FRECUENTES */
