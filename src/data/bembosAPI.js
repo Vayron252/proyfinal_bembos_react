@@ -1,24 +1,27 @@
 import axios from 'axios'
 
 export const obtenerPromocionesOnline = async () => {
-    const { data } = await axios.get(`http://localhost:3000/productos`);
+    const { data } = await axios.get(import.meta.env.VITE_API_URL);
     const { promociones_online } = data[6];
     return promociones_online;
 }
 
 export const obtenerListadoMenu = async () => {
-    const { data } = await axios.get(`http://localhost:3000/productos`);
+    const { data } = await axios.get(import.meta.env.VITE_API_URL);
     const { menu } = data[7];
     return menu;
 }
 
 export const obtenerListadoProductosXOpcion = async (opcion) => {
-    const { data } = await axios.get(`http://localhost:3000/productos`);   
+    const { data } = await axios.get(import.meta.env.VITE_API_URL);
     const resultado = data.filter(elemento => {
         if (Object.keys(elemento)[0] == opcion) {
             return elemento;
         }
     });
+    if (resultado.length === 0) {
+        return resultado;
+    }
     return resultado[0][opcion];
 }
 

@@ -812,6 +812,7 @@ hr {
     padding-top: 12.7rem;
     padding-bottom: 9rem;
     overflow: hidden;
+    background-color: var(--blanco);
 }
 
 @media (min-width: 768px) {

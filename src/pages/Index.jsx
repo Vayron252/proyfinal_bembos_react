@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Link } from "react-router-dom"
 import Slider from "react-slick"
 import { AutoSlider } from "../components/AutoSlider"
 import { Tarjeta } from '../components/Tarjeta'
@@ -86,19 +86,21 @@ export const Index = () => {
         <h2 className="menuburguer__online__titulo">Menu de hamburguesas online</h2>
         <Slider {...settings}>
           {listadoMenu.map(itemMenu => (
-            <Tarjeta key={itemMenu.nombre}>
-              <div className="tarjeta">
-                <div className="tarjeta__contenedor__imagen">
-                  <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />
-                </div>
-                <div className="tarjeta__contenido">
-                  <div className="tarjeta__contenido__informacion">
-                    <h4 className="tarjeta__titulo tarjeta__titulo__menuburguer">{itemMenu.nombre}</h4>
+            <Link to={itemMenu.link}>
+              <Tarjeta key={itemMenu.nombre}>
+                <div className="tarjeta">
+                  <div className="tarjeta__contenedor__imagen">
+                    <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />
                   </div>
-                  <button className="tarjeta__boton">Ver Todos</button>
+                  <div className="tarjeta__contenido">
+                    <div className="tarjeta__contenido__informacion">
+                      <h4 className="tarjeta__titulo tarjeta__titulo__menuburguer">{itemMenu.nombre}</h4>
+                    </div>
+                    <button className="tarjeta__boton">Ver Todos</button>
+                  </div>
                 </div>
-              </div>
-            </Tarjeta>
+              </Tarjeta>
+            </Link>
           ))}
         </Slider>
       </section>
