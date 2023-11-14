@@ -2,7 +2,18 @@ import { useContext } from "react"
 import { CarroComprasContext } from "../context/CarroComprasContext"
 
 export const useCarroCompras = () => {
-    const { carroCompras, setCarroCompras, mostrarCarro, setMostrarCarro, montoDelivery } = useContext(CarroComprasContext);
+    const { carroCompras, setCarroCompras, 
+            mostrarCarro, setMostrarCarro, 
+            montoDelivery,
+            menuBarActive, setMenuBarActive } = useContext(CarroComprasContext);
+
+    const handleMenuBar = () => {
+        if (menuBarActive) {
+            setMenuBarActive(false);
+        } else {
+            setMenuBarActive(true);
+        }
+    }
 
     const mostrarSuTotalCarrito = () => {
         const sumarSubTotales = carroCompras.reduce((acumulado, carro) => acumulado + carro.subtotal, 0);
@@ -40,6 +51,8 @@ export const useCarroCompras = () => {
         modificarProductoCantidad,
         mostrarCarro,
         setMostrarCarro,
-        montoDelivery
+        montoDelivery,
+        menuBarActive,
+        handleMenuBar
     }
 }

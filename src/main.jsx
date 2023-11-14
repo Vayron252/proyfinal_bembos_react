@@ -35,13 +35,13 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: '/menu/:opcion',
+        path: '/menu/:categoria',
         element: <MenuOpciones />,
         loader: menuOpcionesLoader,
         errorElement: <ErrorPage />
       },
       {
-        path: '/menu/:opcion/:producto',
+        path: '/menu/:categoria/:producto',
         element: <ProductoCompra />,
         loader: productoCompraLoader
       },

@@ -205,6 +205,7 @@
     font-family: var(--fuentePrincipal);
     font-weight: 700;
     font-size: 1.7rem;
+    color: var(--negro);
 }
 @media (min-width: 768px) {
     .listado__productos .tarjeta__titulo {
@@ -215,6 +216,7 @@
     font-family: var(--fuenteSecundaria);
     font-size: 2rem;
     font-weight: 900;
+    color: var(--negro);
 }
 @media (min-width: 768px) {
     .listado__productos .tarjeta__precio {
@@ -225,6 +227,7 @@
     font-size: 1.8rem;
     text-decoration: underline;
     text-align: center;
+    color: var(--negro);
 }
 @media (min-width: 768px) {
     .listado__productos .tarjeta__terminosycondiciones {

@@ -11,14 +11,14 @@ import '../styles/secciones.css'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-export const loader = () => {
-  const promociones = obtenerPromocionesOnline();
-  const listadoMenu = obtenerListadoMenu();
-  if (Object.values(promociones).length === 0 || Object.values(listadoMenu).length === 0) {
-    throw new Response('', {
-      status: 404, statusText: 'Información no encontrada.'
-    });
-  }
+export const loader = async () => {
+  const promociones = await obtenerPromocionesOnline();
+  const listadoMenu = await obtenerListadoMenu();
+  // if (Object.values(promociones).length === 0 || Object.values(listadoMenu).length === 0) {
+  //   throw new Response('', {
+  //     status: 404, statusText: 'Información no encontrada.'
+  //   });
+  // }
   return { promociones, listadoMenu };
 }
 

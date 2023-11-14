@@ -8,6 +8,7 @@ export function CarroComprasProvider ({ children }) {
             id: 1,
             nombre: 'Hamburguesa Cheese',
             imagen: 'https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/h/a/hamburguesa-bembos-cheese-base.jpg',
+            codproducto: 25,
             cantidad: 1,
             monto: 18.9,
             subtotal: 18.9
@@ -70,12 +71,17 @@ export function CarroComprasProvider ({ children }) {
         }
     ];
 
+    const [menuBarActive, setMenuBarActive] = useState(false);
     const [mostrarCarro, setMostrarCarro] = useState(false);
     const [carroCompras, setCarroCompras] = useState(valorInicialCarro);
     const [montoDelivery, setMontoDelivery] = useState(5);
 
     return (
-        <CarroComprasContext.Provider value={{ carroCompras, setCarroCompras, mostrarCarro, setMostrarCarro, montoDelivery }}>
+        <CarroComprasContext.Provider 
+            value={{ carroCompras, setCarroCompras, 
+                    mostrarCarro, setMostrarCarro, 
+                    montoDelivery,
+                    menuBarActive, setMenuBarActive }}>
             {children}
         </CarroComprasContext.Provider>
     )

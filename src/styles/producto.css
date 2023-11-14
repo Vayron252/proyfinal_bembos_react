@@ -1,0 +1,220 @@
+/* Seccion Header Producto */
+.header__back {
+    background-color: var(--colorPrincipal);
+    position: fixed;
+    width: 100%;
+    top: 4.5rem;
+    z-index: 100;
+}
+.contenedor__header__back {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+}
+.header__back__compra__barra {
+    display: flex;
+    gap: 1rem;
+}
+.header__back__compra__shopping {
+    position: relative;
+}
+.header__back__compra__shopping span {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -.5rem;
+    top: -1rem;
+    font-weight: 700;
+}
+.header__back i {
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* Secuencia Navegacion */
+.contenedor__header__back__navegacion {
+    background-color: var(--blanco);
+    padding: .8rem 0 .8rem .8rem;
+}
+.header__back__navegacion {
+    font-size: 1.2rem;
+    font-family: var(--fuenteTerciaria);
+}
+.header__back__navegacion a {
+    text-decoration: underline;
+    color: var(--colorPrincipal);
+}
+
+/* Seccion Item */
+.seccion__item {
+    display: flex;
+    flex-direction: column;
+}
+.seccion__item__contenedor__imagen {
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+    position: fixed;
+    z-index: 50;
+}
+.seccion__item__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.seccion__item__imagen__contenedor {
+    position: absolute;
+    top: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+.seccion__item__imagen__info,
+.seccion__item__imagen__terminoscondiciones {
+    color: var(--blanco);
+    text-decoration: underline;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.seccion__item__imagen__info i {
+    color: var(--blanco);
+}
+.seccion__item__contenedor__contenido {
+    z-index: 51;
+}
+.seccion__item__contenido {
+    margin-top: 33.5rem;
+    background-color: var(--blanco);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+/* Footer Operaciones */
+.footer__contenedor__operaciones {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--background);
+    position: fixed;
+    bottom: 0;
+    z-index: 52;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+    -moz-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+}
+.footer__operaciones {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.footer__operaciones button {
+    /* padding: 1rem; */
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+.footer__operaciones p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.footer__agregarproducto {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    align-items: center;
+}
+.agregarproducto__acumulado {
+    color: var(--rojo);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.agregarproducto__monto {
+    color: var(--blanco);
+    background-color: var(--colorPrincipal);
+    border: none;
+    outline: none;
+    padding: 1.2rem 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    font-family: var(--fuenteSecundaria);
+    cursor: pointer;
+}
+
+/* Producto */
+.seccion__item__contenido__titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--negro);
+}
+.seccion__item__opciones {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Seccion de opciones */
+.item__opciones{
+    width: 100%;
+}
+.item__opciones__pregunta {
+    display: flex;
+    color: var(--colorPrincipal);
+    cursor: pointer;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--negro);
+    padding-bottom: 1.5rem;
+}
+.item__opciones__pregunta__contenedor {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.item__opciones__pregunta__numeracion {
+    background-color: var(--colorSecundario);
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* padding: .5rem; */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item__opciones__pregunta::after {
+    content: "\276F";
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+    color: var(--colorPrincipal);
+    font-size: 2.3rem;
+}
+.item__opciones[open] summary::after {
+    transform: rotate(270deg);
+}
+.item__opciones__pregunta__titulo{
+    text-align: justify;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.item__opciones__respuestas{
+    padding-top: 1rem;
+}

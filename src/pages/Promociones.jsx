@@ -15,8 +15,8 @@ import { obtenerCupones } from '../data/bembosAPI';
 import { obtenerPromocionesParaCompartir } from '../data/bembosAPI';
 
 
-export const loader = () => {
-  const listadoComplementos = obtenerListadoProductosXOpcion('complementos')
+export const loader = async () => {
+  const listadoComplementos = await obtenerListadoProductosXOpcion('complementos')
   const promocionesPersonalesActualizado = obtenerPromocionesPersonales('')
   const promocionesParaCompartir = obtenerPromocionesParaCompartir('')
   const promocionesParaDos = obtenerPromocionesParaDos('')

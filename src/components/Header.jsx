@@ -8,16 +8,8 @@ import { useCarroCompras } from '../hooks/useCarroCompras';
 export const Header = () => {
     const navigate = useNavigate();
     const { width } = useScreenSize();
-    const [menuBarActive, setMenuBarActive] = useState(false);
-    const { carroCompras, setMostrarCarro } = useCarroCompras();
-
-    const handleMenuBar = () => {
-        if (menuBarActive) {
-            setMenuBarActive(false);
-        } else {
-            setMenuBarActive(true);
-        }
-    }
+    
+    const { carroCompras, setMostrarCarro, handleMenuBar, menuBarActive } = useCarroCompras();
 
     const handleClickOptionMenu = (e, subUrl) => {
         e.preventDefault();
