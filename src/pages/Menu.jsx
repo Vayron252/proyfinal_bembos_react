@@ -4,8 +4,8 @@ import '../styles/menu.css'
 import { obtenerListadoMenu } from '../data/bembosAPI'
 import { TarjetaMenu } from '../components/TarjetaMenu'
 
-export const loader = () => {
-  const listadoMenu = obtenerListadoMenu();
+export const loader = async () => {
+  const listadoMenu = await obtenerListadoMenu();
   return { listadoMenu };
 }
 

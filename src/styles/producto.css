@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     top: 4.5rem;
-    z-index: 160;
+    z-index: 100;
 }
 .contenedor__header__back {
     display: flex;
@@ -15,6 +15,20 @@
 .header__back__compra__barra {
     display: flex;
     gap: 1rem;
+}
+.header__back__compra__shopping {
+    position: relative;
+}
+.header__back__compra__shopping span {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -.5rem;
+    top: -1rem;
+    font-weight: 700;
 }
 .header__back i {
     color: var(--blanco);
@@ -53,10 +67,17 @@
     object-fit: cover;
     object-position: center center;
 }
-.seccion__item__imagen__info {
+.seccion__item__imagen__contenedor {
     position: absolute;
     top: 30rem;
-    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+.seccion__item__imagen__info,
+.seccion__item__imagen__terminoscondiciones {
     color: var(--blanco);
     text-decoration: underline;
     font-size: 1.5rem;
@@ -86,6 +107,9 @@
     z-index: 52;
     width: 100%;
     padding: 1rem 0;
+    box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
+    -moz-box-shadow: 0px 1px 8px 1px rgba(161, 158, 158, 0.86);
 }
 .footer__operaciones {
     display: flex;
@@ -125,4 +149,72 @@
     text-transform: uppercase;
     border-radius: 3rem;
     font-family: var(--fuenteSecundaria);
+    cursor: pointer;
+}
+
+/* Producto */
+.seccion__item__contenido__titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--negro);
+}
+.seccion__item__opciones {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Seccion de opciones */
+.item__opciones{
+    width: 100%;
+}
+.item__opciones__pregunta {
+    display: flex;
+    color: var(--colorPrincipal);
+    cursor: pointer;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--negro);
+    padding-bottom: 1.5rem;
+}
+.item__opciones__pregunta__contenedor {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.item__opciones__pregunta__numeracion {
+    background-color: var(--colorSecundario);
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* padding: .5rem; */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item__opciones__pregunta::after {
+    content: "\276F";
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+    color: var(--colorPrincipal);
+    font-size: 2.3rem;
+}
+.item__opciones[open] summary::after {
+    transform: rotate(270deg);
+}
+.item__opciones__pregunta__titulo{
+    text-align: justify;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.item__opciones__respuestas{
+    padding-top: 1rem;
 }

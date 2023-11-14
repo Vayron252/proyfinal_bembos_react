@@ -10,9 +10,9 @@ import '../styles/secciones.css'
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
-export const loader = ({ params }) => {
+export const loader = async ({ params }) => {
   const { categoria } = params;
-  const listadoOpciones = obtenerListadoProductosXOpcion(categoria);
+  const listadoOpciones = await obtenerListadoProductosXOpcion(categoria);
   return listadoOpciones;
 }
 
