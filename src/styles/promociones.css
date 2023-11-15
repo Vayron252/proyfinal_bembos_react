@@ -37,6 +37,7 @@
 .container__details__promociones{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contenedor__total__promociones{
@@ -223,10 +224,10 @@
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
     box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
-    /* height: 220px; */
     border-radius: 20px;
     overflow: hidden;
-    /* margin-bottom: 30px; */
+   background-color: var(--blanco);
+
 }
 
 .contenedor__imagen__promo__personal{
@@ -349,7 +350,7 @@
 
 /* PROMOCIONES PARA DOS - INICIO ---------------------------*/
 
-.contenedor__info__details{
+.contenedor__dos__details{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -359,7 +360,7 @@
  
 }
 
-.general__container__promo__personal{
+.general__container__dos{
     display: flex;
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
@@ -374,13 +375,13 @@
     
 }
 
-.prueba {
+.container__all__promo__personal, .container__all__promo__dos, .container__all__promo__compartir, .container__all__cupones {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
 }
 
-.contenedor__imagen__promo__personal{
+.contenedor__imagen__dos{
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -391,17 +392,17 @@
     margin-right: 20px;
 }
 
-.imagen__promo__personal{
+.imagen__dos{
     object-fit: cover;
     width: 210px;
     height:230px;
 }
 
-.contenedor__promo__personal__img{
+.contenedor__dos__img{
     position: relative;
 }
 
-.contenedor__precios__promo{
+.contenedor__precios__dos{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -412,7 +413,7 @@
     width: 100%;
 }
 
-.button__promo__personal{
+.button__dos__promo{
     background-color: var(--colorPrincipal);
     color: var(--blanco);
     height: 35px;
@@ -425,7 +426,7 @@
     cursor: pointer;
 }
 
-.precios__promo__personal{
+.precios__promo__dos{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -433,7 +434,7 @@
     gap: 15px;
 }
 
-.container__total__promo__button{
+.container__total__dos__button{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -441,30 +442,37 @@
     padding-left: 16px;
 }
 
-.precio__actual{
+.precio__actual__dos{
     font-size: 20px;
     font-weight: 900;
 }
 
-.precio__antiguo{
+.precio__antiguo__dos{
     color: var(--rojo);
     font-size: 900;
 
 }
 
-.promo__personal__details{
+.promo__dos__details{
     margin-bottom: 25px;
     margin-right: 10px;
 }
 
-.titulo__promo{
+.titulo__dos__azul{
     transform: scaleY(1.1);
     font-size: 15px;
     margin-bottom: 10px;
-
+    color: var(--colorPrincipal);
 }
 
-.descripcion__promo{
+.titulo__dos__negro{
+    transform: scaleY(1.1);
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--negro);
+}
+
+.descripcion__dos{
     font-size: 11px;
     color: var(--negroMenosIntenso);
     line-height: 16px;
@@ -472,7 +480,7 @@
     width:100%;
 }
 
-.contenedor__precios__promo h4{
+.contenedor__precios__dos h4{
     color: var(--blanco);
     background-color: var(--rojo);
     text-align: center;
@@ -488,9 +496,9 @@
     justify-content: center;
 }
 
-.contenedor__precios__promo p{
+.contenedor__precios__dos p{
     color: var(--blanco);
-    margin-top: 30px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -526,12 +534,10 @@
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
     box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
-    margin-right: 30px;
     max-width: 500px;
     height: 220px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 40px;
     background-color: var(--blanco);
     
 }
@@ -581,7 +587,7 @@
     cursor: pointer;
 }
 
-.precios__promo__personal{
+.precios__promo__compartir{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -589,7 +595,7 @@
     gap: 15px;
 }
 
-.container__total__promo__button{
+.container__total__compartir__button{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -685,12 +691,9 @@
 /* CUPONES ----------------------------------*/
 
 .cupon__info__details{
-    display: flex;
-    flex-direction: column;
-    padding-right: 25px;
+    padding-right: 20px;
     padding-left: 14px;
-    text-align: left;
- 
+    margin-top: 4px; 
 }
 
 .general__container__cupon__personal{
@@ -698,13 +701,13 @@
     align-items: center;
     border: 1.5px solid rgb(226, 223, 223);
     box-shadow: 2px 2px 13px rgba(189, 189, 189, 0.6);
-    margin-right: 30px;
     max-width: 430px;
-    height: 275px;
+    height: 238px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 30px;
-    background-color: var(--blanco)
+    background-color: var(--blanco);
+    padding-top: 50px;
+    padding-bottom: 50px;
     
 }
 
@@ -728,6 +731,8 @@
 .aviso__cupon{
     margin-top: 5px;
     margin-bottom: 17px;
+    color: var(--colorPrincipal);
+    font-size: 11px;
 }
 
 .contenedor__cupon__personal__img{
@@ -770,13 +775,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-left: 16px;
 }
 
 .precio__actual__cupon{
     font-size: 20px;
     font-weight: 900;
+    margin-bottom: -4px;
 }
 
 .precio__antiguo__cupon{
@@ -801,27 +805,10 @@
     font-size: 11px;
     color: var(--negroMenosIntenso);
     line-height: 16px;
-    max-width:120px;
-    width:100%;
-}
-
-
-.precios__cupon__descuento{
-    color: var(--blanco);
-    text-align: center;
-    font-size: 14px;
-    position: absolute;
-    left: -9px;
-    border-radius: 20px;
-    max-width: 55px;
-    height: 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--rojo);
 
 }
+
+
 
 .contenedor__precios__cupon p{
     color: var(--blanco);
@@ -829,17 +816,30 @@
     cursor: pointer;
 }
 
-.contenedor__cupon__details{
-    width: 240px;
-}
+
 .entel__image{
     width: 155px;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
 }
 
-.descuento__img{
+/* .descuento__cupon{
     position: absolute;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rojo);
+    max-width: 55px;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+} */
+
+.contenedor__cupon__details{
+    max-width: 220px;
+    width: 100%;
 }
 
 
@@ -928,7 +928,7 @@
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 18px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     margin-top: 50px;
 }
 
@@ -1048,7 +1048,19 @@
         display: block;
     }
 
-    
+    /* DESCUENTO % */
+
+    .contenedor__precios__compartir h4{
+        margin-left: 20px;
+    }
+
+    .contenedor__precios__promo h4{
+        margin-left: 20px;
+    }
+
+    .contenedor__precios__dos h4{
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1118,6 +1130,8 @@
     display: none;
  
 }
+
+
 
 
 

@@ -25,11 +25,19 @@
 
 /* CONTENEDOR TOTAL */
 
+.contenedor__toda__pagina__beneficios{
+    padding: 0 20px;
+}
+
 .container__all__beneficios{
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 36px;
+    margin-bottom: 20px;
 }
 
 /* ENCABEZADO DE BENEFICIOS */
@@ -39,15 +47,65 @@
     color: var(--colorSecundario);
     width: 100%;
     margin-bottom: 40px;
+    padding: 1px 0;
 }
 
 .encabezado__beneficios h1{
     text-align: center;
     transform: scaleY(1);
     font-size: 23px;
+    
+}
+
+/* MENÚ DE BENEFICIOS */
+
+.container__menu__beneficios{
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contenedor__menu__categoria{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+}
+
+.contenedor__menu__categoria img{
+  max-width: 60px;
+  width: 100%;
+
+}
+
+.contenedor__menu__categoria h2{
+  color: var(--colorPrincipal);
 }
 
 /* ESTILOS DE BENEFICIOS */
+
+.titulo__preguntas__beneficios{
+    color: var(--colorPrincipal);
+    font-weight: 900;
+    transform: scaleY(1.2);
+    font-size: 21px;
+    margin-bottom: 24px;
+}
+
+.container__preguntas__beneficios{
+    padding: 0 26px 10px;
+    margin-bottom: 16px;
+}
+
+.titulo__preguntas__beneficios{
+    text-align: center;
+}
 
 .container__por__pregunta__beneficios {
     width: 100%;
@@ -94,7 +152,6 @@
   .respuesta__preguntas__beneficios {
     overflow: hidden;
     transition: all 0.35s;
-    width: 100%;
     margin-bottom: 5px;
   }
   
@@ -110,7 +167,6 @@
   
   .pregunta__beneficios h3 {
     margin-bottom: 8px;
-    text-align: justify;
     font-size: 16px;
     transform: scaleY(1);
   }
@@ -129,10 +185,26 @@
       opacity: 1;
     }
   }
-  
+
+
+/* FIN EFECTO PREGUNTAS BENEFICIOS */
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:992px) {
+
+  .container__menu__beneficios{
+
+  }
+
  
+  
+}
+
+@media (max-width: 600px) {
+  
 
 
 
-
-/* FIN EFECTO PREGUNTAS FRECUENTES */
+}
