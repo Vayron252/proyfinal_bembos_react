@@ -12,6 +12,12 @@ import destinados_mini from '../img/destinados_mini.png'
 import '../styles/beneficios.css'
 
 export const Beneficios = () => {
+  const [nombrediv, setNombrediv] = useState('friendzone');
+
+  const handleClick = (nombre) => {
+    setNombrediv(nombre);
+  }
+
   return (
 
   <div className='contenedor__toda__pagina__beneficios'>
@@ -26,22 +32,22 @@ export const Beneficios = () => {
       {/* CONTENEDOR - MENÚ BENFICIOS */}
 
       <div className='container__menu__benefit'>
-        <div className='container__menu__category'>        
+        <div className={`container__menu__category${nombrediv === 'friendzone' ? ' active' : ''}`} onClick={() => handleClick('friendzone')}>        
             <img src={friendzone} alt="" />
             <h2>FRIENDZONE</h2>               
         </div>
 
-        <div className='container__menu__category'>
+        <div className={`container__menu__category${nombrediv === 'gileos' ? ' active' : ''}`} onClick={() => handleClick('gileos')}>
           <img src={gileos} alt="" /> 
           <h2>GILEOS</h2> 
         </div>
 
-        <div className='container__menu__category'>          
+        <div className={`container__menu__category${nombrediv === 'relacion' ? ' active' : ''}`} onClick={() => handleClick('relacion')}>          
           <img src={relacion} alt=""/>   
           <h2>RELACIÓN</h2>      
         </div>
 
-        <div className='container__menu__category'>   
+        <div className={`container__menu__category${nombrediv === 'destinados' ? ' active' : ''}`} onClick={() => handleClick('destinados')}>   
             <img src={destinados} alt="" /> 
             <h2>DESTINADOS</h2>                     
         </div>
@@ -52,6 +58,7 @@ export const Beneficios = () => {
       </div>
 
     {/* FRIENDZONE_INFO */}
+  <div className=''>
     <div className='container__friendzone__info'>
       <div className='container__info__details__friendzone'>
         <div className='friendzone__info__title'>
@@ -73,7 +80,7 @@ export const Beneficios = () => {
         <div className='gileos__info__title'>
           <img src={gileos_mini} alt="" />
           <h1>GILEOS</h1>
-          <h3>ALCANZA 100<span className=''>PTS</span></h3>
+          <h3>ALCANZA 100<span className='pts_gileos'>PTS</span></h3>
         </div>
         <div className='slogan__gileos'>
           <h3>MULTIPLICA PUNTOS X2</h3>
@@ -88,7 +95,7 @@ export const Beneficios = () => {
         <div className='relacion__info__title'>
           <img src={relacion_mini} alt="" />
           <h1>RELACIÓN</h1>
-          <h3>ALCANZA 400PTS</h3>
+          <h3>ALCANZA 400<span className='pts_relacion'>PTS</span></h3>
         </div>
         <div className='slogan__relacion'>
           <h3>MULTIPLICA PUNTOS X3 | <span className='delivery__relacion'>Delivery</span> <strong>GRATIS</strong></h3>
@@ -103,7 +110,7 @@ export const Beneficios = () => {
         <div className='destinados__info__title'>
           <img src={destinados_mini} alt="" />
           <h1>DESTINADOS</h1>
-          <h3>ALCANZA 700PTS</h3>
+          <h3>ALCANZA 700<span className='pts_destinados'>PTS</span></h3>
         </div>
         <div className='slogan__destinados'>
           <h3>MULTIPLICA PUNTOS X4 | <span className='delivery__destinados'>Delivery</span> <strong>GRATIS</strong></h3>
@@ -111,6 +118,7 @@ export const Beneficios = () => {
       </div>
     </div>
     {/* FIN DESTINADOS_INFO */}
+  </div>  
 
     
 

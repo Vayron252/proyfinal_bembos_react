@@ -75,6 +75,10 @@
   cursor: pointer;
 }
 
+.container__menu__category.active {
+  border-bottom: 1px solid var(--rojo);
+}
+
 .container__menu__category img{
   max-width: 30%;
   width: 100%;
@@ -208,6 +212,12 @@
   font-size: 16px;
 }
 
+.pts_gileos{
+  color: var(--rojo);
+  font-weight: 900;
+  font-size: 16px;
+}
+
 /* FIN DETALLES DE GILEOS */
 
 /* DETALLES DE RELACIÓN */
@@ -259,10 +269,20 @@
   font-weight: 900;
   font-size: 16px;
 }
+
+.pts_relacion{
+  color: var(--rojo);
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.delivery__relacion{
+  font-weight: 500;
+}
+
 /* FIN DE DETALLES DE RELACIÓN */
 
 /* DETALLES DE DESTINADOS */
-
 
 .container__destinados__info{
   background-color: var(--colorSecundario);
@@ -312,7 +332,15 @@
   font-size: 16px;
 }
 
+.pts_destinados{
+  color: var(--rojo);
+  font-weight: 900;
+  font-size: 16px;
+}
 
+.delivery__destinados{
+  font-weight: 500;
+}
 
 
 

@@ -626,5 +626,34 @@
                 }
             ]
         }
-    ]
+    ],
+
+    "locales": [{
+        "nombre_local": "hamburguesas en lima",
+        "distritos": [
+            {
+                "nombre_distrito": "Ate", 
+                "sedes": [
+                    "plaza vea ate", "santa clara", "puruchuco"
+                ]
+            },
+            {
+                "nombre_distrito": "La Molina",
+                "sedes": [
+                    "la fontana", "camacho", "dk la molina"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre_local": "hamburguesas arequipa",
+        "distritos": [
+            {
+                "nombre_distrito": "",
+                "sedes": [
+                    "cerro colorado arequipa", "arequipa real plaza", "arequipa mall aventura"
+                ]
+            }
+        ]
+    }]
 }
