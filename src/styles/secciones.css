@@ -200,6 +200,12 @@
         padding: 0 6rem;
     }
 }
+.listado__productos__mensaje {
+    font-size: 2rem;
+    color: var(--negro);
+    text-align: center;
+    padding: 2rem;
+}
 .listado__productos .tarjeta__titulo {
     min-height: 5rem;
     font-family: var(--fuentePrincipal);
