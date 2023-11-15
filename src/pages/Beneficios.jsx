@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import friendzone from '../img/friendzone.png'
+import gileos from '../img/gileos.png'
+import relacion from '../img/relacion.png'
+import destinados from '../img/destinados.png'
 import '../styles/beneficios.css'
 
 export const Beneficios = () => {
@@ -14,6 +18,30 @@ export const Beneficios = () => {
         </div>
       </div>
 
+      {/* CONTENEDOR - MENÚ BENFICIOS */}
+
+      <div className='container__menu__beneficios'>
+        <div className='contenedor__menu__categoria'>
+          <img src={friendzone} alt="" />
+          <h2>FRIENDZONE</h2>
+        </div>
+
+        <div className='contenedor__menu__categoria'>
+          <img src={gileos} alt="" />
+          <h2>GILEOS</h2>
+        </div>
+
+        <div className='contenedor__menu__categoria'>
+          <img src={relacion} alt="" />
+          <h2>RELACIÓN</h2>
+        </div>
+
+        <div className='contenedor__menu__categoria'>
+          <img src={destinados} alt="" />
+          <h2>DESTINADOS</h2>
+        </div>
+      </div>
+    {/* FIN CONTENEDOR - MENÚ BENFICIOS */}
 
 
       {/* PREGUNTAS FRECUENTES */}

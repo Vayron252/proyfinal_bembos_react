@@ -1,16 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
 
-
-
-
-
 export const Cupones = ({personalCupon}) => {
 
-    
-    
   return (
-    <div>
+    <div className='container__all__cupones'>
 
         {/* Cupones */}
     
@@ -22,7 +16,7 @@ export const Cupones = ({personalCupon}) => {
                 <div className='cupon__info__details'>
                     <img src={personalCupon.img_entel} alt="" className='entel__image' />
                     <h3 className='titulo__cupon'>{personalCupon.nombre} </h3>
-                    <p className='descripcion__cuppon'> {personalCupon.descripcion} </p>
+                    <p className='descripcion__cupon'> {personalCupon.descripcion} </p>
                     <p className='aviso__cupon'>{personalCupon.aviso} </p>
                 </div>
                
@@ -45,7 +39,7 @@ export const Cupones = ({personalCupon}) => {
                     <div className='contenedor__precios__cupon'>
                         {/* { precanterior > 0 ? <p>30.5</p> : <p></p> } */}
                         <div>
-                        <h4 className='descuento__img'>{personalCupon.descuento}</h4>
+                        <h4 className='descuento__cupon'>{personalCupon.descuento }%</h4>
                         </div>
                         <div>
                         <p> <u>Términos y condiciones</u></p>  

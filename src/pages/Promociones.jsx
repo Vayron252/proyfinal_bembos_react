@@ -17,24 +17,20 @@ import { obtenerPromocionesParaCompartir } from '../data/bembosAPI';
 
 export const loader = async () => {
   const listadoComplementos = await obtenerListadoProductosXOpcion('complementos')
-  const promocionesPersonalesActualizado = obtenerPromocionesPersonales('')
-  const promocionesParaCompartir = obtenerPromocionesParaCompartir('')
-  const promocionesParaDos = obtenerPromocionesParaDos('')
-  const cupones = obtenerCupones('')
+  const promocionesPersonalesActualizado = await obtenerPromocionesPersonales('')
+  const promocionesParaCompartir = await obtenerPromocionesParaCompartir('')
+  const promocionesParaDos = await obtenerPromocionesParaDos('')
+  const cupones = await obtenerCupones('')
   return {listadoComplementos, promocionesPersonalesActualizado, promocionesParaCompartir, promocionesParaDos, cupones};
 }
 
 export const Promociones = () => {
 
-  const { listadoComplementos } = useLoaderData();
-  const { promocionesPersonalesActualizado } = useLoaderData ();
-  const { promocionesParaDos } = useLoaderData ();
-  const { cupones } = useLoaderData ();
-  const {promocionesParaCompartir} = useLoaderData ();
-  console.log(listadoComplementos)
-  console.log(promocionesPersonalesActualizado)
-  console.log(cupones)
-  console.log(promocionesParaCompartir)
+  const { listadoComplementos, promocionesPersonalesActualizado, promocionesParaDos, cupones, promocionesParaCompartir} = useLoaderData();
+  // console.log(listadoComplementos)
+  // console.log(promocionesPersonalesActualizado)
+  // console.log(cupones)
+  // console.log(promocionesParaCompartir)
   
 /* SLIDER DEL MENU */
   const settings = {
@@ -49,7 +45,7 @@ export const Promociones = () => {
 /* SLIDER DE COMPLEMENTOS */
   const settingsCards = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
@@ -57,40 +53,75 @@ export const Promociones = () => {
     swipeToSlide: false,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1, 
+          variableWidth: true,     
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          variableWidth: false, 
+        },
+      },
+    ],
+
     style: {
-      margin: '0 20px', 
-      columnGap: '10px', 
+      margin: '0 20px',
+      columnGap: '30px',
+      position: 'relative',
     },
   };
 
-  /* SLIDER DEL PROMO PERSONAL, CUPONES*/
+  /* SLIDER DEL PROMO PERSONAL, PARA DOS, COMPARTIR Y CUPONES*/
 
   const settingsAll = {
     speed: 500,
     infinite: false,
     slidesToShow: 2,
-    // slidesToScroll: 2,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,
     rows: 2,
-    // slidesPerRow: 1
-    // column: 3,
-    // centerMode: false
-    // style: {
-    //   margin: '10px 1px',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    // },
   };
+
+  const settingsResponsive = [
+    {
+      breakpoint: 992,
+      settings: {
+      slidesToShow: 1,
+      rows: 1,
+      vertical: true,
+      verticalSwiping: true,
+      nextArrow: <Arrow vertical />,
+      prevArrow: <Arrow vertical />,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+      slidesToShow: 1,
+      rows: 1,
+      vertical: true,
+      verticalSwiping: true,
+      nextArrow: <Arrow vertical />, 
+      prevArrow: <Arrow vertical />,
+      },
+    },
+  ];
 
 
   function Arrow(props) {
-    const { className, style, onClick } = props;
+    const { className, style, onClick, vertical } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "#173083"}}
+        style={{ ...style, display: "block", background: "#173083", transform: vertical ? 'rotate(90deg)' : 'none'}}
         onClick={onClick}
       />
     );
@@ -98,14 +129,15 @@ export const Promociones = () => {
 
   return (
 
+
       <div className='container__todo__pagina__promociones'>
 
                   <div className='contenedor__total__promociones'>
                     <div className='contenedor__promociones__seleccion'>
-                      <button>Promociones Personales</button>
-                      <button>Promociones para 2</button>
-                      <button><a href='#sss'>Promociones para compartir</a></button>
-                      <button>Cupones</button>
+                      <button> <a href="#personal">Promociones Personales</a></button>
+                      <button> <a href="#dos">Promociones para 2</a></button>
+                      <button><a href='#compartir'>Promociones para compartir</a></button>
+                      <button><a href='#cupones'>Cupones</a></button>
                     </div>
                   </div>
 
@@ -130,7 +162,7 @@ export const Promociones = () => {
             <div className='contenedor__total__buscar__producto'>
               <div className='contenedor__buscar__producto'>
                 <input type="text" placeholder='Buscar tu producto'/>
-                <i class="fa-solid fa-magnifying-glass icono__buscar"></i>
+                <i className="fa-solid fa-magnifying-glass icono__buscar"></i>
               </div>
             </div>
     
@@ -145,7 +177,7 @@ export const Promociones = () => {
                 <button>Promociones Personales</button>
               </div>
               <div className='contenedor__button__menu__mobile'>
-                <button>Promociones para 2</button>
+                <button><a href="#dos">Promociones para 2</a></button>
               </div>
               <div className='contenedor__button__menu__mobile'>
                 <button>Promociones para compartir</button>
@@ -168,7 +200,7 @@ export const Promociones = () => {
             <div className='contenedor__total__buscar__producto container__buscar__producto__tablet'>
               <div className='contenedor__buscar__producto '>
                 <input type="text" placeholder='Buscar tu producto'/>
-                <i class="fa-solid fa-magnifying-glass icono__buscar"></i>
+                <i className="fa-solid fa-magnifying-glass icono__buscar"></i>
               </div>
             </div>
           </div>   
@@ -184,13 +216,13 @@ export const Promociones = () => {
                   <hr className='separador__promociones__categorias'/>            
                 </div>
                  
-                <div className='contenedor__promocion__categoria'>
-                  <i class="fa-solid fa-user"></i>
+                <div className='contenedor__promocion__categoria' id='personal'>
+                  <i className="fa-solid fa-user"></i>
                   <h3>Promociones Personales</h3>                
                 </div>
 
                 <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsAll} className='slider__contenedor'>
+                  <Slider {...settingsAll} responsive={settingsResponsive} className='slider__contenedor'>
                       {promocionesPersonalesActualizado.map((personal, index) => (
                         <PromocionesPersonales key={index} personalPromo = {personal}/>
                       ))}
@@ -212,15 +244,14 @@ export const Promociones = () => {
                                         
                 </div>
 
-                <div className='contenedor__promocion__categoria' id='sss'>
-                  <i class="fa-solid fa-user-group"></i>
+                <div className='contenedor__promocion__categoria' id='dos'>
+                  <i className="fa-solid fa-user-group"></i>
                   <h3>Promociones para dos</h3>
                 </div>
 
                 {/* PROMO PARA DOS */}
-
-                <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsAll} className='slider__contenedor'>
+                <div className='promociones__dos__contenedor' responsive={settingsResponsive}>
+                  <Slider {...settingsAll} responsive={settingsResponsive} className='slider__contenedor'>
                       {promocionesParaDos.map((compartir, index) => (
                         <PromocionesParaDos key={index} promoDos = {compartir}/>
                       ))}
@@ -233,7 +264,7 @@ export const Promociones = () => {
                   <h1>Complementos</h1>
                   {/* COMPLEMENTOS - PROMOCIONES PERSONALES */}                            
                     <div className='menu__container__complementos'>
-                    <Slider {...settingsCards}>
+                    <Slider {...settingsCards} >
                     {listadoComplementos.map((complemento, index) => (
                     <PromocionesTarjetas key = {index} complementoPromo = {complemento} />
                     ))}
@@ -245,18 +276,20 @@ export const Promociones = () => {
 
                 {/* PROMOCIONES PARA COMPARTIR */}
 
-                <div className='contenedor__promocion__categoria'>
-                  <i class="fa-solid fa-people-group"></i>
+            
+                <div className='contenedor__promocion__categoria' id='compartir' >
+                  <i className="fa-solid fa-people-group"></i>
                   <h3>Promociones para compartir</h3>
                 </div>
 
-                <div className='promociones__personales__contenedor'>
-                  <Slider {...settingsAll} className='slider__contenedor'>
+                <div className='promociones__compartir__contenedor' responsive={settingsResponsive}>
+                  <Slider {...settingsAll} responsive={settingsResponsive}  className='slider__contenedor'>
                       {promocionesParaCompartir.map((compartir, index) => (
                         <PromocionesParaCompartir key={index} promoCompartir = {compartir}/>
                       ))}
                   </Slider>
                 </div>  
+             
 
                 {/*FIN PROMOCIONES PARA COMPARTIR */}
 
@@ -280,13 +313,13 @@ export const Promociones = () => {
 
               {/* INICIO CUPONES*/}
 
-                <div className='contenedor__promocion__categoria'>
+                <div className='contenedor__promocion__categoria' id='cupones'>
                   <h3>Cupones</h3>
                 </div>
 
-                <div className='promociones__personales__contenedor'>
+                <div className='promociones__cupones__contenedor'>
       
-                  <Slider {...settingsAll} className='slider__contenedor'>     
+                  <Slider {...settingsAll} className='slider__contenedor' responsive={settingsResponsive}>     
                       {cupones.map((cupon, index) => (
                         <Cupones key={index} personalCupon = {cupon}/>
                       ))}
@@ -313,8 +346,8 @@ export const Promociones = () => {
 
           <div className= 'preguntas__unidad__container'>
 
-          <div class="preguntas__frecuentes__container">
-            <details class="container__por__pregunta">
+          <div className="preguntas__frecuentes__container">
+            <details className="container__por__pregunta">
               <summary className="pregunta__frecuente">
                 <h3>¿Las promociones de <strong>hamburguesas delivery</strong> online se pueden pagar presencialmente en mi domicilio?</h3>
               </summary>
@@ -327,7 +360,7 @@ export const Promociones = () => {
 
           {/* PREGUNTA 2 */}
 
-            <details class="container__por__pregunta">
+            <details className="container__por__pregunta">
               <summary className="pregunta__frecuente">
                 <h3>¿Con cualquier método de pago accedo a las <strong>promociones de delivery</strong> online de Bembos?</h3>
               </summary>
@@ -340,7 +373,7 @@ export const Promociones = () => {
 
             {/* PREGUNTA 3 */}
 
-            <details class="container__por__pregunta">
+            <details className="container__por__pregunta">
               <summary className="pregunta__frecuente">
                 <h3>¿En qué ciudades puedo pedir las <strong>Promociones de Delivery</strong></h3>
               </summary>
@@ -354,7 +387,7 @@ export const Promociones = () => {
 
             {/* PREGUNTA 4 */}
 
-            <details class="container__por__pregunta">
+            <details className="container__por__pregunta">
               <summary className="pregunta__frecuente">
                 <h3>¿Acumulo puntos si elijo las <strong>promociones de delivery</strong> online?</h3>
               </summary>
@@ -367,7 +400,7 @@ export const Promociones = () => {
 
             {/* PREGUNTA 5 */}
 
-            <details class="container__por__pregunta">
+            <details className="container__por__pregunta">
               <summary className="pregunta__frecuente">
                 <h3>Para acceder a las promociones <strong>online delivery</strong> de Bembos tengo que ser cliente habitual?</h3>
               </summary>

@@ -3,7 +3,7 @@ import React from 'react'
 
 export const PromocionesPersonales = ({personalPromo}) => {
   return (
-    <div className='prueba'>
+    <div className='container__all__promo__personal'>
 
         {/* Promociones Personales */}
     

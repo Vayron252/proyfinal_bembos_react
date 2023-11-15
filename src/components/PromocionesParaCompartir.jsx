@@ -3,7 +3,7 @@ import React from 'react'
 
 export const PromocionesParaCompartir= ({promoCompartir}) => {
   return (
-    <div>
+    <div className='container__all__promo__compartir'>
 
         {/* Promociones Personales */}
     
@@ -16,8 +16,8 @@ export const PromocionesParaCompartir= ({promoCompartir}) => {
                     <p className='descripcion__compartir'> {promoCompartir.descripcion} </p>
                 </div>
 
-                <div className='container__total__promo__button'>              
-                    <div className='precios__promo__personal'>
+                <div className='container__total__compartir__button'>              
+                    <div className='precios__promo__compartir'>
                         <h2 className='precio__actual__compartir'> S/.{promoCompartir.precio_actual} </h2>
                         <h2 className='precio__antiguo__compartir'> <del> S/.{promoCompartir.precio_antiguo} </del> </h2>
                     </div>
