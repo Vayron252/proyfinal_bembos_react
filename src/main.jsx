@@ -83,7 +83,7 @@ const router = createBrowserRouter([
         element: <TerminosCondiciones/>,
         errorElement: <ErrorPage />
       }
-    ]
+    ],
   }
 ])
 
