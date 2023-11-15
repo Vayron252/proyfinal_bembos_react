@@ -4,17 +4,22 @@ import { obtenerProductoxNombre } from "../data/bembosAPI"
 import { useCarroCompras } from "../hooks/useCarroCompras"
 import '../styles/producto.css'
 
-export const loader = ({ params }) => {
+export const loader = async ({ params }) => {
   const { categoria, producto } = params;
-  const productoConsultado = obtenerProductoxNombre(producto);
+  const productoConsultado = await obtenerProductoxNombre(categoria, producto);
+  if (productoConsultado.length === 0) {
+    throw new Response('', {
+        status: 404, statusText: 'El producto no fue encontrado.'
+    });
+  }
   return productoConsultado;
 }
 
 export const ProductoCompra = () => {
-  const { categoria, producto } = useParams();
   const navigate = useNavigate();
-  const { informacion } = useLoaderData();
-  const { carroCompras ,setMostrarCarro, handleMenuBar } = useCarroCompras();
+  const { categoria, producto } = useParams();
+  const informacion = useLoaderData();
+  const { carroCompras, setMostrarCarro, handleMenuBar } = useCarroCompras();
 
   return (
     <>
@@ -40,15 +45,15 @@ export const ProductoCompra = () => {
       </header>
       <div className="seccion__item">
         <div className="seccion__item__contenedor__imagen">
-          <img className="seccion__item__imagen" src={informacion.img_producto} alt="imagen producto" />
+          <img className="seccion__item__imagen" src={informacion.img} alt="imagen producto" />
           <div className="seccion__item__imagen__contenedor">
-            <p className="seccion__item__imagen__info"><i class="fa-solid fa-circle-info"></i>Más información</p>
+            <p className="seccion__item__imagen__info"><i className="fa-solid fa-circle-info"></i>Más información</p>
             <p className="seccion__item__imagen__terminoscondiciones">Términos y Condiciones</p>
           </div>
         </div>
         <div className="seccion__item__contenedor__contenido">
           <div className="seccion__item__contenido">
-            <h3 className="seccion__item__contenido__titulo">Titulo del producto</h3>
+            <h3 className="seccion__item__contenido__titulo">{informacion.nombre}</h3>
             <section className="seccion__item__opciones">
               <details className="item__opciones" open>
                 <summary className="item__opciones__pregunta">

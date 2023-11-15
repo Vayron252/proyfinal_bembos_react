@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLoaderData, Link, useLocation, useParams } from 'react-router-dom';
 import { obtenerListadoMenu, obtenerListadoProductosXOpcion } from '../data/bembosAPI'
 import { useScrollPosition } from '../hooks/useScrollPosition'
@@ -10,8 +11,18 @@ import '../styles/secciones.css'
 export const loader = async ({ params }) => {
   const { categoria } = params;
   const listadoMenu = await obtenerListadoMenu();
+  const existeCategoria =  listadoMenu.filter(element => {
+    if (element.link.substring(element.link.lastIndexOf("/")+1) === categoria) {
+      return element;
+    }
+  });
   const listadoOpciones = await obtenerListadoProductosXOpcion(categoria);
-  return {listadoOpciones, listadoMenu};
+  if (listadoOpciones.length === 0 && Object.values(existeCategoria).length === 0) {
+    throw new Response('', {
+        status: 404, statusText: 'La categoría al cuál quiere acceder no existe.'
+    });
+  }
+  return { listadoOpciones, listadoMenu };
 }
 
 export const MenuOpciones = () => {
@@ -35,8 +46,8 @@ export const MenuOpciones = () => {
       <div className="contenedor__opciones__menu">
         <ul className={`listado__opciones__menu${scrollPosition > 0 ? ' normal' : ''}`}>
           {listadoMenu.map(enlace => (
-            <li className="opcion__menu">
-              <Link className={`opcion__menu__link${location.pathname === enlace.link ? ' active' : ''}`} to={enlace.link}>
+            <li className="opcion__menu" key={enlace.link}>
+              <Link key={enlace.link} className={`opcion__menu__link${location.pathname === enlace.link ? ' active' : ''}`} to={enlace.link}>
                 {enlace.nombre}
               </Link>
             </li>
@@ -78,7 +89,7 @@ export const MenuOpciones = () => {
         <div className="contenedor__slice__opciones__menu">
           <Slider {...settings}>
             {listadoMenu.map(enlace => (
-              <li className="opcion__menu">
+              <li className="opcion__menu" key={enlace.link}>
                 <Link className={`opcion__menu__link${location.pathname === enlace.link ? ' active' : ''}`} to={enlace.link}>
                   {enlace.nombre}
                 </Link>

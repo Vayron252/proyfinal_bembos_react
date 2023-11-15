@@ -43,7 +43,8 @@ const router = createBrowserRouter([
       {
         path: '/menu/:categoria/:producto',
         element: <ProductoCompra />,
-        loader: productoCompraLoader
+        loader: productoCompraLoader,
+        errorElement: <ErrorPage />
       },
       {
         path: '/promociones/delivery-hamburguesas',

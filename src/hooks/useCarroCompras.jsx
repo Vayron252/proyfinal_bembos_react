@@ -5,7 +5,7 @@ export const useCarroCompras = () => {
     const { carroCompras, setCarroCompras, 
             mostrarCarro, setMostrarCarro, 
             montoDelivery,
-            menuBarActive, setMenuBarActive } = useContext(CarroComprasContext);
+            menuBarActive, setMenuBarActive} = useContext(CarroComprasContext);
 
     const handleMenuBar = () => {
         if (menuBarActive) {

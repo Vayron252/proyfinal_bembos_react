@@ -70,7 +70,7 @@ export function CarroComprasProvider ({ children }) {
             subtotal: 20.9
         }
     ];
-
+    
     const [menuBarActive, setMenuBarActive] = useState(false);
     const [mostrarCarro, setMostrarCarro] = useState(false);
     const [carroCompras, setCarroCompras] = useState(valorInicialCarro);
