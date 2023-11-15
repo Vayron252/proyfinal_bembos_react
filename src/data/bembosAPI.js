@@ -14,6 +14,9 @@ export const obtenerListadoMenu = async () => {
 
 export const obtenerListadoProductosXOpcion = async (categoria) => {
     const { data } = await axios.get(import.meta.env.VITE_API_URL);
+    // const data2 = await axios.get(`${import.meta.env.VITE_API_URL_STRAPI}/productos?filters[categoria]=${categoria}`);
+    // console.log('desde strapi');
+    // console.log(data2);
     const resultado = data.filter(elemento => {
         if (Object.keys(elemento)[0] == categoria) {
             return elemento;
