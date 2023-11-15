@@ -22,6 +22,7 @@ export const loader = async ({ params }) => {
         status: 404, statusText: 'La categoría al cuál quiere acceder no existe.'
     });
   }
+  // Validacion
   return { listadoOpciones, listadoMenu };
 }
 
