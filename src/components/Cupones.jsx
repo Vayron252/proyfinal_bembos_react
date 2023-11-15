@@ -14,7 +14,7 @@ export const Cupones = ({personalCupon}) => {
             <div className='contenedor__cupon__details'>    
 
                 <div className='cupon__info__details'>
-                    <img src={personalCupon.img_entel} alt="" className='entel__image' />
+                    <img src={personalCupon.entel_img} alt="" className='entel__image' />
                     <h3 className='titulo__cupon'>{personalCupon.nombre} </h3>
                     <p className='descripcion__cupon'> {personalCupon.descripcion} </p>
                     <p className='aviso__cupon'>{personalCupon.aviso} </p>

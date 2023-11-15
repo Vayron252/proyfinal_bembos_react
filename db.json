@@ -312,6 +312,7 @@
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-interbank-oct.webp"
                 },
                 {
+                    "entel_img": "",
                     "nombre": "Parrillera Regular",
                     "descripcion": "2 parrilleras regulares, 2 papas regulares",
                     "aviso": "Ingresa el cupón de suscriptores de pchujoy.com antes de finalizar la compra y obtén la promoción a S/.26.90",
@@ -321,17 +322,19 @@
                     "id": 2,
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/e/personal-cheese-bembos.webp"
                 },
-                {
+                {  
+                    "entel_img": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_2.png",
                     "nombre": "Entel 2x1 Royal 2023",
                     "descripcion": "2 Royal mediana, 2 papas regulares Mayonesa x 2,...",
                     "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/23.80",
                     "precio_actual": 47.60,
-                    "precio_antiguo": "t",
+                    "precio_antiguo": "",
                     "descuento": "",
                     "id": 3,
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-royal-800x1370.webp"
                 },
                 {
+                    "entel_img": "",
                     "nombre": "Plaza Vea Dúo",
                     "descripcion": "1 Queso Tocino regular, 1 Clásica regular, 2...",
                     "aviso": "Ingresa el cupón de Yape antes de finalizar la compra y obtén la promoción a S/21.90",
@@ -342,6 +345,8 @@
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-pv-bb.webp"
                 },
                 {
+
+                    "entel_img": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_2.png",               
                     "nombre": "Entel 2x1 Royal 2023",
                     "descripcion": "2 Parrillera mediana, 2 papa regular Mayonesa x2, Ketch...",
                     "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/27.80",
@@ -352,6 +357,7 @@
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-parrillera-800x1370.webp"
                 },
                 {
+                    "entel_img": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_2.png",                
                     "nombre": "Entel 2x1 Royal 2023",
                     "descripcion": "2 Clásicas mediana, 2 papa regular, Mayonesa x2, Ketch...",
                     "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/20.80",
@@ -362,6 +368,7 @@
                     "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-clasica-800x1370.webp"
                 },
                 {
+                    "entel_img": "https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/entel_2.png",
                     "nombre": "2X1 Queabuso 2023",
                     "descripcion": "2 Queabuso medianas, 2 papas regulares, Mayonesa x2,...",
                     "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/24.80",

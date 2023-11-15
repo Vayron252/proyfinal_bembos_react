@@ -4,6 +4,11 @@ import friendzone from '../img/friendzone.png'
 import gileos from '../img/gileos.png'
 import relacion from '../img/relacion.png'
 import destinados from '../img/destinados.png'
+import friendzone_mini from '../img/friendzone_mini.png'
+import gileos_mini from '../img/gileos_mini.png'
+import relacion_mini from '../img/relacion_mini.png'
+import destinados_mini from '../img/destinados_mini.png'
+
 import '../styles/beneficios.css'
 
 export const Beneficios = () => {
@@ -20,28 +25,108 @@ export const Beneficios = () => {
 
       {/* CONTENEDOR - MENÚ BENFICIOS */}
 
-      <div className='container__menu__beneficios'>
-        <div className='contenedor__menu__categoria'>
-          <img src={friendzone} alt="" />
-          <h2>FRIENDZONE</h2>
+      <div className='container__menu__benefit'>
+        <div className='container__menu__category'>        
+            <img src={friendzone} alt="" />
+            <h2>FRIENDZONE</h2>               
         </div>
 
-        <div className='contenedor__menu__categoria'>
-          <img src={gileos} alt="" />
-          <h2>GILEOS</h2>
+        <div className='container__menu__category'>
+          <img src={gileos} alt="" /> 
+          <h2>GILEOS</h2> 
         </div>
 
-        <div className='contenedor__menu__categoria'>
-          <img src={relacion} alt="" />
-          <h2>RELACIÓN</h2>
+        <div className='container__menu__category'>          
+          <img src={relacion} alt=""/>   
+          <h2>RELACIÓN</h2>      
         </div>
 
-        <div className='contenedor__menu__categoria'>
-          <img src={destinados} alt="" />
-          <h2>DESTINADOS</h2>
+        <div className='container__menu__category'>   
+            <img src={destinados} alt="" /> 
+            <h2>DESTINADOS</h2>                     
         </div>
       </div>
+
+      <div className='container__separation__menu__benefit'>
+        <hr className='separation__menu__benefit' />        
+      </div>
+
+    {/* FRIENDZONE_INFO */}
+    <div className='container__friendzone__info'>
+      <div className='container__info__details__friendzone'>
+        <div className='friendzone__info__title'>
+          <img src={friendzone_mini} alt="" />
+          <h1>FRIENDZONE</h1>
+          <h3>INICIA SESIÓN</h3>
+        </div>
+        <div className='slogan__friendzone'>
+          <h3>PROMOCIONES POR TU AMISTAD</h3>
+        </div>
+      </div>
+    </div>
+    {/* FIN FRIENDZONE_INFO */}
+
+
+    {/* GILEOS_INFO */}
+    <div className='container__gileos__info'>
+      <div className='container__info__details__gileos'>
+        <div className='gileos__info__title'>
+          <img src={gileos_mini} alt="" />
+          <h1>GILEOS</h1>
+          <h3>ALCANZA 100<span className=''>PTS</span></h3>
+        </div>
+        <div className='slogan__gileos'>
+          <h3>MULTIPLICA PUNTOS X2</h3>
+        </div>
+      </div>
+    </div>
+    {/* FIN GILEOS_INFO */}
+
+    {/* RELACIÓN_INFO */}
+    <div className='container__relacion__info'>
+      <div className='container__info__details__relacion'>
+        <div className='relacion__info__title'>
+          <img src={relacion_mini} alt="" />
+          <h1>RELACIÓN</h1>
+          <h3>ALCANZA 400PTS</h3>
+        </div>
+        <div className='slogan__relacion'>
+          <h3>MULTIPLICA PUNTOS X3 | <span className='delivery__relacion'>Delivery</span> <strong>GRATIS</strong></h3>
+        </div>
+      </div>
+    </div>
+    {/* FIN RELACIÓN_INFO */}
+
+    {/* DESTINADOS_INFO */}
+    <div className='container__destinados__info'>
+      <div className='container__info__details__destinados'>
+        <div className='destinados__info__title'>
+          <img src={destinados_mini} alt="" />
+          <h1>DESTINADOS</h1>
+          <h3>ALCANZA 700PTS</h3>
+        </div>
+        <div className='slogan__destinados'>
+          <h3>MULTIPLICA PUNTOS X4 | <span className='delivery__destinados'>Delivery</span> <strong>GRATIS</strong></h3>
+        </div>
+      </div>
+    </div>
+    {/* FIN DESTINADOS_INFO */}
+
+    
+
+      
+  
     {/* FIN CONTENEDOR - MENÚ BENFICIOS */}
+
+
+    {/* GILEOS_INFO */}
+    {/* FIN GILEOS_INFO */}
+
+    {/* RELACION_INFO */}
+    {/* FIN RELACION_INFO */}
+
+    {/* DESTINADOS_INFO */}
+    {/* FIN DESTINADOS_INFO */}
 
 
       {/* PREGUNTAS FRECUENTES */}

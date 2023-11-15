@@ -58,7 +58,6 @@ export const obtenerCupones = async () => {
     return cupones;
 }
 
-
 export const obtenerListadoComplementos = () => {
     const listadoComplementos = [
         {
