@@ -218,82 +218,78 @@
 
 		{ "cupones" [
 
-			        {
-            "nombre": "Combo Interbank",
-            "descripcion": "1 queso tocino regular, nuggets x 6, 1 papa regular",
-            "aviso": "",
-            "precio_actual": 19.90,
-            "precio_antiguo": 30.30,
-            "descuento": 34,
-            "id": 1,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-interbank-oct.webp"
-        },
-        {
-            "nombre": "Parrillera Regular",
-            "descripcion": "2 parrilleras regulares, 2 papas regulares",
-            "aviso": "Ingresa el cupón de suscriptores de pchujoy.com antes de finalizar la compra y obtén la promoción a S/.26.90",
-            "precio_actual": 47.60,
-            "precio_antiguo": "",
-            "descuento": "",
-            "id": 2,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/e/personal-cheese-bembos.webp"
-        },
-
-        {
-            "nombre": "Entel 2x1 Royal 2023",
-            "descripcion": "2 Royal mediana, 2 papas regulares Mayonesa x 2,...",
-            "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/23.80",
-            "precio_actual": 47.60,
-            "precio_antiguo": "t",
-            "descuento": "",
-            "id": 3,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-royal-800x1370.webp"
-        },
-
-        {
-            "nombre": "Plaza Vea Dúo",
-            "descripcion": "1 Queso Tocino regular, 1 Clásica regular, 2...",
-            "aviso": "Ingresa el cupón de Yape antes de finalizar la compra y obtén la promoción a S/21.90",
-            "precio_actual": 36.90,
-            "precio_antiguo": "t",
-            "descuento": "",
-            "descuento": "",
-            "id": 4,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-pv-bb.webp"
-        },
-
-        {
-            "nombre": "Entel 2x1 Royal 2023",
-            "descripcion": "2 Parrillera mediana, 2 papa regular Mayonesa x2, Ketch...",
-            "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/27.80",
-            "precio_actual": 55.60,
-            "precio_antiguo": "",
-            "descuento": "",
-            "id": 5,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-parrillera-800x1370.webp"
-        },
-
-        {
-            "nombre": "Entel 2x1 Royal 2023",
-            "descripcion": "2 Clásicas mediana, 2 papa regular, Mayonesa x2, Ketch...",
-            "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/20.80",
-            "precio_actual": 41.60,
-            "precio_antiguo": "",
-            "descuento": "",
-            "id": 6,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-clasica-800x1370.webp"
-        },
-
-        {
-            "nombre": "2X1 Queabuso 2023",
-            "descripcion": "2 Queabuso medianas, 2 papas regulares, Mayonesa x2,...",
-            "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/24.80",
-            "precio_actual": 49.60,
-            "precio_antiguo": "",
-            "descuento": "",
-            "id": 6,
-            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-queabuso-2x1_1.webp"
-        }
+	{
+                    "nombre": "Combo Interbank",
+                    "descripcion": "1 queso tocino regular, nuggets x 6, 1 papa regular",
+                    "aviso": "",
+                    "precio_actual": 19.90,
+                    "precio_antiguo": 30.30,
+                    "descuento": 34,
+                    "id": 1,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-interbank-oct.webp"
+                },
+                {
+                    "nombre": "Parrillera Regular",
+                    "descripcion": "2 parrilleras regulares, 2 papas regulares",
+                    "aviso": "Ingresa el cupón de suscriptores de pchujoy.com antes de finalizar la compra y obtén la promoción a S/.26.90",
+                    "precio_actual": 47.60,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 2,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/e/personal-cheese-bembos.webp"
+                },
+                {   "img_entel":"https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/   entel_2.png",
+                    "nombre": "Entel 2x1 Royal 2023",
+                    "descripcion": "2 Royal mediana, 2 papas regulares Mayonesa x 2,...",
+                    "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/23.80",
+                    "precio_actual": 47.60,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 3,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-royal-800x1370.webp"
+                },
+                {
+                    "nombre": "Plaza Vea Dúo",
+                    "descripcion": "1 Queso Tocino regular, 1 Clásica regular, 2...",
+                    "aviso": "Ingresa el cupón de Yape antes de finalizar la compra y obtén la promoción a S/21.90",
+                    "precio_actual": 36.90,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 4,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-pv-bb.webp"
+                },
+                {
+                    "img_entel":"https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/   entel_2.png",
+                    "nombre": "Entel 2x1 Royal 2023",
+                    "descripcion": "2 Parrillera mediana, 2 papa regular Mayonesa x2, Ketch...",
+                    "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/27.80",
+                    "precio_actual": 55.60,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 5,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-parrillera-800x1370.webp"
+                },
+                {
+                    "img_entel":"https://www.bembos.com.pe/_ipx/s_184x28/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/e/n/   entel_2.png",
+                    "nombre": "Entel 2x1 Royal 2023",
+                    "descripcion": "2 Clásicas mediana, 2 papa regular, Mayonesa x2, Ketch...",
+                    "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/20.80",
+                    "precio_actual": 41.60,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 6,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/combo-clasica-800x1370.webp"
+                },
+                {
+                    "nombre": "2X1 Queabuso 2023",
+                    "descripcion": "2 Queabuso medianas, 2 papas regulares, Mayonesa x2,...",
+                    "aviso": "Ingresa el cupón de Entel antes de finalizar la compra y obtén la promoción a S/24.80",
+                    "precio_actual": 49.60,
+                    "precio_antiguo": "",
+                    "descuento": "",
+                    "id": 6,
+                    "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-queabuso-2x1_1.webp"
+                }
 		]
 		},
 
@@ -439,7 +435,7 @@
         ]
         },
 
-		
+
 
 		{
             "promociones_para_compartir": [
@@ -500,19 +496,6 @@
         
         ]
         },
-
-
-        
-
-
-
-
-
-
-
-
-
-
 
 		{
 			"promociones_online": [
@@ -642,6 +625,142 @@
 				}
 				
 			]
-		}
+		},
+
+
+		{
+            "beneficios__friendzone": [
+            {
+                "nombre": "Pareja real",
+                "precio": 39.90,
+				descuento: -35%,
+				"puntos": "¡Acumula 39Pts!",
+                "id": 1,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-pareja-real-beneficios.jpg"
+            },
+
+            {
+                "nombre": "Clásico amor",
+                "precio": 42.90,
+				descuento: -34%,
+				"puntos": "¡Acumula 42Pts!",
+                "id": 2,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-clasico-amor-beneficios.jpg"
+            },
+    
+            {
+                "nombre": "La Incondicional",
+                "precio": 19.90,
+				descuento: -23%,
+				"puntos": "¡Acumula 19Pts!",
+                "id": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-la-incondicional-beneficios.jpg"
+            }
+                    
+        ]
+        }
+
+		{
+            "beneficios__gileos": [
+            {
+                "nombre": "Pasión de barrio",
+                "precio": 29.90,
+				descuento: -37%,
+				"puntos": "¡Acumula 29Pts!",
+                "id": 1,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-pasion-de-barrio-benenficios.jpg"
+            },
+
+            {
+                "nombre": "Amor sin fronteras",
+                "precio": 52.90,
+				descuento: -36%,
+				"puntos": "¡Acumula 52Pts!",
+                "id": 2,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-amor-sin-fronteras-benenficios.jpg"
+            },
+    
+            {
+                "nombre": "Amor a la churrita",
+                "precio": 19.90,
+				descuento: -23%,
+				"puntos": "¡Acumula 19Pts!",
+                "id": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-amor-a-la-churrita-beneficios.jpg"
+            }
+                    
+        ]
+        }
+		
+		{
+            "beneficios__relacion": [
+            {
+                "nombre": "La Churrita del barrio",
+                "precio": 39.90,
+				descuento: -39%,
+				"puntos": "¡Acumula 39Pts!",
+                "id": 1,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-la-churrita-del-barrio-benenficios.jpg"
+            },
+
+            {
+                "nombre": "Rica pero humilde",
+                "precio": 21.90,
+				descuento: -37%,
+				"puntos": "¡Acumula 21Pts!",
+                "id": 2,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-rica-pero-humilde-beneficios.jpg"
+            },
+    
+            {
+                "nombre": "Amor a la parrilla mediano",
+                "precio": 34.90,
+				descuento: -35%,
+				"puntos": "¡Acumula 34Pts!",
+                "id": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-amor-a-la-parrilla-mediano-beneficios.jpg"
+            }                    
+        ]
+        }
+
+		{
+            "beneficios__destinados": [
+            {
+                "nombre": "Almas gemelas",
+                "precio": 25.90,
+				descuento: -42%,
+				"puntos": "¡Acumula 25Pts!",
+                "id": 1,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-almas-gemelas-beneficios.jpg"
+            },
+
+            {
+                "nombre": "Mi Complice perfecto",
+                "precio": 19.90,
+				descuento: -35%,
+				"puntos": "¡Acumula 19Pts!",
+                "id": 2,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-mi-complice-perfecto-beneficios.jpg"
+            },
+    
+            {
+                "nombre": "Amor Parrillero",
+                "precio": 23.90,
+				descuento: -31%,
+				"puntos": "¡Acumula 23Pts!",
+                "id": 3,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-amor-parrillero-beneficios.jpg"
+            },
+
+			{
+                "nombre": "Amor Extremo",
+                "precio": 21.90,
+				descuento: -27%,
+				"puntos": "¡Acumula 21Pts!",
+                "id": 4,
+                "img": "https://www.bembos.com.pe/_ipx/q_60,w_260/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/1/3/1370x800-amor-extremo-beneficios.jpg"
+            }                              
+        ]
+        }
 	]
 }
