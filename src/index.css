@@ -815,6 +815,10 @@ hr {
     background-color: var(--blanco);
 }
 
+.principal.compra {
+    padding-top: 9.5rem;
+}
+
 @media (min-width: 768px) {
     .principal {
         padding-top: 15.2rem;

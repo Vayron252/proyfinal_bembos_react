@@ -4,6 +4,7 @@ import './styles/normalize.css'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LayoutPrincipal } from './components/templates/LayoutPrincipal'
+import { LayoutCompra } from './components/templates/LayoutCompra'
 import { Index, loader as indexLoader } from './pages/Index'
 import { Menu, loader as menuLoader } from './pages/Menu'
 import { MenuOpciones, loader as menuOpcionesLoader } from './pages/MenuOpciones'
@@ -38,12 +39,6 @@ const router = createBrowserRouter([
         path: '/menu/:categoria',
         element: <MenuOpciones />,
         loader: menuOpcionesLoader,
-        errorElement: <ErrorPage />
-      },
-      {
-        path: '/menu/:categoria/:producto',
-        element: <ProductoCompra />,
-        loader: productoCompraLoader,
         errorElement: <ErrorPage />
       },
       {
@@ -84,6 +79,18 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       }
     ],
+  },
+  {
+    path: '/menu/:categoria/:producto',
+    element: <LayoutCompra />,
+    children: [
+      {
+        index: true,
+        element: <ProductoCompra />,
+        loader: productoCompraLoader,
+        errorElement: <ErrorPage />
+      }
+    ]
   }
 ])
 

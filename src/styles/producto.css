@@ -3,7 +3,7 @@
     background-color: var(--colorPrincipal);
     position: fixed;
     width: 100%;
-    top: 4.5rem;
+    top: 0;
     z-index: 100;
 }
 .contenedor__header__back {

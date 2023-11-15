@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useLoaderData, useNavigate, Link, useParams } from "react-router-dom"
 import { obtenerProductoxNombre } from "../data/bembosAPI"
 import { useCarroCompras } from "../hooks/useCarroCompras"
+import { useScreenSize } from "../hooks/useScreenSize"
 import '../styles/producto.css'
 
 export const loader = async ({ params }) => {
@@ -16,6 +17,7 @@ export const loader = async ({ params }) => {
 }
 
 export const ProductoCompra = () => {
+  const { width } = useScreenSize();
   const navigate = useNavigate();
   const { categoria, producto } = useParams();
   const informacion = useLoaderData();
@@ -23,26 +25,28 @@ export const ProductoCompra = () => {
 
   return (
     <>
-      <header className="header__back">
-        <div className="contenedor__header__back contenedor">
-          <i className="fa-solid fa-circle-arrow-left header__back__volver" onClick={() => navigate(-1)}></i>
-          <div className="header__back__compra__barra">
-            <div className="header__back__compra__shopping">
-              <i className="fa-solid fa-cart-shopping" onClick={() => setMostrarCarro(true)}></i>
-              <span>{carroCompras.length}</span>
+      {width < 992 ? (
+        <header className="header__back">
+          <div className="contenedor__header__back contenedor">
+            <i className="fa-solid fa-circle-arrow-left header__back__volver" onClick={() => navigate(-1)}></i>
+            <div className="header__back__compra__barra">
+              <div className="header__back__compra__shopping">
+                <i className="fa-solid fa-cart-shopping" onClick={() => setMostrarCarro(true)}></i>
+                <span>{carroCompras.length}</span>
+              </div>
+              <i className="fa-solid fa-bars" onClick={() => handleMenuBar()}></i>
             </div>
-            <i className="fa-solid fa-bars" onClick={() => handleMenuBar()}></i>
           </div>
-        </div>
-        <div className="contenedor__header__back__navegacion">
-          <h2 className="header__back__navegacion">
-            <Link to={'/'}>Inicio</Link>{' > '}
-            <Link to={'/menu'}>Menú</Link>{' > '}
-            <Link to={`/menu/${categoria}`}>{categoria}</Link>{' > '}
-            <Link to={`/menu/${categoria}/${producto}`}>{producto}</Link>
-          </h2>
-        </div>
-      </header>
+          <div className="contenedor__header__back__navegacion">
+            <h2 className="header__back__navegacion">
+              <Link to={'/'}>Inicio</Link>{' > '}
+              <Link to={'/menu'}>Menú</Link>{' > '}
+              <Link to={`/menu/${categoria}`}>{categoria}</Link>{' > '}
+              <Link to={`/menu/${categoria}/${producto}`}>{producto}</Link>
+            </h2>
+          </div>
+        </header>
+      ) : (<></>)}
       <div className="seccion__item">
         <div className="seccion__item__contenedor__imagen">
           <img className="seccion__item__imagen" src={informacion.img} alt="imagen producto" />
@@ -127,7 +131,7 @@ export const ProductoCompra = () => {
         </div>
         <div className="footer__agregarproducto">
           <p className="agregarproducto__acumulado">Acumulas 0Pts</p>
-          <button className="agregarproducto__monto">Agregar S/. 30.80</button>
+          <button className="agregarproducto__monto">{`Agregar S/. ${informacion.precio}`}</button>
         </div>
       </footer>
     </>
