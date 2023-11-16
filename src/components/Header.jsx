@@ -57,8 +57,8 @@ export const Header = () => {
                                         </a>
                                     </li>
                                     <li className="links__opcion">
-                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/locales')}>
-                                            <p className="links__opcion__texto">Locales</p>
+                                        <a className="links__opcion__link" onClick={e => handleClickOptionMenu(e, '/locales')}>                                          
+                                                <p className="links__opcion__texto">Locales</p>                                  
                                         </a>
                                     </li>
                                     <li className="links__opcion">

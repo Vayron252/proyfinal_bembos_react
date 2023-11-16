@@ -150,6 +150,8 @@
             "link": "hamburguesa-extrema"
         }
     ],
+
+
     "pollo": [
         {
             "nombre": "Bembroster clasica",
@@ -180,6 +182,7 @@
             "link": "bembos-chicken-grill"
         }
     ],
+
     "loncheritas": [
         {
             "nombre": "Loncherita básica de pollo",
@@ -291,6 +294,7 @@
             "link": "inca-kola-sin-azucar-500-ml"
         }
     ],
+
     "helados": [
         {
             "nombre": "Helado Mini Princesa",
@@ -694,7 +698,8 @@
             "descuento": "",
             "id": 34,
             "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x1370-combo-queabuso-2x1_1.webp"
-        }
+        }        
+
     ],
     "locales": [
         {
@@ -873,7 +878,9 @@
                 {
                     "nombre_distrito": "",
                     "sedes": [
-                        "Plaza Vea Callao, Bellavista, Minka"
+                        "Plaza Vea Callao", 
+                        "Bellavista", 
+                        "Minka"
                     ]
                 }
             ]
@@ -884,7 +891,8 @@
                 {
                     "nombre_distrito": "",
                     "sedes": [
-                        "Chiclayo Real Plaza, Mall Aventura Chiclayo"
+                        "Chiclayo Real Plaza", 
+                        "Mall Aventura Chiclayo"
                     ]
                 }
             ]
@@ -979,6 +987,9 @@
             ]
         }
     ],
+
+
+
     "relaciones": [
         {
             "id": 1,

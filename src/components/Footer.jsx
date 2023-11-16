@@ -32,7 +32,7 @@ export const Footer = () => {
                         <ul className='footer__info-list'>
                             <li className='footer__info-item'>
                                 <div className='footer__info-item-1row'>
-                                    <a href="" className=''>Locales</a>
+                                    <Link to={'/locales'}>Locales</Link>
                                     <Link to={'/nosotros/como-nacio-bembos'}>Nosotros</Link>
                                     <a href="" className=''>Atención al Cliente</a>
                                     <a href="" className=''>Preguntas Frecuentes</a>

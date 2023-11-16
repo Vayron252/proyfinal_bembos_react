@@ -49,3 +49,8 @@ export const obtenerCupones = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/cupones`);
     return data;
 }
+
+export const obtenerLocales = async () => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/locales`);
+    return data;
+}

@@ -1,0 +1,109 @@
+/* ESTILOS DE LOCALES */
+:root {
+    /* Paleta de colores */
+    --color-contrast: #9bb5da;
+    --color-gris: #d8d8d8;
+    --grisClaro: #A19E9E;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --rojo: #E20917;
+    --colorPrincipal: #173083;
+    --colorSecundario: #FBB905;
+    --background: #F6F7F8;
+    --negroMenosIntenso: #494b4d;
+
+    /* Paleta de colores: redes sociales */
+    --colorFacebook: #314A7E;
+    --colorTwitter: #29B6FD;
+
+    /* Tipografias */
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Teko', sans-serif;
+    --fuenteTerciaria: 'Dosis', sans-serif;
+    --fuenteCuaternaria: 'serif';
+}
+
+
+.container__city_district{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    gap: 80px;
+    justify-content: center;
+    align-content: center;
+}
+
+.hamburger__local{
+    background-color: var(--colorPrincipal);
+    color: var(--blanco);
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    text-align: center;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+.hamburger__district {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    font-weight: 900;  
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+.hamburger__district.sinpading {
+    padding-top: 0;
+}
+
+.hamburger__sede{
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.container__title__locals{
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    text-align: center;
+    padding: 2px 10px;
+    font-size: 14px;
+    transform: scaleY(1.1);
+    margin: 0 auto;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+}
+
+.container__lima__hamburguer{
+    margin-top: 50px;
+}
+
+.container__info__locals{
+    background-color: var(--blanco);
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container__total__locals{
+    background-color: var(--background);
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.container__locals{
+    margin-bottom: 116px;
+}
+
+/* PREGUNTAS FRECUENTES */
+

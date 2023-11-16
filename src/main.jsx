@@ -11,7 +11,7 @@ import { MenuOpciones, loader as menuOpcionesLoader } from './pages/MenuOpciones
 import { Promociones, loader as promocionesLoader } from './pages/Promociones'
 import { Beneficios } from './pages/Beneficios'
 import { MiCuenta } from './pages/MiCuenta'
-import { Locales } from './pages/Locales'
+import { Locales, loader as localesLoader } from './pages/Locales'
 import { ZonasReparto } from './pages/ZonasReparto'
 import { Nosotros } from './pages/Nosotros'
 import { TerminosCondiciones } from './pages/TerminosCondiciones'
@@ -62,6 +62,7 @@ const router = createBrowserRouter([
       {
         path: '/locales',
         element: <Locales />,
+        loader: localesLoader,
         errorElement: <ErrorPage />
       },
       {
