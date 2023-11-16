@@ -6,6 +6,7 @@ import { useScreenSize } from "../hooks/useScreenSize"
 import { formatoDosDecimales } from "../utils/utilitarios"
 import { Spinner } from "../components/Spinner"
 import { Modal } from 'react-responsive-modal';
+import { Pregunta } from "../components/Pregunta"
 import '../styles/producto.css'
 import 'react-responsive-modal/styles.css';
 
@@ -24,7 +25,8 @@ export const loader = async ({ params }) => {
 export const ProductoCompra = () => {
   const [cantidad, setCantidad] = useState(1);
   const [open, setOpen] = useState(false);
-  const [mostrarSpinner, setMostrarSpinner] = useState(false); 
+  const [mostrarSpinner, setMostrarSpinner] = useState(false);
+  const [combinaciones, setCombinaciones] = useState([]);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
@@ -102,7 +104,7 @@ export const ProductoCompra = () => {
       </Modal>
       {width < 992 ? (
         <header className="header__back">
-          <div className="contenedor__header__back contenedor">
+          <div className={`contenedor__header__back contenedor`}>
             <i className="fa-solid fa-circle-arrow-left header__back__volver" onClick={() => navigate(-1)}></i>
             <div className="header__back__compra__barra">
               <div className="header__back__compra__shopping">
@@ -122,8 +124,7 @@ export const ProductoCompra = () => {
           </div>
         </header>
       ) : (<></>)}
-      {/* <Spinner /> */}
-      <div className="seccion__item contenedor">
+      <div className={`seccion__item${width >= 992 ? ' contenedor' : ''}`}>
         <div className="seccion__item__contenedor__imagen">
           <img className="seccion__item__imagen" src={informacion.img} alt="imagen producto" />
           <div className="seccion__item__imagen__contenedor">
@@ -137,25 +138,7 @@ export const ProductoCompra = () => {
             {relacion[0].preguntas.length > 0 ? (
               <section className="seccion__item__opciones">
                 {relacion[0].preguntas.map(pregunta => (
-                  <details key={pregunta.nropregunta} className="item__opciones" open>
-                    <summary className="item__opciones__pregunta">
-                      <div className="item__opciones__pregunta__contenedor">
-                        <span className="item__opciones__pregunta__numeracion">{pregunta.nropregunta}</span>
-                        <h3 className="item__opciones__pregunta__titulo">{pregunta.nombrepregunta}</h3>
-                      </div>
-                    </summary>
-                    <div className="item__opciones__respuestas">
-                      <p className="item__opciones__respuestas__descripcion">{pregunta.descrippregunta}</p>
-                      <div className="item__opciones__respuestas__contenedor">
-                        {pregunta.combinaciones.map(comb => (
-                          <div className="item__opcion">
-                            <img src={comb.imgcomb} alt="imagen opcion" />
-                            <p className="item__opcion__titulo">{comb.titulocomb}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </details>
+                  <Pregunta key={pregunta.nropregunta} pregunta={pregunta} />
                 ))}
             </section>
             ) : (
