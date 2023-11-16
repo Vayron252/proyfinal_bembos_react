@@ -54,3 +54,9 @@ export const obtenerLocales = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/locales`);
     return data;
 }
+
+/* export const obtenerBeneficios = async (categoria) => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/gileos`);
+    const beneficios = data.filter(elemento => elemento.categoria === categoria);
+    return beneficios;
+} */

@@ -343,10 +343,6 @@
 }
 
 
-
-
-
-
 /* FIN DE DETALLES DE DESTINADOS */
 
 
@@ -359,15 +355,12 @@
     transform: scaleY(1.2);
     font-size: 21px;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .container__preguntas__beneficios{
     padding: 0 26px 10px;
     margin-bottom: 16px;
-}
-
-.titulo__preguntas__beneficios{
-    text-align: center;
 }
 
 .container__por__pregunta__beneficios {
@@ -456,10 +449,6 @@
 /* RESPONSIVE DESIGN */
 
 @media (max-width:992px) {
-
-  .container__menu__beneficios{
-
-  }
 
  
   

@@ -42,18 +42,18 @@ export const Locales = () => {
 
           {/* PREGUNTAS FRECUENTES */}
 
-          <div className='container__preguntas__beneficios'>
-            <h1 className='titulo__preguntas__beneficios'>Preguntas Frecuentes</h1>
+          <div className='container__questions__locals'>
+            <h1 className='title__questions__locals'>Preguntas Frecuentes</h1>
           
           {/* PREGUNTA 1*/}
-            <div className= 'preguntas__unidad__container'>
-              <div class="preguntas__beneficios__container">
-                <details class="container__por__pregunta__beneficios">
-                  <summary className="pregunta__beneficios">
-                    <h3>¿Cómo funcionan los puntos?</h3>
+            <div className= 'questions__unit__container'>
+              <div class="questions__locals__container">
+                <details class="container__per__question__locals">
+                  <summary className="questions__locals">
+                    <h3>¿En qué ciudades hay locales físicos para compras de hamburguesas?</h3>
                   </summary>
-                  <div className="respuesta__preguntas__beneficios">
-                    <p>Tus consumos se convierten en puntos para acceder a distintos estados de relación y así seguir obteniendo más productos. Conforme vayas fortaleciendo la relación, podrás acceder a más beneficios y descuentos.</p>
+                  <div className="answers__questions__locals">
+                    <p>Los locales físicos con atención al público están en las siguientes ciudades: Chiclayo, Cusco, Juliaca, Huancayo, Piura, Puno, Tacna, Trujillo y Arequipa. En Lima contamos con locales hamburguesas en Ate, Chorrillos, Cercado de lima, Comas, Independencia, Jesus María, La Molina, La Victoria, Magdalena del Mar, Miraflores, Pueblo Libre, San Borja, San Isidro, Miraflores, San Martin de Porres, San Miguel, Santa Anita, Surco, Surquillo.</p>
                   </div>
                 </details>
               </div>
@@ -61,65 +61,58 @@ export const Locales = () => {
           {/* FIN - PREGUNTA 1*/}
 
           {/* PREGUNTA 2*/}
-          <div className= 'preguntas__unidad__container'>
-              <div class="preguntas__beneficios__container">
-                <details class="container__por__pregunta__beneficios">
-                  <summary className="pregunta__beneficios">
-                    <h3>¿Cuáles son los beneficios?</h3>
+
+          <div className= 'questions__unit__container'>
+              <div class="questions__locals__container">
+                <details class="container__per__question__locals">
+                  <summary className="questions__locals">
+                    <h3>¿Qué horario tienen los locales de Bembos?</h3>
                   </summary>
-                  <div className="respuesta__preguntas__beneficios">
-                    <p>Existen diferentes beneficios en cada estado de relación que vas alcanzando. Puedes tener desde descuentos con más del 30% hasta delivery gratis.</p>
+                  <div className="answers__questions__locals">
+                    <p>El horario de atención es de 11am a 10:30pm. Pueden haber ciertas variaciones por local.
+                    Los locales físicos con atención al público están en las siguientes ciudades: Chiclayo, Cusco, Juliaca, Huancayo, Piura, Puno, Tacna, Trujillo y Arequipa. En Lima contamos con locales hamburguesas en Ate, Chorrillos, Cercado de Lima, Comas, Independencia, Jesus María, La Molina, La Victoria, Magdalena del Mar, Miraflores, Pueblo Libre, San Borja, San Isidro, Miraflores, San Martin de Porres, San Miguel, Santa Anita, Surco, Surquillo.</p>
                   </div>
                 </details>
               </div>
             </div>
+          
           {/* FIN - PREGUNTA 2*/}  
 
           {/* PREGUNTA 3*/}
-          <div className= 'preguntas__unidad__container'>
-              <div class="preguntas__beneficios__container">
-                <details class="container__por__pregunta__beneficios">
-                  <summary className="pregunta__beneficios">
-                    <h3>¿Hay beneficios por el método de pago?</h3>
+          <div className= 'questions__unit__container'>
+              <div class="questions__locals__container">
+                <details class="container__per__question__locals">
+                  <summary className="questions__locals">
+                    <h3>¿Cuál es el telefono de contacto?</h3>
                   </summary>
-                  <div className="respuesta__preguntas__beneficios">
-                    <p>Actualmente no existe un beneficio por pagar a través de un método de pago en particular.</p>
+                  <div className="answers__questions__locals">
+                    <p>El teléfono de Delivery a través es el 01419-1919 para Lima.
+                    Los locales físicos con atención al público están en las siguientes ciudades: Chiclayo, Cusco, Juliaca, Huancayo, Piura, Puno, Tacna, Trujillo y Arequipa. En Lima contamos con locales hamburguesas en Ate, Chorrillos, Cercado de Lima, Comas, Independencia, Jesus María, La Molina, La Victoria, Magdalena del Mar, Miraflores, Pueblo Libre, San Borja, San Isidro, Miraflores, San Martin de Porres, San Miguel, Santa Anita, Surco, Surquillo.</p>
                   </div>
                 </details>
               </div>
             </div>
+         
           {/* FIN - PREGUNTA 3*/}       
 
           {/* PREGUNTA 4*/}
-          <div className= 'preguntas__unidad__container'>
-              <div class="preguntas__beneficios__container">
-                <details class="container__por__pregunta__beneficios">
-                  <summary className="pregunta__beneficios">
-                    <h3>¿Los cupones de descuentos tienen fecha límite para usar?</h3>
+
+          <div className= 'questions__unit__container'>
+              <div class="questions__locals__container">
+                <details class="container__per__question__locals">
+                  <summary className="questions__locals">
+                    <h3>¿Puedo obtener puntos por compras en los locales físicos?</h3>
                   </summary>
-                  <div className="respuesta__preguntas__beneficios">
-                    <p>Si tienen una fecha límite y puedes revisar los legales en el pie de página del mismo.</p>
+                  <div className="answers__questions__locals">
+                    <p>Los puntos solo pueden obtenerse por las compras realizadas desde el canal de Web y la App de Bembos.
+                    Los locales físicos con atención al público están en las siguientes ciudades: Chiclayo, Cusco, Juliaca, Huancayo, Piura, Puno, Tacna, Trujillo y Arequipa. En Lima contamos con locales hamburguesas en Ate, Chorrillos, Cercado de Lima, Comas, Independencia, Jesus María, La Molina, La Victoria, Magdalena del Mar, Miraflores, Pueblo Libre, San Borja, San Isidro, Miraflores, San Martin de Porres, San Miguel, Santa Anita, Surco, Surquillo.</p>
                   </div>
                 </details>
               </div>
             </div>
+         
           {/* FIN - PREGUNTA 4*/}   
           
-          {/* PREGUNTA 5*/}
-          <div className= 'preguntas__unidad__container'>
-              <div class="preguntas__beneficios__container">
-                <details class="container__por__pregunta__beneficios">
-                  <summary className="pregunta__beneficios">
-                    <h3>¿Hay beneficios en compras por la App?</h3>
-                  </summary>
-                  <div className="respuesta__preguntas__beneficios">
-                    <p>Haciendo tu compra a través de la APP o el sitio web podrás acumular puntos para tener más beneficios con nosotros.</p>
-                  </div>
-                </details>
-              </div>                 
-    </div>
-
-
     </div>
       </div>
     </div>

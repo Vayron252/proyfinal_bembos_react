@@ -19,6 +19,9 @@ import { ErrorPage } from './pages/ErrorPage'
 import { ProductoCompra, loader as productoCompraLoader } from './pages/ProductoCompra'
 import { CarroComprasProvider } from './context/CarroComprasContext'
 
+
+
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -50,7 +53,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: '/beneficios',
+        path: '/beneficios/',
         element: <Beneficios />,
         errorElement: <ErrorPage />
       },

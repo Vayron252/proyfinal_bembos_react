@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+/* import { useLoaderData, Link } from 'react-router-dom'; */
 import friendzone from '../img/friendzone.png'
 import gileos from '../img/gileos.png'
 import relacion from '../img/relacion.png'
@@ -8,8 +8,21 @@ import friendzone_mini from '../img/friendzone_mini.png'
 import gileos_mini from '../img/gileos_mini.png'
 import relacion_mini from '../img/relacion_mini.png'
 import destinados_mini from '../img/destinados_mini.png'
-
+/* import obtenerBeneficios from '../data/bembosAPI' */
 import '../styles/beneficios.css'
+
+
+/* import { Friendzone } from '../components/Friendzone'; */
+
+/* export const loader = async ( {params} ) => {
+  const  {categoria}  = params;
+  const existeBeneficio = await obtenerBeneficios();
+  
+
+  const beneficiosCategorias = await obtenerBeneficios('friendzone','gileos','relacion','destinados')  
+  return {beneficiosCategorias};
+} */
+
 
 export const Beneficios = () => {
   const [nombrediv, setNombrediv] = useState('friendzone');
@@ -70,6 +83,12 @@ export const Beneficios = () => {
           <h3>PROMOCIONES POR TU AMISTAD</h3>
         </div>
       </div>
+    </div>
+
+    <div>
+    {/* {beneficiosCategorias.map((item, index) => (
+      <Friendzone key = {index} friendzone = {item}/>
+      ))} */}
     </div>
     {/* FIN FRIENDZONE_INFO */}
 
