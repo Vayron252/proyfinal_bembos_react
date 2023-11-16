@@ -66,6 +66,7 @@
     overflow: hidden;
     position: fixed;
     z-index: 50;
+    /* left: 0; */
 }
 @media (min-width: 992px) {
     .seccion__item__contenedor__imagen {
@@ -82,6 +83,14 @@
     object-fit: cover;
     object-position: center center;
 }
+@media (min-width: 992px) {
+    .seccion__item__imagen {
+        position: fixed;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 2rem;
+    }
+}
 .seccion__item__imagen__contenedor {
     position: absolute;
     top: 30rem;
@@ -97,6 +106,12 @@
     text-decoration: underline;
     font-size: 1.5rem;
     cursor: pointer;
+}
+@media (min-width: 992px) {
+    .seccion__item__imagen__info,
+    .seccion__item__imagen__terminoscondiciones {
+        display: none;
+    }
 }
 .seccion__item__imagen__info i {
     color: var(--blanco);
@@ -275,7 +290,7 @@
 
 /* Modal */
 .modal__compra {
-    width: 40rem;
+    width: 30rem;
 }
 @media (min-width: 768px) {
     .modal__compra {
@@ -306,8 +321,14 @@
     object-position: center center;
 }
 .modal__compra .sk-cube-grid {
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
+}
+@media (min-width: 768px) {
+    .modal__compra .sk-cube-grid {
+        width: 20rem;
+        height: 20rem;
+    }
 }
 .modal__compra__contenido {
     padding: 1rem;

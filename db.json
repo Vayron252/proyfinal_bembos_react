@@ -1075,7 +1075,7 @@
             "categoria": "loncheritas",
             "preguntas": [
                 {
-                    "nropregunta": 1,
+                    "nropregunta": 2,
                     "nombrepregunta": "ELIGE EL TAMAÑO DE TU PAPA",
                     "descrippregunta": "",
                     "combinaciones": [
@@ -1100,7 +1100,7 @@
                     ]
                 },
                 {
-                    "nropregunta": 2,
+                    "nropregunta": 3,
                     "nombrepregunta": "¿DESEAS AGREGAR EXTRAS?",
                     "descrippregunta": "",
                     "combinaciones": [
@@ -1161,6 +1161,153 @@
                     ]
                 },
                 {
+                    "nropregunta": 4,
+                    "nombrepregunta": "¿Deseas elegir salsas?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 23,
+                            "titulocomb": "Mayonesa + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 24,
+                            "titulocomb": "Ketchup + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 25,
+                            "titulocomb": "Aji + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
+                            "preccomb": 0
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 5,
+                    "nombrepregunta": "¿Deseas salsas extras?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 26,
+                            "titulocomb": "",
+                            "imgcomb": "https://res.cloudinary.com/dlwq4rdll/image/upload/v1700114239/todas_las_cremas_vfnrlt.png",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 27,
+                            "titulocomb": "3 Ketchup + S/.1.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/k/e/ketchup_1.jpg",
+                            "preccomb": 1
+                        },
+                        {
+                            "nrocomb": 28,
+                            "titulocomb": "Mayonesa 2 Oz + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 1.5
+                        },
+                        {
+                            "nrocomb": 29,
+                            "titulocomb": "Ají Bembos 2 Oz + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
+                            "preccomb": 1.5
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 6,
+                    "nombrepregunta": "¿Deseas Agregar Salsas?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 27,
+                            "titulocomb": "",
+                            "imgcomb": "https://res.cloudinary.com/dlwq4rdll/image/upload/v1700114239/todas_las_cremas_vfnrlt.png",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 30,
+                            "titulocomb": "Salsa Tártara Bembos 2 oz + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/e/bembos-salsa_1.webp",
+                            "preccomb": 2
+                        },
+                        {
+                            "nrocomb": 31,
+                            "titulocomb": "Salsa Barrio Bembos 2 oz + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/e/bembos-salsa.webp",
+                            "preccomb": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "categoria": "combos",
+            "preguntas": []
+        },
+        {
+            "id": 6,
+            "categoria": "hamburguesas",
+            "preguntas": []
+        },
+        {
+            "id": 7,
+            "categoria": "pollo",
+            "preguntas": [
+                {
+                    "nropregunta": 1,
+                    "nombrepregunta": "DESEA COMBEAR",
+                    "descrippregunta": "(El número de complementos será igual al número de productos seleccionados en el cuadro cantidad)",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 1,
+                            "titulocomb": "Papas Fritas Regulares + Gaseosa",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_82x82/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-chips-gaseosa-400x400_1_1_1_1_1_1.webp",
+                            "preccomb": 6.9
+                        },
+                        {
+                            "nrocomb": 2,
+                            "titulocomb": "Papas Fritas Medianas + Gaseosa",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_82x82/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/g/a/gaseosa_papas_medianas_delivery_1_2.webp",
+                            "preccomb": 6.9
+                        },
+                        {
+                            "nrocomb": 3,
+                            "titulocomb": "Papas Fritas Grandes + Gaseosa",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_82x82/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/g/a/gaseosa_papas_grandes_delivery_1_2.webp",
+                            "preccomb": 7.9
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 2,
+                    "nombrepregunta": "¿DESEA QUITAR ALGÚN INGREDIENTE?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 2,
+                            "titulocomb": "1 x Sin mayonesa + S/.0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_2.webp",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 3,
+                            "titulocomb": "1 x Sin lechuga + S/.0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/l/e/lechuga_1.webp",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 4,
+                            "titulocomb": "1 x Sin tomate + S/.0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/t/o/tomate_1.webp",
+                            "preccomb": 0
+                        }
+                    ]
+                },
+                {
                     "nropregunta": 3,
                     "nombrepregunta": "¿Deseas elegir salsas?",
                     "descrippregunta": "",
@@ -1192,46 +1339,31 @@
                     "combinaciones": [
                         {
                             "nrocomb": 26,
-                            "titulocomb": "Mayonesa + S/0.00",
-                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "titulocomb": "",
+                            "imgcomb": "https://res.cloudinary.com/dlwq4rdll/image/upload/v1700114239/todas_las_cremas_vfnrlt.png",
                             "preccomb": 0
                         },
                         {
                             "nrocomb": 27,
-                            "titulocomb": "Ketchup + S/0.00",
-                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
-                            "preccomb": 0
+                            "titulocomb": "3 Ketchup + S/.1.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/k/e/ketchup_1.jpg",
+                            "preccomb": 1
                         },
                         {
                             "nrocomb": 28,
-                            "titulocomb": "Aji + S/0.00",
-                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
-                            "preccomb": 0
+                            "titulocomb": "Mayonesa 2 Oz + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 1.5
                         },
                         {
                             "nrocomb": 29,
-                            "titulocomb": "Aji + S/0.00",
+                            "titulocomb": "Ají Bembos 2 Oz + S/.1.50",
                             "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
-                            "preccomb": 0
+                            "preccomb": 1.5
                         }
                     ]
                 }
             ]
-        },
-        {
-            "id": 5,
-            "categoria": "combos",
-            "preguntas": []
-        },
-        {
-            "id": 6,
-            "categoria": "hamburguesas",
-            "preguntas": []
-        },
-        {
-            "id": 7,
-            "categoria": "pollo",
-            "preguntas": []
         },
         {
             "id": 8,
