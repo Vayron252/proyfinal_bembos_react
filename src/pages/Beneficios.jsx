@@ -120,14 +120,13 @@ export const Beneficios = () => {
     {/* FIN DESTINADOS_INFO */}
   </div>  
 
-    
-
-      
   
     {/* FIN CONTENEDOR - MENÚ BENFICIOS */}
 
 
     {/* GILEOS_INFO */}
+
+    
     {/* FIN GILEOS_INFO */}
 
     {/* RELACION_INFO */}
