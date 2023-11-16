@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 export const CarroComprasContext = createContext();
 
@@ -73,7 +73,7 @@ export function CarroComprasProvider ({ children }) {
     
     const [menuBarActive, setMenuBarActive] = useState(false);
     const [mostrarCarro, setMostrarCarro] = useState(false);
-    const [carroCompras, setCarroCompras] = useState(valorInicialCarro);
+    const [carroCompras, setCarroCompras] = useState([]);
     const [montoDelivery, setMontoDelivery] = useState(5);
 
     return (

@@ -1,30 +1,105 @@
-import { useEffect } from "react"
+import { useState } from "react"
 import { useLoaderData, useNavigate, Link, useParams } from "react-router-dom"
-import { obtenerProductoxNombre } from "../data/bembosAPI"
+import { obtenerProductoxNombre, obtenerRelacionXCategoria } from "../data/bembosAPI"
 import { useCarroCompras } from "../hooks/useCarroCompras"
 import { useScreenSize } from "../hooks/useScreenSize"
+import { formatoDosDecimales } from "../utils/utilitarios"
+import { Spinner } from "../components/Spinner"
+import { Modal } from 'react-responsive-modal';
 import '../styles/producto.css'
+import 'react-responsive-modal/styles.css';
 
 export const loader = async ({ params }) => {
   const { categoria, producto } = params;
-  const productoConsultado = await obtenerProductoxNombre(categoria, producto);
-  if (productoConsultado.length === 0) {
+  const relacion = await obtenerRelacionXCategoria(categoria);
+  const informacion = await obtenerProductoxNombre(categoria, producto);
+  if (informacion.length === 0) {
     throw new Response('', {
         status: 404, statusText: 'El producto no fue encontrado.'
     });
   }
-  return productoConsultado;
+  return {informacion, relacion};
 }
 
 export const ProductoCompra = () => {
+  const [cantidad, setCantidad] = useState(1);
+  const [open, setOpen] = useState(false);
+  const [mostrarSpinner, setMostrarSpinner] = useState(false); 
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   const { width } = useScreenSize();
   const navigate = useNavigate();
   const { categoria, producto } = useParams();
-  const informacion = useLoaderData();
-  const { carroCompras, setMostrarCarro, handleMenuBar } = useCarroCompras();
+  const {informacion, relacion} = useLoaderData();
+  const { carroCompras, addProduct, setMostrarCarro, handleMenuBar } = useCarroCompras();
+
+  const handleIncrementOrDecrementQuantity = (value) => {
+    const nuevoValor = cantidad + value;
+    if (nuevoValor <= 0) {
+      return;
+    }
+    setCantidad(nuevoValor)
+  }
+
+  const handleAddToCar = () => {
+    onOpenModal();
+    setMostrarSpinner(true);
+    const product = {
+      nombre: informacion.nombre,
+      imagen: informacion.img,
+      codproducto: informacion.id,
+      cantidad: cantidad,
+      monto: informacion.precio,
+      subtotal: Number.parseFloat(formatoDosDecimales(cantidad * informacion.precio))
+    }
+    setTimeout(() => {
+      addProduct(product);
+      setMostrarSpinner(false);
+    }, 2000);
+  }
+
+  const handleKeepBuying = (e) => {
+    e.preventDefault();
+    onCloseModal();
+  }
+
+  const viewBagShop = (e) => {
+    e.preventDefault();
+    onCloseModal();
+    setMostrarCarro(true);
+  }
 
   return (
     <>
+      <Modal open={open} onClose={onCloseModal} classNames={{ modal: 'modal__custom__compra' }} 
+              center closeOnEsc={false} closeOnOverlayClick={false} showCloseIcon={false} blockScroll={false}>
+        <div className="modal__compra">
+          {mostrarSpinner ? (
+            <Spinner />
+          ) : (
+            <div className="modal__compra__contenido">
+              <div className="modal__compra__producto">
+                <div className="modal__compra__producto__imagen__contenedor">
+                  <img className="modal__compra__producto__imagen" src={informacion.img} alt="imagen producto" />  
+                </div>
+                <div className="modal__compra__producto__contenedor">
+                  <h2 className="modal__compra__producto__aviso">Acabas de agregar</h2>
+                  <div className="modal__compra__producto__contenido">
+                    <p className="modal__compra__producto__nombre">{informacion.nombre}</p>
+                    <p className="modal__compra__producto__bolsa">a tu Bolsa de Compras</p>
+                  </div>
+                </div>
+              </div>
+              <div className="modal__compra__redireccionamiento">
+                <Link className="compra__redireccionamiento__seguircomprando" onClick={e => handleKeepBuying(e)}>Seguir comprando</Link>
+                <Link className="compra__redireccionamiento__bolsa" onClick={e => viewBagShop(e)}>Ver Bolsa de Compras</Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </Modal>
       {width < 992 ? (
         <header className="header__back">
           <div className="contenedor__header__back contenedor">
@@ -47,7 +122,8 @@ export const ProductoCompra = () => {
           </div>
         </header>
       ) : (<></>)}
-      <div className="seccion__item">
+      {/* <Spinner /> */}
+      <div className="seccion__item contenedor">
         <div className="seccion__item__contenedor__imagen">
           <img className="seccion__item__imagen" src={informacion.img} alt="imagen producto" />
           <div className="seccion__item__imagen__contenedor">
@@ -58,80 +134,46 @@ export const ProductoCompra = () => {
         <div className="seccion__item__contenedor__contenido">
           <div className="seccion__item__contenido">
             <h3 className="seccion__item__contenido__titulo">{informacion.nombre}</h3>
-            <section className="seccion__item__opciones">
-              <details className="item__opciones" open>
-                <summary className="item__opciones__pregunta">
-                  <div className="item__opciones__pregunta__contenedor">
-                    <span className="item__opciones__pregunta__numeracion">1</span>
-                    <h3 className="item__opciones__pregunta__titulo">Elige el tamaño de tu hamburguesa</h3>
-                  </div>
-                </summary>
-                <div className="item__opciones__respuestas">
-                  <p>{`(El número de complementos será igual al número de productos seleccionados en el cuadro cantidad)`}</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                </div>
-              </details>
-              <details className="item__opciones" open>
-                <summary className="item__opciones__pregunta">
-                  <div className="item__opciones__pregunta__contenedor">
-                    <span className="item__opciones__pregunta__numeracion">1</span>
-                    <h3 className="item__opciones__pregunta__titulo">Elige el tamaño de tu hamburguesa</h3>
-                  </div>
-                </summary>
-                <div className="item__opciones__respuestas">
-                  <p>{`(El número de complementos será igual al número de productos seleccionados en el cuadro cantidad)`}</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                </div>
-              </details>
-              <details className="item__opciones" open>
-                <summary className="item__opciones__pregunta">
-                  <div className="item__opciones__pregunta__contenedor">
-                    <span className="item__opciones__pregunta__numeracion">1</span>
-                    <h3 className="item__opciones__pregunta__titulo">Elige el tamaño de tu hamburguesa</h3>
-                  </div>
-                </summary>
-                <div className="item__opciones__respuestas">
-                  <p>{`(El número de complementos será igual al número de productos seleccionados en el cuadro cantidad)`}</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                </div>
-              </details>
-              <details className="item__opciones" open>
-                <summary className="item__opciones__pregunta">
-                  <div className="item__opciones__pregunta__contenedor">
-                    <span className="item__opciones__pregunta__numeracion">1</span>
-                    <h3 className="item__opciones__pregunta__titulo">Elige el tamaño de tu hamburguesa</h3>
-                  </div>
-                </summary>
-                <div className="item__opciones__respuestas">
-                  <p>{`(El número de complementos será igual al número de productos seleccionados en el cuadro cantidad)`}</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                  <p>contenido</p>
-                </div>
-              </details>
+            {relacion[0].preguntas.length > 0 ? (
+              <section className="seccion__item__opciones">
+                {relacion[0].preguntas.map(pregunta => (
+                  <details key={pregunta.nropregunta} className="item__opciones" open>
+                    <summary className="item__opciones__pregunta">
+                      <div className="item__opciones__pregunta__contenedor">
+                        <span className="item__opciones__pregunta__numeracion">{pregunta.nropregunta}</span>
+                        <h3 className="item__opciones__pregunta__titulo">{pregunta.nombrepregunta}</h3>
+                      </div>
+                    </summary>
+                    <div className="item__opciones__respuestas">
+                      <p className="item__opciones__respuestas__descripcion">{pregunta.descrippregunta}</p>
+                      <div className="item__opciones__respuestas__contenedor">
+                        {pregunta.combinaciones.map(comb => (
+                          <div className="item__opcion">
+                            <img src={comb.imgcomb} alt="imagen opcion" />
+                            <p className="item__opcion__titulo">{comb.titulocomb}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </details>
+                ))}
             </section>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
       <footer className="footer__contenedor__operaciones">
         <div className="footer__operaciones">
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
+          <button onClick={() => handleIncrementOrDecrementQuantity(-1)}>-</button>
+          <p>{cantidad}</p>
+          <button onClick={() => handleIncrementOrDecrementQuantity(1)}>+</button>
         </div>
         <div className="footer__agregarproducto">
           <p className="agregarproducto__acumulado">Acumulas 0Pts</p>
-          <button className="agregarproducto__monto">{`Agregar S/. ${informacion.precio}`}</button>
+          <button className="agregarproducto__monto" 
+            onClick={() => handleAddToCar()}>{`Agregar S/. ${formatoDosDecimales(cantidad * informacion.precio)}`}</button>
         </div>
       </footer>
     </>

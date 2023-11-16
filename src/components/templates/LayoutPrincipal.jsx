@@ -7,10 +7,8 @@ export const LayoutPrincipal = () => {
     return (
         <>
             <ScrollToTop />
-            <CarroComprasProvider>
-                <CarroCompras />
-                <ContenedorApp />
-            </CarroComprasProvider>
+            <CarroCompras />
+            <ContenedorApp />
         </>
     )
 }

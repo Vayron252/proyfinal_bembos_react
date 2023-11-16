@@ -6,6 +6,7 @@ import { HomePromoSocial } from "../components/HomePromoSocial"
 import { OpcionesNavegacion } from "../components/OpcionesNavegacion"
 import { obtenerPromocionesOnline, obtenerListadoMenu } from '../data/bembosAPI'
 import { useScreenSize } from '../hooks/useScreenSize'
+import { formatoDosDecimales } from "../utils/utilitarios"
 import '../styles/tarjetas.css'
 import '../styles/secciones.css'
 import "slick-carousel/slick/slick.css"
@@ -71,8 +72,8 @@ export const Index = () => {
                   <div className="tarjeta__contenido__informacion">
                     <h4 className="tarjeta__titulo">{promo.nombre}</h4>
                     <div className="tarjeta__precio">
-                      <p className="tarjeta__precio__actual">{`S/.${promo.precio_actual}`}</p>
-                      <p className="tarjeta__precio__anterior">{`S/.${promo.precio_antiguo}`}</p>
+                      <p className="tarjeta__precio__actual">{`S/.${formatoDosDecimales(promo.precio_actual)}`}</p>
+                      <p className="tarjeta__precio__anterior">{`S/.${formatoDosDecimales(promo.precio_antiguo)}`}</p>
                     </div>
                   </div>
                   <button className="tarjeta__boton">Ver más</button>
@@ -86,8 +87,8 @@ export const Index = () => {
         <h2 className="menuburguer__online__titulo">Menu de hamburguesas online</h2>
         <Slider {...settings}>
           {listadoMenu.map(itemMenu => (
-            <Link to={itemMenu.link}>
-              <Tarjeta key={itemMenu.nombre}>
+            <Link to={itemMenu.link} key={itemMenu.nombre}>
+              <Tarjeta>
                 <div className="tarjeta">
                   <div className="tarjeta__contenedor__imagen">
                     <img className="tarjeta__imagen" src={itemMenu.img} alt="imagen" />

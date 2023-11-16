@@ -17,6 +17,7 @@ import { Nosotros } from './pages/Nosotros'
 import { TerminosCondiciones } from './pages/TerminosCondiciones'
 import { ErrorPage } from './pages/ErrorPage'
 import { ProductoCompra, loader as productoCompraLoader } from './pages/ProductoCompra'
+import { CarroComprasProvider } from './context/CarroComprasContext'
 
 const router = createBrowserRouter([
   {
@@ -96,6 +97,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CarroComprasProvider>
+      <RouterProvider router={router} />
+    </CarroComprasProvider>
   </React.StrictMode>,
 )

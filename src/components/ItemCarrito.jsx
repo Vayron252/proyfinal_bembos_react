@@ -1,4 +1,5 @@
 import { useCarroCompras } from "../hooks/useCarroCompras"
+import { formatoDosDecimales } from "../utils/utilitarios";
 
 export const ItemCarrito = ({ item }) => {
     const { imagen, nombre, id, subtotal, cantidad } = item;
@@ -14,7 +15,7 @@ export const ItemCarrito = ({ item }) => {
                 </div>
                 <div className="carrito__informacion">
                     <p className="carrito__informacion__nombre">{`${cantidad} x ${nombre}`}</p>
-                    <p className="carrito__informacion__subtotal">{`S/. ${subtotal}`}</p>
+                    <p className="carrito__informacion__subtotal">{`S/. ${formatoDosDecimales(subtotal)}`}</p>
                 </div>
             </div>
             <div className="item__carrito__operacion">
