@@ -279,7 +279,7 @@
         {
             "nombre": "Fanta Sabor Original 500 ml",
             "precio": 5.9,
-            "img": "chttps://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/fanta-500ml-nuevo.jpg",
+            "img": "https://www.bembos.com.pe/_ipx/q_85,w_290,f_webp/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/fanta-500ml-nuevo.jpg",
             "id": 39,
             "link": "fanta-sabor-original-500-ml"
         },
@@ -977,6 +977,266 @@
                     ]
                 }
             ]
+        }
+    ],
+    "relaciones": [
+        {
+            "id": 1,
+            "categoria": "inka-chips",
+            "preguntas": []
+        },
+        {
+            "id": 2,
+            "categoria": "bebidas",
+            "preguntas": []
+        },
+        {
+            "id": 3,
+            "categoria": "helados",
+            "preguntas": [
+                {
+                    "nropregunta": 1,
+                    "nombrepregunta": "ELIGE SABOR DE TU HELADO",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 1,
+                            "titulocomb": "Mini Princesa Vainilla + S/.4.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/4/0/400x400-solo_1_3.webp",
+                            "preccomb": 4.9
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 2,
+                    "nombrepregunta": "DESEA AGREGAR ADICIONAL",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 2,
+                            "titulocomb": "Adicional Lenteja + S/.3.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/l/e/lentejas_1.webp",
+                            "preccomb": 3
+                        },
+                        {
+                            "nrocomb": 3,
+                            "titulocomb": "Adicional Brownie + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/r/brwonie_2.webp",
+                            "preccomb": 2
+                        },
+                        {
+                            "nrocomb": 4,
+                            "titulocomb": "Adicional Grageas + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/g/r/grageas_3.webp",
+                            "preccomb": 2
+                        },
+                        {
+                            "nrocomb": 5,
+                            "titulocomb": "Adicional Coco + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coco_2.webp",
+                            "preccomb": 2
+                        },
+                        {
+                            "nrocomb": 6,
+                            "titulocomb": "Adicional Maní + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mani_1.webp",
+                            "preccomb": 1.5
+                        },
+                        {
+                            "nrocomb": 7,
+                            "titulocomb": "Adicional Doña Pepa + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/d/o/dona-pepa_2.webp",
+                            "preccomb": 1.5
+                        },
+                        {
+                            "nrocomb": 8,
+                            "titulocomb": "Adicional Cua Cua + S/.1.50",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/u/cua-cua_2.webp",
+                            "preccomb": 1.5
+                        },
+                        {
+                            "nrocomb": 9,
+                            "titulocomb": "2 Barquillos + S/.1.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/2/-/2-barquillos_2.webp",
+                            "preccomb": 1
+                        },
+                        {
+                            "nrocomb": 10,
+                            "titulocomb": "6 Barquillos + S/.3.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/6/-/6-barquillos_1.webp",
+                            "preccomb": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "categoria": "loncheritas",
+            "preguntas": [
+                {
+                    "nropregunta": 1,
+                    "nombrepregunta": "ELIGE EL TAMAÑO DE TU PAPA",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 11,
+                            "titulocomb": "Papa regular + S/.0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/8/0/800x800-papas-reg_2.webp",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 12,
+                            "titulocomb": "Papa Mediana + S/.1.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papas_grandes_1_1_2.webp",
+                            "preccomb": 1
+                        },
+                        {
+                            "nrocomb": 13,
+                            "titulocomb": "Papa Grande + S/.2.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papas_grandes_2_1.webp",
+                            "preccomb": 2
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 2,
+                    "nombrepregunta": "¿DESEAS AGREGAR EXTRAS?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 14,
+                            "titulocomb": "Papa Mediana + S/4.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papas-fritas_4.webp",
+                            "preccomb": 4.9
+                        },
+                        {
+                            "nrocomb": 15,
+                            "titulocomb": "Papa Grande + S/5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/p/a/papas-grande_2.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 16,
+                            "titulocomb": "Coca Cola Sabor Original 500 ml + S/5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-sabor-original_1.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 17,
+                            "titulocomb": "Coca Cola Sin Azúcar 500 ml + S/.5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/c/o/coca-cola-sin-azucar_1_1.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 18,
+                            "titulocomb": "Inca Kola Sabor Original 500 ml + S/.5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/incakola-sabor-original_1.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 19,
+                            "titulocomb": "Inca kola Sin Azúcar 500 ml + S/.5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/i/n/inca-kola-sin-azucar_1_1.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 20,
+                            "titulocomb": "Sprite Sabor Original 500 ml + S/.5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/p/sprite-con-azucar_2.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 21,
+                            "titulocomb": "Fanta Sabor Original 500 ml + S/.5.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/f/a/fanta-con-azucar_3_2.webp",
+                            "preccomb": 5.9
+                        },
+                        {
+                            "nrocomb": 22,
+                            "titulocomb": "Agua San Luis sin gas 750 ml + S/.4.90",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_72x72/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/s/a/san-luis-sin-gas_2_1_1_1_1.webp",
+                            "preccomb": 4.9
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 3,
+                    "nombrepregunta": "¿Deseas elegir salsas?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 23,
+                            "titulocomb": "Mayonesa + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 24,
+                            "titulocomb": "Ketchup + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 25,
+                            "titulocomb": "Aji + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
+                            "preccomb": 0
+                        }
+                    ]
+                },
+                {
+                    "nropregunta": 4,
+                    "nombrepregunta": "¿Deseas salsas extras?",
+                    "descrippregunta": "",
+                    "combinaciones": [
+                        {
+                            "nrocomb": 26,
+                            "titulocomb": "Mayonesa + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 27,
+                            "titulocomb": "Ketchup + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/m/a/mayonesa_1_2.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 28,
+                            "titulocomb": "Aji + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
+                            "preccomb": 0
+                        },
+                        {
+                            "nrocomb": 29,
+                            "titulocomb": "Aji + S/0.00",
+                            "imgcomb": "https://www.bembos.com.pe/_ipx/q_60,s_68x68/https://d31npzejelj8v1.cloudfront.net/media/catalog/product/a/j/aji_1.jpg",
+                            "preccomb": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "categoria": "combos",
+            "preguntas": []
+        },
+        {
+            "id": 6,
+            "categoria": "hamburguesas",
+            "preguntas": []
+        },
+        {
+            "id": 7,
+            "categoria": "pollo",
+            "preguntas": []
+        },
+        {
+            "id": 8,
+            "categoria": "complementos",
+            "preguntas": []
         }
     ]
 }

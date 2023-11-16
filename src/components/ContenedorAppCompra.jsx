@@ -16,7 +16,7 @@ export const ContenedorAppCompra = () => {
                 <Sugerencias />
                 <Outlet />
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

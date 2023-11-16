@@ -1,11 +1,12 @@
 import { useContext } from "react"
 import { CarroComprasContext } from "../context/CarroComprasContext"
+import { formatoDosDecimales } from "../utils/utilitarios";
 
 export const useCarroCompras = () => {
     const { carroCompras, setCarroCompras, 
             mostrarCarro, setMostrarCarro, 
             montoDelivery,
-            menuBarActive, setMenuBarActive} = useContext(CarroComprasContext);
+            menuBarActive, setMenuBarActive } = useContext(CarroComprasContext);
 
     const handleMenuBar = () => {
         if (menuBarActive) {
@@ -17,12 +18,24 @@ export const useCarroCompras = () => {
 
     const mostrarSuTotalCarrito = () => {
         const sumarSubTotales = carroCompras.reduce((acumulado, carro) => acumulado + carro.subtotal, 0);
-        return sumarSubTotales;
+        return formatoDosDecimales(sumarSubTotales);
     }
 
     const mostrarMontoTotal = () => {
-        const total = mostrarSuTotalCarrito() + montoDelivery;
-        return total;
+        const total = Number.parseFloat(mostrarSuTotalCarrito()) + montoDelivery;
+        return formatoDosDecimales(total);
+    }
+
+    const addProduct = (product) => {
+        let correlativeId = 1;
+        if (carroCompras.length !== 0) {
+            const valorMayorId = carroCompras.reduce((previous, current) => {
+                return current.id > previous.id ? current : previous;
+            });
+            correlativeId = valorMayorId.id + 1;
+        }
+        product.id = correlativeId;
+        setCarroCompras([...carroCompras, product]);
     }
 
     const eliminarProductoxId = (nroItem) => {
@@ -37,7 +50,7 @@ export const useCarroCompras = () => {
             return;
         }
         productoModificar.cantidad = cantidadNueva;
-        productoModificar.subtotal = productoModificar.monto * cantidadNueva;
+        productoModificar.subtotal = Number.parseFloat(formatoDosDecimales(productoModificar.monto * cantidadNueva));
         const productosCarrito = carroCompras.map(producto => producto.id === nroItem ? productoModificar : producto);
         setCarroCompras(productosCarrito);
     }
@@ -49,6 +62,7 @@ export const useCarroCompras = () => {
         mostrarMontoTotal,
         eliminarProductoxId,
         modificarProductoCantidad,
+        addProduct,
         mostrarCarro,
         setMostrarCarro,
         montoDelivery,

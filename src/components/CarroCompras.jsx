@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useCarroCompras } from "../hooks/useCarroCompras"
 import { ItemCarrito } from "./ItemCarrito";
+import { formatoDosDecimales } from '../utils/utilitarios';
 
 export const CarroCompras = () => {
     const navigate = useNavigate();
@@ -59,7 +60,7 @@ export const CarroCompras = () => {
                         </div>
                         <div className="contenido__items__delivery">
                             <p className="items__delivery__titulo">Delivery</p>
-                            <p className="items__delivery__monto">{`S/. ${montoDelivery}`}</p>
+                            <p className="items__delivery__monto">{`S/. ${formatoDosDecimales(montoDelivery)}`}</p>
                         </div>
                         <div className="contenido__items__total">
                             <p className="items__total__titulo">Total a pagar</p>

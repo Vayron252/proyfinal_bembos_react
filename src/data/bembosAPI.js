@@ -24,6 +24,12 @@ export const obtenerProductoxNombre = async (categoria, nombreProducto) => {
     return producto[0];
 }
 
+export const obtenerRelacionXCategoria = async (categoria) => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/relaciones`);
+    const relacion = data.filter(elemento => elemento.categoria === categoria);
+    return relacion;
+}
+
 export const obtenerPromocionesPersonales = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/promociones_personales`);
     return data;

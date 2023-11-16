@@ -7,10 +7,8 @@ export const LayoutCompra = () => {
     return (
         <>
             <ScrollToTop />
-            <CarroComprasProvider>
-                <CarroCompras />
-                <ContenedorAppCompra />
-            </CarroComprasProvider>
+            <CarroCompras />
+            <ContenedorAppCompra />
         </>
     )
 }

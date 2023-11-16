@@ -4,6 +4,7 @@ import { obtenerListadoMenu, obtenerListadoProductosXOpcion } from '../data/bemb
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { useCarroCompras } from '../hooks/useCarroCompras'
 import { Tarjeta } from '../components/Tarjeta'
+import { formatoDosDecimales } from '../utils/utilitarios';
 import Slider from "react-slick"
 import '../styles/tarjetas.css'
 import '../styles/secciones.css'
@@ -72,7 +73,7 @@ export const MenuOpciones = () => {
                     <div className="tarjeta__contenido">
                       <div className="tarjeta__contenido__informacion">
                         <h4 className="tarjeta__titulo">{producto.nombre}</h4>
-                        <p className="tarjeta__precio">{`S/. ${producto.precio}`}</p>
+                        <p className="tarjeta__precio">{`S/. ${formatoDosDecimales(producto.precio)}`}</p>
                         {location.pathname === '/menu/combos' ? <></> : (
                           <p className="tarjeta__terminosycondiciones">Términos y Condiciones</p>
                         )}
