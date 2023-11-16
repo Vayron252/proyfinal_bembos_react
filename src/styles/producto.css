@@ -278,10 +278,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    border: 2px solid var(--colorPrincipal);
+    border-radius: 2rem;
 }
 .item__opcion.seleccionado {
-    border: 2px solid var(--colorPrincipal);
+    border-color: var(--rojo);
 }
 .item__opcion__titulo {
     font-size: 1.3rem;
@@ -436,4 +437,43 @@
 }
 .modal__custom__compra {
     border-radius: 2rem;
+}
+
+/* Preguntas */
+
+/* Opciones */
+.item__opcion__contenedor__imagen {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+}
+.item__opcion__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.item__opcion__titulo {
+    font-size: 1.2rem;
+}
+.item__opcion__precio {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.item__opcion__operaciones {
+    display: flex;
+    align-items: center;
+    padding: .8rem 0;
+    gap: 1rem;
+}
+.item__opcion__decrementar,
+.item__opcion__incrementar {
+    padding: .3rem .5rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+.item__opcion__cantidades {
+    font-weight: 700;
+    font-size: 1.1rem;
 }

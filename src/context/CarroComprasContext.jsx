@@ -75,6 +75,24 @@ export function CarroComprasProvider ({ children }) {
     const [mostrarCarro, setMostrarCarro] = useState(false);
     const [carroCompras, setCarroCompras] = useState([]);
     const [montoDelivery, setMontoDelivery] = useState(5);
+    const [cargaLS, setCargaLS] = useState(false);
+
+    useEffect(() => {
+        if (cargaLS) {
+          localStorage.setItem('carrito', JSON.stringify(carroCompras)); 
+        }
+      }, [carroCompras]);
+
+    useEffect(() => {
+        const obtenerLS = () => {
+            const carritoLS = JSON.parse(localStorage.getItem('carrito')) ?? [];
+            setCarroCompras(carritoLS);
+            setCargaLS(true);
+        }
+        if (!cargaLS) {
+            obtenerLS();
+        }
+    }, []);
 
     return (
         <CarroComprasContext.Provider 

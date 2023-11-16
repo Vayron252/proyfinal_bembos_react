@@ -43,6 +43,11 @@ export const useCarroCompras = () => {
         setCarroCompras(productosSinId);
     }
 
+    const getSumComb = (combinaciones) => {
+        const sumarSubComb = combinaciones.reduce((acumulado, comb) => acumulado + comb.subtotcomb, 0);
+        return sumarSubComb;
+    }
+
     const modificarProductoCantidad = (nroItem, cantidad) => {
         const productoModificar = carroCompras.find(producto => producto.id === nroItem);
         const cantidadNueva = productoModificar.cantidad + cantidad;
@@ -50,7 +55,7 @@ export const useCarroCompras = () => {
             return;
         }
         productoModificar.cantidad = cantidadNueva;
-        productoModificar.subtotal = Number.parseFloat(formatoDosDecimales(productoModificar.monto * cantidadNueva));
+        productoModificar.subtotal = getSumComb(productoModificar.combinations) + Number.parseFloat(formatoDosDecimales(productoModificar.monto * cantidadNueva));
         const productosCarrito = carroCompras.map(producto => producto.id === nroItem ? productoModificar : producto);
         setCarroCompras(productosCarrito);
     }

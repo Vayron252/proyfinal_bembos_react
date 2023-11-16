@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useLoaderData, useNavigate, Link, useParams } from "react-router-dom"
 import { obtenerProductoxNombre, obtenerRelacionXCategoria } from "../data/bembosAPI"
 import { useCarroCompras } from "../hooks/useCarroCompras"
@@ -23,6 +23,10 @@ export const loader = async ({ params }) => {
 }
 
 export const ProductoCompra = () => {
+  // const valorCombi = [
+  //   {nropregunta: 1, nrocomb: 25, cant: 5, precio: 2, subtotcomb: 10}
+  // ]
+
   const [cantidad, setCantidad] = useState(1);
   const [open, setOpen] = useState(false);
   const [mostrarSpinner, setMostrarSpinner] = useState(false);
@@ -54,12 +58,20 @@ export const ProductoCompra = () => {
       codproducto: informacion.id,
       cantidad: cantidad,
       monto: informacion.precio,
-      subtotal: Number.parseFloat(formatoDosDecimales(cantidad * informacion.precio))
+      subtotal: Number.parseFloat(formatoDosDecimales(getTotalProduct())),
+      combinations: combinaciones
+      // subtotal: Number.parseFloat(formatoDosDecimales(cantidad * informacion.precio))
     }
     setTimeout(() => {
       addProduct(product);
       setMostrarSpinner(false);
     }, 2000);
+  }
+
+  const getTotalProduct = () => {
+    const sumarSubComb = combinaciones.reduce((acumulado, comb) => acumulado + comb.subtotcomb, 0);
+    const totalizado = (cantidad * informacion.precio) + sumarSubComb;
+    return totalizado;
   }
 
   const handleKeepBuying = (e) => {
@@ -138,7 +150,7 @@ export const ProductoCompra = () => {
             {relacion[0].preguntas.length > 0 ? (
               <section className="seccion__item__opciones">
                 {relacion[0].preguntas.map(pregunta => (
-                  <Pregunta key={pregunta.nropregunta} pregunta={pregunta} />
+                  <Pregunta key={pregunta.nropregunta} pregunta={pregunta} combinaciones={combinaciones} setCombinaciones={setCombinaciones} />
                 ))}
             </section>
             ) : (
@@ -156,7 +168,7 @@ export const ProductoCompra = () => {
         <div className="footer__agregarproducto">
           <p className="agregarproducto__acumulado">Acumulas 0Pts</p>
           <button className="agregarproducto__monto" 
-            onClick={() => handleAddToCar()}>{`Agregar S/. ${formatoDosDecimales(cantidad * informacion.precio)}`}</button>
+            onClick={() => handleAddToCar()}>{`Agregar S/. ${formatoDosDecimales(getTotalProduct())}`}</button>
         </div>
       </footer>
     </>
