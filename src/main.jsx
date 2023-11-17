@@ -9,7 +9,7 @@ import { Index, loader as indexLoader } from './pages/Index'
 import { Menu, loader as menuLoader } from './pages/Menu'
 import { MenuOpciones, loader as menuOpcionesLoader } from './pages/MenuOpciones'
 import { Promociones, loader as promocionesLoader } from './pages/Promociones'
-import { Beneficios } from './pages/Beneficios'
+import { Beneficios , loader as beneficiosLoader } from './pages/Beneficios'
 import { MiCuenta } from './pages/MiCuenta'
 import { Locales, loader as localesLoader } from './pages/Locales'
 import { ZonasReparto } from './pages/ZonasReparto'
@@ -54,7 +54,8 @@ const router = createBrowserRouter([
 
       {
         path: '/beneficios/',
-        element: <Beneficios />,
+        element: <Beneficios/>,
+        loader: beneficiosLoader, 
         errorElement: <ErrorPage />
       },
       {

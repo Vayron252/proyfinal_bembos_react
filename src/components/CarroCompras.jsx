@@ -4,6 +4,7 @@ import { ItemCarrito } from "./ItemCarrito";
 import { Modal } from 'react-responsive-modal';
 import { Spinner } from "../components/Spinner"
 import { formatoDosDecimales } from '../utils/utilitarios';
+import React, { useState } from 'react';
 
 export const CarroCompras = () => {
     const navigate = useNavigate();
@@ -19,6 +20,7 @@ export const CarroCompras = () => {
         setMostrarCarro,
         carroCompras,
         montoDelivery } = useCarroCompras();
+
 
     const handleIrAPagar = (e) => {
         e.preventDefault();
