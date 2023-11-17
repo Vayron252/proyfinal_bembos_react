@@ -16,6 +16,11 @@ export const useCarroCompras = () => {
         }
     }
 
+    const limpiarCarrito = () => {
+        localStorage.removeItem("carrito");
+        setCarroCompras([]);
+    }
+
     const mostrarSuTotalCarrito = () => {
         const sumarSubTotales = carroCompras.reduce((acumulado, carro) => acumulado + carro.subtotal, 0);
         return formatoDosDecimales(sumarSubTotales);
@@ -72,6 +77,7 @@ export const useCarroCompras = () => {
         setMostrarCarro,
         montoDelivery,
         menuBarActive,
-        handleMenuBar
+        handleMenuBar,
+        limpiarCarrito
     }
 }

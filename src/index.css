@@ -1206,11 +1206,30 @@ hr {
     border-radius: 2rem;
 }
 .pago__pagar {
-    background-color: var(--grisClaro);
+    background-color: var(--colorPrincipal);
     color: var(--blanco);
+}
+.pago__pagar:active {
+    background-color: #000075;
 }
 .pago__seguircomprando {
     background-color: var(--blanco);
     color: var(--rojo);
     border: .2rem solid var(--rojo);
+}
+
+.modal__compra__gracias {
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+}
+
+.check {
+    font-size: 8rem;
+    color: var(--colorSecundario);
+    background-color: var(--colorPrincipal);
+    padding: 2rem 3rem;
+    border-radius: 2rem;
 }

@@ -19,7 +19,7 @@ export const CarroCompras = () => {
         mostrarMontoTotal,
         setMostrarCarro,
         carroCompras,
-        montoDelivery } = useCarroCompras();
+        montoDelivery, limpiarCarrito } = useCarroCompras();
 
 
     const handleIrAPagar = (e) => {
@@ -29,6 +29,10 @@ export const CarroCompras = () => {
         onOpenModal();
         setTimeout(() => {
             setMostrarSpinner(false);
+            setTimeout(() => {
+                limpiarCarrito();
+                onCloseModal();
+            }, 2000);
         }, 2000);
     }
 
@@ -40,11 +44,16 @@ export const CarroCompras = () => {
 
     return (
         <>
-            <Modal open={open} onClose={onCloseModal} classNames={{ modal: 'modal__custom__compra' }} 
-              center closeOnEsc={false} closeOnOverlayClick={false} showCloseIcon={false} blockScroll={false}>
-                {mostrarSpinner ? (<Spinner />) : (
-                    <p>Gracias por su compra!!!</p>
-                )}
+            <Modal open={open} onClose={onCloseModal} classNames={{ modal: 'modal__custom__compra' }}
+                center closeOnEsc={false} closeOnOverlayClick={false} showCloseIcon={false} blockScroll={false}>
+                <div className="modal__compra">
+                    {mostrarSpinner ? (<Spinner />) : (
+                        <>
+                            <p className="modal__compra__gracias">¡Gracias por su compra!</p>
+                            <p className="modal__compra__gracias"><i className="fa-solid fa-check modal__compra__gracias check"></i></p>
+                        </>
+                    )}
+                </div>
             </Modal>
             <div className={`contenedor__carro${mostrarCarro ? ' mostrar' : ''}`}>
                 <div className={`carro__compras${mostrarCarro ? ' mostrar' : ''}`}>
