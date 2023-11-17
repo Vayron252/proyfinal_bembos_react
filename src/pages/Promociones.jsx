@@ -74,7 +74,7 @@ export const Promociones = () => {
 
     style: {
       margin: '0 20px',
-      columnGap: '30px',
+      columnGap: '-30px',
       position: 'relative',
     },
   };

@@ -1,34 +1,67 @@
 import React, { useState } from 'react';
-/* import { useLoaderData, Link } from 'react-router-dom'; */
-import friendzone from '../img/friendzone.png'
-import gileos from '../img/gileos.png'
-import relacion from '../img/relacion.png'
-import destinados from '../img/destinados.png'
+import { useLoaderData } from 'react-router-dom'; 
+import Slider from "react-slick";
+import friendzoneImg from '../img/friendzone.png';
+import gileosImg from '../img/gileos.png'
+import relacionImg from '../img/relacion.png'
+import destinadosImg from '../img/destinados.png'
 import friendzone_mini from '../img/friendzone_mini.png'
 import gileos_mini from '../img/gileos_mini.png'
 import relacion_mini from '../img/relacion_mini.png'
 import destinados_mini from '../img/destinados_mini.png'
-/* import obtenerBeneficios from '../data/bembosAPI' */
+import  { getBeneficieCategory } from '../data/bembosAPI'
+import { Friendzone } from '../components/Friendzone';
+import { Gileos } from '../components/Gileos';
+import { Relacion } from '../components/Relacion';
+import { Destinados } from '../components/Destinados';
 import '../styles/beneficios.css'
 
 
-/* import { Friendzone } from '../components/Friendzone'; */
-
-/* export const loader = async ( {params} ) => {
-  const  {categoria}  = params;
-  const existeBeneficio = await obtenerBeneficios();
-  
-
-  const beneficiosCategorias = await obtenerBeneficios('friendzone','gileos','relacion','destinados')  
-  return {beneficiosCategorias};
-} */
-
+export const loader = async () => {
+  const friendzone = await getBeneficieCategory('friendzone')
+  // const gileos = await obtenerGileos('')
+  // const relacion = await obtenerRelacion('')
+  // const destinados = await obtenerDestinados('')
+  return {friendzone};
+}
 
 export const Beneficios = () => {
-  const [nombrediv, setNombrediv] = useState('friendzone');
+  const { friendzone } = useLoaderData();  
+  const [category, setCategory] = useState(friendzone);
 
-  const handleClick = (nombre) => {
+  const [nombrediv, setNombrediv] = useState('friendzone');
+  const handleClick = async (nombre) => {
     setNombrediv(nombre);
+    const categories = await getBeneficieCategory(nombre);
+    setCategory(categories);
+  }
+
+  // const handleCallCatBen = async (categorie) => {
+    
+  // }
+
+  /* SLIDER DE CATEGORÍAS */
+
+  const settingsCards = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: false,
+    swipeToSlide: false,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />,
+  };
+
+  function Arrow(props) {
+    const { className, style, onClick} = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "#173083"}}
+        onClick={onClick}
+      />
+    );
   }
 
   return (
@@ -46,22 +79,22 @@ export const Beneficios = () => {
 
       <div className='container__menu__benefit'>
         <div className={`container__menu__category${nombrediv === 'friendzone' ? ' active' : ''}`} onClick={() => handleClick('friendzone')}>        
-            <img src={friendzone} alt="" />
+            <img src={friendzoneImg} alt="" />
             <h2>FRIENDZONE</h2>               
         </div>
 
         <div className={`container__menu__category${nombrediv === 'gileos' ? ' active' : ''}`} onClick={() => handleClick('gileos')}>
-          <img src={gileos} alt="" /> 
+          <img src={gileosImg} alt="" /> 
           <h2>GILEOS</h2> 
         </div>
 
         <div className={`container__menu__category${nombrediv === 'relacion' ? ' active' : ''}`} onClick={() => handleClick('relacion')}>          
-          <img src={relacion} alt=""/>   
+          <img src={relacionImg} alt=""/>   
           <h2>RELACIÓN</h2>      
         </div>
 
         <div className={`container__menu__category${nombrediv === 'destinados' ? ' active' : ''}`} onClick={() => handleClick('destinados')}>   
-            <img src={destinados} alt="" /> 
+            <img src={destinadosImg} alt="" /> 
             <h2>DESTINADOS</h2>                     
         </div>
       </div>
@@ -76,88 +109,35 @@ export const Beneficios = () => {
       <div className='container__info__details__friendzone'>
         <div className='friendzone__info__title'>
           <img src={friendzone_mini} alt="" />
-          <h1>FRIENDZONE</h1>
-          <h3>INICIA SESIÓN</h3>
+          <h1>{category.titulo}</h1>
+          {/* <h3>INICIA SESIÓN</h3> */}
         </div>
         <div className='slogan__friendzone'>
-          <h3>PROMOCIONES POR TU AMISTAD</h3>
+          {/* <h3>PROMOCIONES POR TU AMISTAD</h3> */}
         </div>
       </div>
-    </div>
+      </div>
 
-    <div>
-    {/* {beneficiosCategorias.map((item, index) => (
-      <Friendzone key = {index} friendzone = {item}/>
-      ))} */}
+      {/* SOLO PARA RESPONSIVE - FRIENDZONE */}
+      <h3 className='mobile__friendzone__slogan'>BENEFICIOS ESPECIALES</h3>
+      {/* SOLO PARA RESPONSIVE - FRIENDZONE*/}
+    
+      <div className='container__friendzone__all'>
+      {/* <Slider {...settingsCards} nextArrow={<Arrow />} prevArrow={<Arrow />}> */}
+          {category.coleccion.map((item, index) => (
+            <Friendzone key = {index} friendItem = {item} />
+          ))}
+      {/* </Slider> */}
+      </div> 
     </div>
     {/* FIN FRIENDZONE_INFO */}
 
 
-    {/* GILEOS_INFO */}
-    <div className='container__gileos__info'>
-      <div className='container__info__details__gileos'>
-        <div className='gileos__info__title'>
-          <img src={gileos_mini} alt="" />
-          <h1>GILEOS</h1>
-          <h3>ALCANZA 100<span className='pts_gileos'>PTS</span></h3>
-        </div>
-        <div className='slogan__gileos'>
-          <h3>MULTIPLICA PUNTOS X2</h3>
-        </div>
-      </div>
-    </div>
-    {/* FIN GILEOS_INFO */}
-
-    {/* RELACIÓN_INFO */}
-    <div className='container__relacion__info'>
-      <div className='container__info__details__relacion'>
-        <div className='relacion__info__title'>
-          <img src={relacion_mini} alt="" />
-          <h1>RELACIÓN</h1>
-          <h3>ALCANZA 400<span className='pts_relacion'>PTS</span></h3>
-        </div>
-        <div className='slogan__relacion'>
-          <h3>MULTIPLICA PUNTOS X3 | <span className='delivery__relacion'>Delivery</span> <strong>GRATIS</strong></h3>
-        </div>
-      </div>
-    </div>
-    {/* FIN RELACIÓN_INFO */}
-
-    {/* DESTINADOS_INFO */}
-    <div className='container__destinados__info'>
-      <div className='container__info__details__destinados'>
-        <div className='destinados__info__title'>
-          <img src={destinados_mini} alt="" />
-          <h1>DESTINADOS</h1>
-          <h3>ALCANZA 700<span className='pts_destinados'>PTS</span></h3>
-        </div>
-        <div className='slogan__destinados'>
-          <h3>MULTIPLICA PUNTOS X4 | <span className='delivery__destinados'>Delivery</span> <strong>GRATIS</strong></h3>
-        </div>
-      </div>
-    </div>
-    {/* FIN DESTINADOS_INFO */}
-  </div>  
-
-  
-    {/* FIN CONTENEDOR - MENÚ BENFICIOS */}
-
-
-    {/* GILEOS_INFO */}
 
     
-    {/* FIN GILEOS_INFO */}
-
-    {/* RELACION_INFO */}
-    {/* FIN RELACION_INFO */}
-
-    {/* DESTINADOS_INFO */}
-    {/* FIN DESTINADOS_INFO */}
-
-
       {/* PREGUNTAS FRECUENTES */}
 
-          <div className='container__preguntas__beneficios'>
+      <div className='container__preguntas__beneficios'>
             <h1 className='titulo__preguntas__beneficios'>Preguntas Frecuentes</h1>
           
           {/* PREGUNTA 1*/}
@@ -235,7 +215,26 @@ export const Beneficios = () => {
             </div>
                      
     </div>
+    {/* FIN DESTINADOS_INFO */}
+  </div>  
+
+  
+    {/* FIN CONTENEDOR - MENÚ BENFICIOS */}
+
+
+    {/* GILEOS_INFO */}
+
+    
+    {/* FIN GILEOS_INFO */}
+
+    {/* RELACION_INFO */}
+    {/* FIN RELACION_INFO */}
+
+    {/* DESTINADOS_INFO */}
+    {/* FIN DESTINADOS_INFO */}
+
+
     </div>
-    </div>
+
   )
 }

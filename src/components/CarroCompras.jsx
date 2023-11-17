@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useCarroCompras } from "../hooks/useCarroCompras"
 import { ItemCarrito } from "./ItemCarrito";
 import { formatoDosDecimales } from '../utils/utilitarios';
+import React, { useState } from 'react';
 
 export const CarroCompras = () => {
     const navigate = useNavigate();
@@ -13,10 +14,11 @@ export const CarroCompras = () => {
             carroCompras,
             montoDelivery } = useCarroCompras();
 
+
     const handleIrAPagar = (e) => {
         e.preventDefault();
         setMostrarCarro(false);
-        alert('Está llendo a pagar!!!');
+        alert('¡Estás yendo a pagar!');
     }
 
     const handleSeguirComprando = (e) => {

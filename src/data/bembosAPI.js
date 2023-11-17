@@ -55,8 +55,28 @@ export const obtenerLocales = async () => {
     return data;
 }
 
-/* export const obtenerBeneficios = async (categoria) => {
+// export const obtenerFriendzone = async () => {
+//     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/friendzone`);
+//     return data;
+// } 
+
+export const obtenerGileos = async () => {
     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/gileos`);
-    const beneficios = data.filter(elemento => elemento.categoria === categoria);
-    return beneficios;
-} */
+    return data;
+} 
+
+export const obtenerRelacion = async () => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/relacion`);
+    return data;
+} 
+
+
+export const obtenerDestinados = async () => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/destinados`);
+    return data;
+} 
+
+export const getBeneficieCategory = async (category) => {
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/${category}`);
+    return data;
+} 

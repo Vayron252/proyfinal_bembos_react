@@ -26,7 +26,8 @@
 /* CONTENEDOR TOTAL */
 
 .contenedor__toda__pagina__beneficios{
-    padding: 0 20px;
+    padding: 20px 20px;
+    background-color:var(--background);
 }
 
 .container__all__beneficios{
@@ -76,7 +77,8 @@
 }
 
 .container__menu__category.active {
-  border-bottom: 1px solid var(--rojo);
+  border-bottom: 3px solid var(--rojo);
+  margin-top: 20px;
 }
 
 .container__menu__category img{
@@ -97,14 +99,15 @@
 
 .container__separation__menu__benefit{
   padding: 0 60px;
-  margin: 10px 0 auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  position: relative;
+  margin-top: -24.5px;
+  margin-bottom: 15px;
 }
 
 .separation__menu__benefit{
-  border: 1.5px solid var(--negroMenosIntenso);
+  border: 1.5px solid var(--grisClaro);
   width: 100%;
   transform: translateY(50%);
 }
@@ -342,12 +345,533 @@
   font-weight: 500;
 }
 
-
 /* FIN DE DETALLES DE DESTINADOS */
 
+/* RESPONSIVE___DETAILS */
+.mobile__friendzone__slogan,.mobile__gileos__slogan, .mobile__relacion__slogan, .mobile__destinados__slogan {
+  color: var(--colorPrincipal);
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  display: none;
+}
 
 
-/* ESTILOS DE BENEFICIOS */
+/* FIN RESPONSIVE___DETAILS */
+
+/* CARDS FRIENDZONE */
+
+.container__friendzone__all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container__all__friendzone__cards{
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  justify-content: center;
+  width: 300px;
+  opacity: 0.5;
+}
+
+.container__general__friendzone{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-gris);
+  cursor: pointer;
+  ;
+}
+
+.container__friendzone__product__details{
+  margin-left: 15px;
+  width: 120px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__friendzone__info__above{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__button__friendzone{
+  display: flex;
+  justify-content: center;
+}
+
+.container__img__friendzone{
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image__product__friendzone{
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+
+}
+
+.img__friendzone__info{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+  top: 10px;
+}
+
+.heart_friendzone{
+  color: var(--blanco);
+  font-size: 18px;
+}
+
+.text__descount__friendzone{
+  color: var(--blanco);
+  background-color: var(--rojo);
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.container__info__friendzone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__title__product__friendzone{
+  font-size: 12px;
+  transform: scaleY(1.1);
+  font-weight: 500;
+}
+
+.friendzone__precio{
+  font-weight: 900;
+}
+
+.friendzone__puntos{
+  background-color: var(--colorSecundario);
+  color: var(--colorPrincipal);
+  font-weight: 300;
+  padding: 5px 20px;
+  border-radius: 10px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.container__button__friendzone button{
+  margin-top: 80px;
+  background-color: var(--colorPrincipal);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+/* FIN CARDS FRIENDZONE */
+
+/* CARDS GILEOS */
+
+.container__gileos__all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container__all__gileos__cards{
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  justify-content: center;
+  width: 300px;
+  opacity: 0.5;
+}
+
+.container__general__gileos{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-gris);
+  cursor: pointer;
+  ;
+}
+
+.container__gileos__product__details{
+  margin-left: 15px;
+  width: 120px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__gileos__info__above{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__button__gileos{
+  display: flex;
+  justify-content: center;
+}
+
+.container__img__gileos{
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image__product__gileos{
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+
+}
+
+.img__gileos__info{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+  top: 10px;
+}
+
+.heart_gileos{
+  color: var(--blanco);
+  font-size: 18px;
+}
+
+.text__descount__gileos{
+  color: var(--blanco);
+  background-color: var(--rojo);
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.container__info__gileos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__title__product__gileos{
+  font-size: 12px;
+  transform: scaleY(1.1);
+  font-weight: 500;
+}
+
+.gileos__precio{
+  font-weight: 900;
+}
+
+.gileos__puntos{
+  background-color: var(--colorSecundario);
+  color: var(--colorPrincipal);
+  font-weight: 300;
+  padding: 5px 20px;
+  border-radius: 10px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.container__button__gileos button{
+  margin-top: 80px;
+  background-color: var(--colorPrincipal);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+/* FIN CARDS GILEOS */
+
+
+/* CARDS RELACION */
+
+.container__relacion__all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container__all__relacion__cards{
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  justify-content: center;
+  width: 300px;
+  opacity: 0.5;
+}
+
+.container__general__relacion{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-gris);
+  cursor: pointer;
+  ;
+}
+
+.container__relacion__product__details{
+  margin-left: 15px;
+  width: 120px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__relacion__info__above{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__button__relacion{
+  display: flex;
+  justify-content: center;
+}
+
+.container__img__relacion{
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image__product__relacion{
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.img__relacion__info{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+  top: 10px;
+}
+
+.heart_relacion{
+  color: var(--blanco);
+  font-size: 18px;
+}
+
+.text__descount__relacion{
+  color: var(--blanco);
+  background-color: var(--rojo);
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.container__info__relacion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__title__product__relacion{
+  font-size: 12px;
+  transform: scaleY(1.1);
+  font-weight: 500;
+}
+
+.relacion__precio{
+  font-weight: 900;
+}
+
+.relacion__puntos{
+  background-color: var(--colorSecundario);
+  color: var(--colorPrincipal);
+  font-weight: 300;
+  padding: 5px 20px;
+  border-radius: 10px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.container__button__relacion button{
+  margin-top: 80px;
+  background-color: var(--colorPrincipal);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+/* FIN CARDS RELACION */
+
+
+/* CARDS DESTINADOS*/
+
+.container__destinados__all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container__all__destinados__cards{
+  display: flex;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  justify-content: center;
+  width: 300px;
+  opacity: 0.5;
+}
+
+.container__general__destinados{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-gris);
+  cursor: pointer;
+  ;
+}
+
+.container__destinados__product__details{
+  margin-left: 15px;
+  width: 120px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__destinados__info__above{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__button__destinados{
+  display: flex;
+  justify-content: center;
+}
+
+.container__img__destinados{
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image__product__destinados{
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.img__destinados__info{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 85px;
+  top: 10px;
+}
+
+.heart_destinados{
+  color: var(--blanco);
+  font-size: 18px;
+}
+
+.text__descount__destinados{
+  color: var(--blanco);
+  background-color: var(--rojo);
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.container__info__destinados{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__title__product__destionados{
+  font-size: 12px;
+  transform: scaleY(1.1);
+  font-weight: 500;
+}
+
+.destinados__precio{
+  font-weight: 900;
+}
+
+.destinados__puntos{
+  background-color: var(--colorSecundario);
+  color: var(--colorPrincipal);
+  font-weight: 300;
+  padding: 5px 20px;
+  border-radius: 10px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.container__button__destinados button{
+  margin-top: 80px;
+  background-color: var(--colorPrincipal);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+/* FIN CARDS DESTINADOS */
+
+/* ESTILOS DE PREGUNTAS FRECUENTES */
 
 .titulo__preguntas__beneficios{
     color: var(--colorPrincipal);
@@ -361,6 +885,7 @@
 .container__preguntas__beneficios{
     padding: 0 26px 10px;
     margin-bottom: 16px;
+    margin-top: 70px;
 }
 
 .container__por__pregunta__beneficios {
@@ -441,8 +966,6 @@
       opacity: 1;
     }
   }
-
-
 /* FIN EFECTO PREGUNTAS BENEFICIOS */
 
 
@@ -450,13 +973,31 @@
 
 @media (max-width:992px) {
 
- 
-  
+  .container__friendzone__info, .container__gileos__info,.container__relacion__info, .container__destinados__info{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .mobile__friendzone__slogan,.mobile__gileos__slogan, .mobile__relacion__slogan, .mobile__destinados__slogan {
+    color: var(--colorPrincipal);
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+  }
+
+  .slogan__friendzone, .slogan__gileos, .slogan__relacion, .slogan__destinados{
+    display: none;
+  }
+
+  .container__friendzone__all{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 600px) {
   
-
-
 
 }
