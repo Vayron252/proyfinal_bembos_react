@@ -886,6 +886,7 @@
     padding: 0 26px 10px;
     margin-bottom: 16px;
     margin-top: 70px;
+    background-color: var(--blanco);
 }
 
 .container__por__pregunta__beneficios {
@@ -893,6 +894,7 @@
     border: 3px solid var(--color-gris);
     padding: 6px 14px;
     margin-top: 11px;
+    background-color: var(--blanco);
   }
   
   .container__por__pregunta__beneficios summary {
@@ -955,6 +957,7 @@
   .pregunta__beneficios{
     margin-bottom: 13px;
     margin-top: 8px;
+    background-color: var(--blanco);
   }
 
   
@@ -999,5 +1002,6 @@
 
 @media (max-width: 600px) {
   
+
 
 }
